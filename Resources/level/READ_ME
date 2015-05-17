@@ -1,0 +1,13 @@
+1.  Bg         	           背景类型
+2.  Music                  音乐类型
+3.  Kinds      	           cell种类数目
+4.  Map_Width  	           map长度
+5.  Map_Height 	           map高度
+6.  Cell_Width 	           cell长度
+7.  Cell_Height            cell高度
+8.  IsIncreace             是否自增加
+9.  UnLockProp             解锁道具 0表示没有
+10.  Gravity                下落朝向
+                           x,y        0 , 0表示没有 数目可能大于一个
+11. Map_Array              (-1:固定格子 0:空格子 1:普通格子 2:雪块)
+12. Aim_Pass               (1:消除所有 2:表示分数 3:表示消除种类个数 4:表示消除冰块个数)

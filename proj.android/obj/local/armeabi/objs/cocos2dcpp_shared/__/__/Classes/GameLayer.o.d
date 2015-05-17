@@ -446,7 +446,10 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/GameLayer.o: \
  jni/../../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h \
  jni/../../cocos2d/cocos/3d/../ui/UILayoutComponent.h \
  jni/../../Classes/SuccessDialog.h jni/../../Classes/Tools.h \
- jni/../../Classes/PauseDialog.h jni/../../Classes/LoseDialog.h
+ jni/../../Classes/PauseDialog.h jni/../../Classes/LoseDialog.h \
+ jni/../../Classes/Resounce.h jni/../../Classes/Audio.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/Export.h
 
 jni/../../Classes/GameLayer.h:
 
@@ -1355,3 +1358,11 @@ jni/../../Classes/Tools.h:
 jni/../../Classes/PauseDialog.h:
 
 jni/../../Classes/LoseDialog.h:
+
+jni/../../Classes/Resounce.h:
+
+jni/../../Classes/Audio.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/Export.h:

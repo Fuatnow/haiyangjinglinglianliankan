@@ -414,7 +414,13 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/BackgroundLayer.o: \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCFrame.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCActionTimeline.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCTimeLine.h \
- jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h
+ jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h \
+ jni/../../Classes/Audio.h jni/../../Classes/Define.h \
+ jni/../../Classes/Resounce.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/Export.h \
+ jni/../../Classes/GameData.h jni/../../Classes/MapInfo.h \
+ /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream
 
 jni/../../Classes/BackgroundLayer.h:
 
@@ -1247,3 +1253,19 @@ jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/C
 jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCTimeLine.h:
 
 jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h:
+
+jni/../../Classes/Audio.h:
+
+jni/../../Classes/Define.h:
+
+jni/../../Classes/Resounce.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/Export.h:
+
+jni/../../Classes/GameData.h:
+
+jni/../../Classes/MapInfo.h:
+
+/Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:

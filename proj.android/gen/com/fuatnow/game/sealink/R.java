@@ -8,12 +8,2304 @@
 package com.fuatnow.game.sealink;
 
 public final class R {
+    public static final class anim {
+        public static final int kryptanium_slide_bottom_to_top=0x7f040000;
+        public static final int kryptanium_slide_left_to_right=0x7f040001;
+        public static final int kryptanium_slide_left_to_right_hide=0x7f040002;
+        public static final int kryptanium_slide_right_to_left=0x7f040003;
+        public static final int kryptanium_slide_right_to_left_show=0x7f040004;
+        public static final int kryptanium_slide_top_to_bottom=0x7f040005;
+    }
+    public static final class array {
+        public static final int errorDeviceIds=0x7f050003;
+        public static final int kryptanium_plugin_classes=0x7f050004;
+        /**  Recommended Plugins 
+  <item >sina_weibo</item>
+	    <item >@string/s_kt_pluginmiss_sinaweibo</item>
+	    <item >tencent_qzone</item>
+	    <item >@string/s_kt_pluginmiss_qq</item>
+	    <item >weixin</item>
+	    <item >@string/s_kt_pluginmiss_weixin</item> 
+         */
+        public static final int kryptanium_plugins_recommended=0x7f050006;
+        /**  Required Plugins  
+ <item >analytics_umeng</item>
+	    <item >@string/s_kt_pluginmiss_umeng_analytics</item> 
+         */
+        public static final int kryptanium_plugins_required=0x7f050005;
+        public static final int kryptanium_plugins_testkeys=0x7f050007;
+        public static final int phone_area_code=0x7f050000;
+        public static final int phone_country_code=0x7f050002;
+        public static final int phone_country_name=0x7f050001;
+    }
     public static final class attr {
+    }
+    public static final class color {
+        public static final int kryptanium_add_friend_background=0x7f060020;
+        public static final int kryptanium_barline_color=0x7f06002d;
+        public static final int kryptanium_base_bg_color_yellow=0x7f06000e;
+        /**  Base color 
+         */
+        public static final int kryptanium_base_color_black=0x7f06000a;
+        public static final int kryptanium_base_color_blue=0x7f06000f;
+        public static final int kryptanium_base_color_classify_gray=0x7f060012;
+        public static final int kryptanium_base_color_gray=0x7f060015;
+        public static final int kryptanium_base_color_gray_1=0x7f060016;
+        public static final int kryptanium_base_color_gray_2=0x7f060017;
+        public static final int kryptanium_base_color_gray_light=0x7f060018;
+        public static final int kryptanium_base_color_green=0x7f060011;
+        public static final int kryptanium_base_color_hight_light_gray=0x7f06001a;
+        public static final int kryptanium_base_color_light_gray=0x7f060019;
+        public static final int kryptanium_base_color_near_white=0x7f060013;
+        public static final int kryptanium_base_color_red=0x7f06000c;
+        public static final int kryptanium_base_color_transparent_black=0x7f06000b;
+        public static final int kryptanium_base_color_white=0x7f060010;
+        public static final int kryptanium_base_color_yellow=0x7f06000d;
+        public static final int kryptanium_bg=0x7f060033;
+        public static final int kryptanium_black_alpha=0x7f060006;
+        public static final int kryptanium_black_alpha_cancel=0x7f060007;
+        /**  Background color 
+         */
+        public static final int kryptanium_common_background=0x7f06001d;
+        public static final int kryptanium_frame=0x7f060037;
+        public static final int kryptanium_head_tab_bg=0x7f060036;
+        public static final int kryptanium_hot_player_top5=0x7f06001c;
+        public static final int kryptanium_hot_topic_background=0x7f06001f;
+        public static final int kryptanium_hot_topic_bg=0x7f060034;
+        public static final int kryptanium_hot_topic_color=0x7f060014;
+        public static final int kryptanium_image_creator_comment_background=0x7f06001e;
+        /** 
+    <color name="kryptanium_white">#ffffffff</color>
+    <color name="kryptanium_black">#ff000000</color>
+    <color name="kryptanium_black">#ff000000</color>
+    <color name="kryptanium_black_alpha">#aa000000</color>
+    <color name="kryptanium_red">#ffff0000</color>
+    <color name="kryptanium_yellow">#ff00ff00</color>
+    <color name="kryptanium_blue">#ff0000ff</color>
+    <color name="kryptanium_gray">#999999</color>
+    <color name="kryptanium_gray">#999999</color>#
+    <color name="kryptanium_light_gray">#DEDEDE</color>
+    
+         */
+        public static final int kryptanium_selected_bg_grey=0x7f060000;
+        public static final int kryptanium_solid_white=0x7f060004;
+        /**  按钮背景颜色 
+         */
+        public static final int kryptanium_standalone_login_button_bg=0x7f06003a;
+        /**  按钮字体颜色 
+         */
+        public static final int kryptanium_standalone_login_button_text=0x7f06003b;
+        /**  内容区域背景颜色 
+         */
+        public static final int kryptanium_standalone_login_frame_bg=0x7f060038;
+        /**  内容区域边框颜色 
+         */
+        public static final int kryptanium_standalone_login_frame_border=0x7f060039;
+        /**  输入框背景颜色 
+         */
+        public static final int kryptanium_standalone_login_input_bg=0x7f06003d;
+        /**  输入框边框颜色 
+         */
+        public static final int kryptanium_standalone_login_input_border=0x7f06003e;
+        /**  输入框字体颜色 
+         */
+        public static final int kryptanium_standalone_login_input_text=0x7f06003f;
+        /**  标签字体颜色 
+         */
+        public static final int kryptanium_standalone_login_label_text=0x7f060040;
+        /**  链接字体颜色  
+         */
+        public static final int kryptanium_standalone_login_link_text=0x7f06003c;
+        public static final int kryptanium_strong_new_msg_text_color=0x7f060032;
+        public static final int kryptanium_tab_background=0x7f060035;
+        public static final int kryptanium_text_black=0x7f060025;
+        public static final int kryptanium_text_black_little=0x7f060026;
+        public static final int kryptanium_text_black_top5=0x7f060028;
+        public static final int kryptanium_text_blackish_green=0x7f060029;
+        public static final int kryptanium_text_blue=0x7f06002e;
+        public static final int kryptanium_text_dar_black=0x7f060027;
+        public static final int kryptanium_text_dark=0x7f060005;
+        public static final int kryptanium_text_dark_gray=0x7f060024;
+        public static final int kryptanium_text_green=0x7f06002a;
+        public static final int kryptanium_text_light_gray=0x7f060023;
+        public static final int kryptanium_text_register=0x7f060022;
+        /**  Text color 
+         */
+        public static final int kryptanium_text_white=0x7f060021;
+        public static final int kryptanium_title_bg=0x7f060009;
+        public static final int kryptanium_titlebar_tabtext=0x7f060044;
+        public static final int kryptanium_topic_text_yellow=0x7f06002b;
+        public static final int kryptanium_topic_yellow_little=0x7f06002c;
+        public static final int kryptanium_topicreply_layout_color=0x7f06002f;
+        public static final int kryptanium_transparent_bg=0x7f060008;
+        public static final int kryptanium_user_profile_game_list_color=0x7f060030;
+        public static final int kryptanium_user_profile_other=0x7f06001b;
+        public static final int kryptanium_user_profile_username_color=0x7f060031;
+        public static final int kryptanium_white=0x7f060003;
+        public static final int kryptanium_white_alpha=0x7f060001;
+        public static final int kryptanium_white_bg_alpha=0x7f060002;
+        public static final int ktplay_plugin_dialog_button_color=0x7f060042;
+        public static final int ktplay_plugin_sns_dialog_loading_text_color=0x7f060043;
+        public static final int ktplay_plugin_sns_message_color=0x7f060041;
+    }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f0801ca;
+        public static final int activity_vertical_margin=0x7f0801cb;
+        public static final int kryptanium_add_image_buttom_h=0x7f080097;
+        public static final int kryptanium_add_image_buttom_w=0x7f080096;
+        public static final int kryptanium_add_image_editview_th=0x7f08001b;
+        public static final int kryptanium_alllayout_height=0x7f0800d8;
+        public static final int kryptanium_alllayout_width=0x7f0800d7;
+        public static final int kryptanium_arrow_flag_marginRight=0x7f080161;
+        /**  箭头 
+ 箭头 
+         */
+        public static final int kryptanium_arrow_flag_width_height=0x7f080160;
+        public static final int kryptanium_bitmap_size_large=0x7f080080;
+        public static final int kryptanium_bitmap_size_normal=0x7f08007f;
+        public static final int kryptanium_bitmap_size_small=0x7f08007e;
+        public static final int kryptanium_buttom_blue_margin=0x7f0800a4;
+        public static final int kryptanium_buttom_dialog_h=0x7f08009e;
+        public static final int kryptanium_buttom_fullscreem_close_w=0x7f08009d;
+        public static final int kryptanium_buttom_icon_padding=0x7f0800a9;
+        public static final int kryptanium_buttom_icon_padding_big=0x7f0800aa;
+        public static final int kryptanium_buttom_like_h=0x7f08009a;
+        public static final int kryptanium_buttom_like_padding=0x7f080099;
+        public static final int kryptanium_buttom_like_w=0x7f080098;
+        public static final int kryptanium_buttom_menu_dialog_pandding=0x7f0800a0;
+        public static final int kryptanium_buttom_menu_dialog_pandding_top=0x7f08009f;
+        public static final int kryptanium_buttom_save_h=0x7f08009c;
+        public static final int kryptanium_buttom_save_w=0x7f08009b;
+        public static final int kryptanium_buttom_two_words_pandding_left=0x7f0800a2;
+        public static final int kryptanium_buttom_two_words_pandding_top=0x7f0800a1;
+        public static final int kryptanium_button_content_height=0x7f0800cd;
+        /**  文本按钮 
+         */
+        public static final int kryptanium_button_content_width=0x7f0800cc;
+        public static final int kryptanium_button_special_height=0x7f0800cf;
+        /**  特殊按钮 
+         */
+        public static final int kryptanium_button_special_width=0x7f0800ce;
+        public static final int kryptanium_button_title_height=0x7f0800cb;
+        /**  dxh 
+ 按钮尺寸 
+ 导航按钮 
+         */
+        public static final int kryptanium_button_title_width=0x7f0800ca;
+        public static final int kryptanium_checkbox_width=0x7f08002a;
+        /**  发布内容dialog 
+         */
+        public static final int kryptanium_classify_menu_cancel_layout_height=0x7f0800fa;
+        public static final int kryptanium_classify_menu_cancel_margin_left_right=0x7f0800fe;
+        public static final int kryptanium_classify_menu_cancel_margin_top_bottom=0x7f0800ff;
+        public static final int kryptanium_classify_menu_item_height=0x7f0800fc;
+        public static final int kryptanium_classify_menu_layout_width=0x7f0800fb;
+        public static final int kryptanium_classify_menu_padding_top=0x7f0800fd;
+        public static final int kryptanium_close_dialog_h=0x7f0800ae;
+        public static final int kryptanium_close_dialog_padding_big=0x7f0800af;
+        public static final int kryptanium_close_dialog_w=0x7f0800ad;
+        public static final int kryptanium_color_picker_height=0x7f080021;
+        public static final int kryptanium_color_picker_width=0x7f08001f;
+        public static final int kryptanium_colorbg_white_with_border_search_h=0x7f0800bc;
+        public static final int kryptanium_colorbg_white_with_border_search_h_half=0x7f0800bd;
+        public static final int kryptanium_commons_pull_view_font_size=0x7f080000;
+        public static final int kryptanium_commons_small=0x7f080001;
+        public static final int kryptanium_commons_spacing=0x7f080002;
+        public static final int kryptanium_commons_spacing_big=0x7f080003;
+        public static final int kryptanium_commons_spacing_superbig=0x7f080004;
+        public static final int kryptanium_contentlayout_height_small=0x7f0800dc;
+        public static final int kryptanium_contentlayout_width_samll=0x7f0800db;
+        public static final int kryptanium_create_topic_reply_content_layout_paddingTop=0x7f080190;
+        public static final int kryptanium_create_topic_reply_edittext_paddingLeft=0x7f080191;
+        /**  回复主题输入页面 
+         */
+        public static final int kryptanium_create_topic_reply_layout_padding=0x7f08018f;
+        public static final int kryptanium_default_gap=0x7f08000e;
+        public static final int kryptanium_default_gap_2x=0x7f08000f;
+        public static final int kryptanium_default_gap_2x_offset=0x7f080010;
+        public static final int kryptanium_default_gap_3x=0x7f080011;
+        public static final int kryptanium_default_gap_4x=0x7f080012;
+        public static final int kryptanium_default_gap_5x=0x7f080013;
+        public static final int kryptanium_default_gap_5x_port=0x7f0801bc;
+        public static final int kryptanium_default_gap_6x=0x7f080014;
+        public static final int kryptanium_default_gap_7x=0x7f080015;
+        public static final int kryptanium_default_gap_half=0x7f080016;
+        public static final int kryptanium_default_gap_half_2x=0x7f080017;
+        public static final int kryptanium_default_gap_half_6x=0x7f080019;
+        public static final int kryptanium_default_gap_register=0x7f08001a;
+        public static final int kryptanium_default_gap_sns=0x7f080018;
+        public static final int kryptanium_default_gap_three_quarter=0x7f08001c;
+        public static final int kryptanium_default_textview_max_wh=0x7f080065;
+        public static final int kryptanium_detail_button_th=0x7f080007;
+        public static final int kryptanium_detail_button_wh=0x7f080005;
+        public static final int kryptanium_dialog_cancel_layout_paddingBottom=0x7f0800f6;
+        public static final int kryptanium_dialog_cancel_layout_paddingTop=0x7f0800f7;
+        public static final int kryptanium_dialog_listview_height=0x7f0801cd;
+        public static final int kryptanium_dialog_listview_item_height=0x7f0801cc;
+        /**  dialog &  PopupWindow 
+         */
+        public static final int kryptanium_dialog_normal_layout_paddingTop=0x7f0800f5;
+        public static final int kryptanium_follow_button_praise_layout_wh=0x7f0800bb;
+        public static final int kryptanium_fontsize_big=0x7f08006b;
+        public static final int kryptanium_fontsize_large=0x7f08006c;
+        public static final int kryptanium_fontsize_middle=0x7f08006a;
+        public static final int kryptanium_fontsize_small=0x7f080069;
+        public static final int kryptanium_fontsize_tiny=0x7f080068;
+        public static final int kryptanium_fontsize_xlarge=0x7f0800c9;
+        public static final int kryptanium_foundation_pull_view_font_size=0x7f0801c5;
+        public static final int kryptanium_foundation_small=0x7f0801c6;
+        public static final int kryptanium_foundation_spacing=0x7f0801c7;
+        public static final int kryptanium_foundation_spacing_big=0x7f0801c8;
+        public static final int kryptanium_foundation_spacing_superbig=0x7f0801c9;
+        public static final int kryptanium_frame_game_inform_h=0x7f0800b0;
+        public static final int kryptanium_frame_page_must=0x7f080054;
+        public static final int kryptanium_frame_radian=0x7f080050;
+        public static final int kryptanium_frame_radian_padding=0x7f080051;
+        public static final int kryptanium_frame_tag_must=0x7f080053;
+        public static final int kryptanium_frame_th=0x7f08004f;
+        public static final int kryptanium_frame_th_port=0x7f0801b8;
+        public static final int kryptanium_frame_wh=0x7f08004e;
+        public static final int kryptanium_frame_wh_padding=0x7f08000c;
+        public static final int kryptanium_frame_wh_padding_negative=0x7f08000d;
+        public static final int kryptanium_frame_wh_port=0x7f0801b7;
+        /**  kt好友列表 
+         */
+        public static final int kryptanium_friend_kt_item_layout_height=0x7f0801a6;
+        public static final int kryptanium_friend_login_or_register_button_layout_height=0x7f0801a5;
+        /**  好友模块 
+ 注册或登录页面 
+ 好友模块 
+ 注册或登录页面 
+         */
+        public static final int kryptanium_friend_login_or_register_pic_layout_marginleft=0x7f0801a1;
+        public static final int kryptanium_friend_login_or_register_pic_layout_margintop=0x7f0801a2;
+        public static final int kryptanium_friend_login_or_register_textview_height=0x7f0801a4;
+        public static final int kryptanium_friend_login_or_register_textview_width=0x7f0801a3;
+        public static final int kryptanium_friend_share_spacing=0x7f0801a9;
+        public static final int kryptanium_friend_sns_head=0x7f0800c8;
+        public static final int kryptanium_friend_sns_head_listview_h=0x7f0800c7;
+        public static final int kryptanium_friends_action_item_name_maxwidth_big=0x7f0801b4;
+        public static final int kryptanium_friends_action_item_name_maxwidth_small=0x7f0801b5;
+        public static final int kryptanium_full_describe_h=0x7f08003b;
+        public static final int kryptanium_gallery_default_spacing=0x7f08008c;
+        public static final int kryptanium_game_promotion_gameicon_width_height=0x7f08011c;
+        /**  游戏列表 
+         */
+        public static final int kryptanium_game_promotion_linearlayout_marginTop=0x7f080119;
+        public static final int kryptanium_game_promotion_margin=0x7f08011a;
+        public static final int kryptanium_game_promotion_marginTop=0x7f08011b;
+        /**  头像 
+         */
+        public static final int kryptanium_head_image_width_height=0x7f0800dd;
+        public static final int kryptanium_head_tab_h=0x7f080028;
+        public static final int kryptanium_head_tab_w=0x7f080027;
+        public static final int kryptanium_head_wh_big=0x7f080078;
+        public static final int kryptanium_head_wh_large=0x7f080079;
+        public static final int kryptanium_head_wh_middle=0x7f080077;
+        public static final int kryptanium_head_wh_profile=0x7f080047;
+        public static final int kryptanium_head_wh_small=0x7f080074;
+        public static final int kryptanium_head_wh_small_4x=0x7f080075;
+        public static final int kryptanium_head_wh_small_port=0x7f0801bb;
+        public static final int kryptanium_head_wh_tiny=0x7f080073;
+        public static final int kryptanium_head_wh_user_group=0x7f080076;
+        public static final int kryptanium_head_wh_user_item=0x7f080066;
+        public static final int kryptanium_head_wh_user_like_count=0x7f080063;
+        public static final int kryptanium_head_wh_user_like_count_up=0x7f080064;
+        /**  个人设置页面 
+ 设置全局 
+         */
+        public static final int kryptanium_headtitle_layout_height=0x7f080159;
+        public static final int kryptanium_home_hot_game_item_image_width_height=0x7f080145;
+        public static final int kryptanium_home_hot_game_item_layout_paddingRight=0x7f080144;
+        public static final int kryptanium_home_hot_game_layout_height=0x7f080130;
+        /**  热门游戏 
+ 热门游戏 
+         */
+        public static final int kryptanium_home_hot_game_layout_paddingBottom=0x7f08013f;
+        /**  未知 
+         */
+        public static final int kryptanium_home_hot_game_listview_height=0x7f080142;
+        public static final int kryptanium_home_hot_game_listview_spacing=0x7f080143;
+        public static final int kryptanium_home_hot_game_textview_marginBottom=0x7f080140;
+        /**  未知 
+         */
+        public static final int kryptanium_home_hot_game_textview_margintop=0x7f080141;
+        /**  热门图片 
+ 热门图片 
+         */
+        public static final int kryptanium_home_hot_image_Layout_marginTop=0x7f080131;
+        public static final int kryptanium_home_hot_image_item_bottom_image_padding=0x7f08013b;
+        public static final int kryptanium_home_hot_image_item_bottom_image_width_height=0x7f08013a;
+        public static final int kryptanium_home_hot_image_item_bottom_layout_height=0x7f080137;
+        public static final int kryptanium_home_hot_image_item_bottom_layout_paddingRight=0x7f080139;
+        public static final int kryptanium_home_hot_image_item_bottom_layout_width=0x7f080136;
+        public static final int kryptanium_home_hot_image_item_bottom_paddingLeft=0x7f080138;
+        public static final int kryptanium_home_hot_image_item_bottom_text_marginTop=0x7f08013c;
+        public static final int kryptanium_home_hot_image_item_bottom_text_paddingLeft=0x7f08013d;
+        public static final int kryptanium_home_hot_image_item_bottom_text_paddingbottom=0x7f08013e;
+        public static final int kryptanium_home_hot_image_item_layout_width=0x7f080135;
+        public static final int kryptanium_home_hot_image_listview_height=0x7f080132;
+        public static final int kryptanium_home_hot_image_listview_height_small=0x7f080133;
+        public static final int kryptanium_home_hot_image_listview_spacing=0x7f080134;
+        public static final int kryptanium_home_hot_more_game_button_width_height=0x7f080146;
+        public static final int kryptanium_home_hot_topic_gallery_spacing=0x7f080125;
+        public static final int kryptanium_home_hot_topic_item_imageview_width_height=0x7f080127;
+        public static final int kryptanium_home_hot_topic_item_layout_paddingLeft=0x7f080129;
+        public static final int kryptanium_home_hot_topic_item_layout_paddingTop=0x7f080128;
+        public static final int kryptanium_home_hot_topic_item_text_layout_paddingLeft=0x7f08012a;
+        public static final int kryptanium_home_hot_topic_item_text_name_paddingTop=0x7f08012b;
+        public static final int kryptanium_home_hot_topic_item_text_reply_marginLeft=0x7f08012f;
+        public static final int kryptanium_home_hot_topic_item_text_reply_paddingBottom=0x7f08012d;
+        public static final int kryptanium_home_hot_topic_item_text_reply_paddingRight=0x7f08012e;
+        public static final int kryptanium_home_hot_topic_item_text_reply_paddingTop=0x7f08012c;
+        /**  热门话题 
+ 热门话题 
+         */
+        public static final int kryptanium_home_hot_topic_layout_height=0x7f080123;
+        public static final int kryptanium_home_hot_topic_layout_height_small=0x7f080124;
+        public static final int kryptanium_home_hot_topic_layout_marginTop=0x7f0801bd;
+        public static final int kryptanium_home_hot_topic_pageindicator_layout_height=0x7f0801be;
+        /**  未知 
+ 未知 
+         */
+        public static final int kryptanium_home_hot_topic_pageindicator_paddingTop=0x7f080126;
+        /**  home页 
+ 上层布局LinearLayout   包含了title  热门话题  热门图片 
+ home页 
+ 上层布局LinearLayout   包含了title  热门话题  热门图片 
+         */
+        public static final int kryptanium_home_top_layout_marginBottom=0x7f0800e5;
+        public static final int kryptanium_hot_game_download_bt_th=0x7f08000a;
+        public static final int kryptanium_hot_game_download_bt_wh=0x7f08000b;
+        public static final int kryptanium_hot_game_frame_th=0x7f080009;
+        public static final int kryptanium_hot_game_iocn_wh=0x7f080008;
+        public static final int kryptanium_hot_gome_th=0x7f080052;
+        public static final int kryptanium_hot_image_h=0x7f080035;
+        public static final int kryptanium_hot_image_rl_w=0x7f080033;
+        public static final int kryptanium_hot_image_user_head_wh=0x7f080037;
+        public static final int kryptanium_hot_image_user_offset=0x7f080038;
+        public static final int kryptanium_hot_image_user_textview_offset=0x7f080039;
+        public static final int kryptanium_hot_image_user_th=0x7f080036;
+        public static final int kryptanium_hot_image_w=0x7f080034;
+        public static final int kryptanium_hot_image_wh=0x7f080032;
+        public static final int kryptanium_hot_item_image_head_spacing=0x7f080090;
+        public static final int kryptanium_hot_topic_th=0x7f080031;
+        public static final int kryptanium_icon_caution=0x7f0800c1;
+        public static final int kryptanium_icon_ktplay_h=0x7f0800bf;
+        public static final int kryptanium_icon_ktplay_w=0x7f0800be;
+        /**  sns size 
+         */
+        public static final int kryptanium_icon_spacing=0x7f08010b;
+        public static final int kryptanium_image_bottom_item_left_padding=0x7f080089;
+        public static final int kryptanium_image_bottom_item_right_padding=0x7f08008a;
+        public static final int kryptanium_image_detail_button_wh=0x7f080006;
+        public static final int kryptanium_image_item_btn_height=0x7f080084;
+        public static final int kryptanium_image_item_btn_height_big=0x7f080088;
+        public static final int kryptanium_image_item_btn_width=0x7f080083;
+        public static final int kryptanium_image_item_btn_width_big=0x7f080087;
+        public static final int kryptanium_image_item_height=0x7f080044;
+        public static final int kryptanium_image_item_width=0x7f080082;
+        public static final int kryptanium_image_oper_button_width=0x7f080081;
+        public static final int kryptanium_image_reply_listview_h=0x7f08005a;
+        public static final int kryptanium_image_topic_wh=0x7f080043;
+        public static final int kryptanium_img_detail_limit=0x7f080067;
+        /**  边距 
+         */
+        public static final int kryptanium_layout_margin=0x7f0800e8;
+        public static final int kryptanium_layout_marginLeft=0x7f0800ea;
+        public static final int kryptanium_layout_marginRight=0x7f0800eb;
+        public static final int kryptanium_layout_marginTop=0x7f0800e9;
+        public static final int kryptanium_layout_paddingLeft=0x7f0800e6;
+        public static final int kryptanium_layout_paddingRight=0x7f0800e7;
+        public static final int kryptanium_line_h=0x7f0800c0;
+        public static final int kryptanium_locked_login_channel_button_h=0x7f0800c6;
+        public static final int kryptanium_locked_login_channel_button_w=0x7f0800c5;
+        public static final int kryptanium_locked_login_channel_h=0x7f0800c4;
+        public static final int kryptanium_login_content_width=0x7f0801b6;
+        public static final int kryptanium_login_dialog_height=0x7f0801a8;
+        /**  独立登录模块窗口尺寸 
+ 独立登录模块窗口尺寸 
+         */
+        public static final int kryptanium_login_dialog_width=0x7f0801a7;
+        public static final int kryptanium_login_margin_top=0x7f08001e;
+        public static final int kryptanium_login_slipbutton_offset=0x7f08002f;
+        public static final int kryptanium_login_tip_head=0x7f080029;
+        public static final int kryptanium_loginout_dialog_title_h=0x7f0800c3;
+        public static final int kryptanium_loginout_dialog_w=0x7f0800c2;
+        public static final int kryptanium_long_press_dialog_text_padding=0x7f080024;
+        public static final int kryptanium_long_press_dialog_text_size=0x7f080023;
+        public static final int kryptanium_long_press_dialog_title_padding=0x7f080025;
+        public static final int kryptanium_long_press_dialog_title_text_size=0x7f080026;
+        public static final int kryptanium_long_press_dialog_width=0x7f080022;
+        /**  menu 
+         */
+        public static final int kryptanium_menu_select_image_height=0x7f0800f4;
+        /**  全部分类下拉框 
+         */
+        public static final int kryptanium_menudialog_layout_height=0x7f0800f8;
+        public static final int kryptanium_menudialog_layout_width=0x7f0800f9;
+        public static final int kryptanium_menudialog_select_image=0x7f0800b3;
+        public static final int kryptanium_menudialog_send_to_sns_h=0x7f0800b9;
+        public static final int kryptanium_menudialog_send_to_sns_icon_size_wh=0x7f0800ba;
+        public static final int kryptanium_more_game_image_icon_width_height=0x7f080197;
+        public static final int kryptanium_more_game_layout_height=0x7f080194;
+        public static final int kryptanium_more_game_layout_item_image_icon_width_height=0x7f080198;
+        public static final int kryptanium_more_game_layout_item_margin_Left_Right=0x7f080196;
+        public static final int kryptanium_more_game_layout_item_margin_Top_Bottom=0x7f080195;
+        /**  更多游戏 
+         */
+        public static final int kryptanium_more_game_layout_padding_Left_Right=0x7f080192;
+        public static final int kryptanium_more_game_layout_padding_Top_Bottom=0x7f080193;
+        public static final int kryptanium_more_game_textview_marginLeft=0x7f080199;
+        public static final int kryptanium_more_game_textview_marginTop=0x7f08019a;
+        public static final int kryptanium_moregame_icon_size_h=0x7f0800a8;
+        public static final int kryptanium_moregame_icon_size_w=0x7f0800a7;
+        /**  整个布局 
+         */
+        public static final int kryptanium_moregame_icon_width_height=0x7f0800d6;
+        public static final int kryptanium_msgbox_buttom_h=0x7f080093;
+        public static final int kryptanium_msgbox_buttom_w=0x7f080092;
+        public static final int kryptanium_msgbox_item_image_icon_width_height=0x7f080116;
+        public static final int kryptanium_msgbox_item_linealayout_margin_Top_bottom=0x7f080110;
+        public static final int kryptanium_msgbox_item_linealayout_margin_left=0x7f080111;
+        public static final int kryptanium_msgbox_item_linealayout_margin_right=0x7f080112;
+        public static final int kryptanium_msgbox_item_linealayout_padding_Top=0x7f080113;
+        public static final int kryptanium_msgbox_item_linealayout_padding_bottom=0x7f080114;
+        public static final int kryptanium_msgbox_item_linealayout_padding_left_right=0x7f080115;
+        public static final int kryptanium_msgbox_item_textview_down_height=0x7f080118;
+        public static final int kryptanium_msgbox_item_textview_down_width=0x7f080117;
+        /**  msgbox 收件箱 
+         */
+        public static final int kryptanium_msgbox_linealayout_padding=0x7f08010d;
+        public static final int kryptanium_msgbox_text_th=0x7f080020;
+        public static final int kryptanium_msgbox_textview_marginRight=0x7f08010e;
+        public static final int kryptanium_msgbox_textview_marginTop=0x7f08010f;
+        public static final int kryptanium_my_topic_content_layout_marginRight=0x7f080189;
+        public static final int kryptanium_my_topic_content_padding=0x7f08018b;
+        /**  我的讨论 
+         */
+        public static final int kryptanium_my_topic_layout_padding=0x7f080188;
+        public static final int kryptanium_my_topic_reply_arr_marginLeft=0x7f08018d;
+        public static final int kryptanium_my_topic_reply_arr_marginRight=0x7f08018e;
+        public static final int kryptanium_my_topic_reply_item_image_group_width_height=0x7f08018c;
+        public static final int kryptanium_my_topic_text_new_re_paddingTop=0x7f08018a;
+        public static final int kryptanium_new_msg_size=0x7f0800b1;
+        public static final int kryptanium_new_msg_stroke_size=0x7f0800b2;
+        /**  整个布局 
+         */
+        public static final int kryptanium_new_msg_width_height=0x7f0800d5;
+        public static final int kryptanium_number_bg_size_h=0x7f0800ac;
+        public static final int kryptanium_number_bg_size_w=0x7f0800ab;
+        public static final int kryptanium_praise_arrow_marginRight=0x7f080122;
+        public static final int kryptanium_praise_layout_margin=0x7f080120;
+        public static final int kryptanium_praise_layout_padding=0x7f080121;
+        public static final int kryptanium_praise_layout_paddingLeft=0x7f08011e;
+        public static final int kryptanium_praise_nickname_maxWidth=0x7f08011f;
+        /**  我的赞 
+         */
+        public static final int kryptanium_praise_text_linearlayout_marginRight=0x7f08011d;
+        public static final int kryptanium_profile_count_textview_wh=0x7f080046;
+        public static final int kryptanium_profile_left_spacing=0x7f08008b;
+        public static final int kryptanium_profile_onoff_size=0x7f080030;
+        public static final int kryptanium_profile_setting_build_th=0x7f08002c;
+        public static final int kryptanium_profile_setting_build_wh=0x7f08002b;
+        public static final int kryptanium_profile_setting_sex_th=0x7f08002e;
+        public static final int kryptanium_profile_setting_sex_wh=0x7f08002d;
+        public static final int kryptanium_profile_user_image_frame_h=0x7f08004b;
+        public static final int kryptanium_profile_user_image_h=0x7f08004a;
+        public static final int kryptanium_profile_user_image_spacing=0x7f08004d;
+        public static final int kryptanium_profile_user_image_text_h=0x7f08004c;
+        public static final int kryptanium_profile_user_th=0x7f080045;
+        public static final int kryptanium_register_pls_margin=0x7f0800a3;
+        public static final int kryptanium_replay_imageview_width_height=0x7f080179;
+        public static final int kryptanium_replay_item_imageview_delete_height=0x7f08017b;
+        /**  通用 
+         */
+        public static final int kryptanium_replay_item_imageview_delete_marginRght=0x7f08017c;
+        public static final int kryptanium_replay_item_layout_margin=0x7f080177;
+        /**  话题回复 
+         */
+        public static final int kryptanium_replay_item_layout_padding=0x7f080176;
+        public static final int kryptanium_replay_item_textview_createtime_marginLeft=0x7f08017a;
+        public static final int kryptanium_replay_item_textview_delete_marginRght=0x7f08017d;
+        public static final int kryptanium_replay_item_textview_delete_paddingRight=0x7f08017e;
+        public static final int kryptanium_replay_item_textview_like_marginRght=0x7f08017f;
+        public static final int kryptanium_replay_nickname_maxWidth=0x7f080178;
+        public static final int kryptanium_rightlayout_height=0x7f0800da;
+        public static final int kryptanium_rightlayout_width=0x7f0800d9;
+        public static final int kryptanium_share_dialog_gridview_columnWidth=0x7f080106;
+        public static final int kryptanium_share_dialog_gridview_horizontalSpacing=0x7f080107;
+        public static final int kryptanium_share_dialog_gridview_layout_margin=0x7f080105;
+        public static final int kryptanium_share_dialog_layout_height=0x7f080102;
+        /**  <dimen name="kryptanium_topic_dialog_layout_width">401dp</dimen> 
+ sns分享主题 
+ sns分享主题 
+         */
+        public static final int kryptanium_share_dialog_layout_width=0x7f080101;
+        public static final int kryptanium_share_dialog_sns_icon_marginBottom=0x7f080104;
+        public static final int kryptanium_share_dialog_sns_icon_marginTop=0x7f080103;
+        public static final int kryptanium_share_dialog_textview_cancel_marginBottom=0x7f080108;
+        public static final int kryptanium_share_dialog_textview_cancel_marginTop=0x7f080109;
+        public static final int kryptanium_share_dialog_textview_cancel_margin_Left_Right=0x7f08010a;
+        public static final int kryptanium_share_icon_width_height=0x7f08010c;
+        public static final int kryptanium_spacing=0x7f08006f;
+        public static final int kryptanium_spacing_big=0x7f080070;
+        public static final int kryptanium_spacing_small=0x7f08006e;
+        public static final int kryptanium_spacing_superbig=0x7f080071;
+        public static final int kryptanium_spacing_superbig_double=0x7f080072;
+        public static final int kryptanium_spacing_tiny=0x7f08006d;
+        public static final int kryptanium_strong_content_marginleft_samll=0x7f0801ae;
+        public static final int kryptanium_strong_content_marginright_samll=0x7f0801b0;
+        public static final int kryptanium_strong_content_margintop_samll=0x7f0801af;
+        public static final int kryptanium_strong_content_width_samll=0x7f0801ab;
+        public static final int kryptanium_strong_picture_marginleft_samll=0x7f0801ac;
+        public static final int kryptanium_strong_picture_margintop_samll=0x7f0801ad;
+        public static final int kryptanium_strong_picture_samll=0x7f0801aa;
+        public static final int kryptanium_tab_frame_image_marginTop=0x7f0800e4;
+        /**  close按钮 
+ close按钮 
+         */
+        public static final int kryptanium_tab_frame_image_width_height=0x7f0800e3;
+        public static final int kryptanium_tab_head_h=0x7f0800e2;
+        public static final int kryptanium_tab_head_w=0x7f0800e1;
+        public static final int kryptanium_tab_image=0x7f0800e0;
+        public static final int kryptanium_tab_layout_height=0x7f0800df;
+        /**  tab页 横向 
+ tab页 横向 
+         */
+        public static final int kryptanium_tab_layout_width=0x7f0800de;
+        /**  dxh 
+ 字体 
+         */
+        public static final int kryptanium_text_size_big=0x7f0800d1;
+        /**  字体 
+         */
+        public static final int kryptanium_text_size_large=0x7f0800d0;
+        public static final int kryptanium_text_size_medium=0x7f0800d3;
+        public static final int kryptanium_text_size_small=0x7f0800d4;
+        public static final int kryptanium_text_size_standard=0x7f0800d2;
+        public static final int kryptanium_thumbnailimage_wh=0x7f08007a;
+        public static final int kryptanium_thumbnailimage_wh_large=0x7f08007c;
+        public static final int kryptanium_thumbnailimage_wh_middle=0x7f08007b;
+        public static final int kryptanium_title_buttom_h=0x7f080095;
+        public static final int kryptanium_title_buttom_w=0x7f080094;
+        public static final int kryptanium_title_button_height=0x7f0800f0;
+        public static final int kryptanium_title_button_padding=0x7f0800f1;
+        public static final int kryptanium_title_button_width=0x7f0800ef;
+        /**  title 
+         */
+        public static final int kryptanium_title_icon_padding=0x7f0800ec;
+        public static final int kryptanium_title_layout_padding=0x7f0800ee;
+        public static final int kryptanium_title_prompt_margining=0x7f0800f3;
+        /**  未知 
+ 未知 
+         */
+        public static final int kryptanium_title_prompt_width_height=0x7f0800f2;
+        /**  title 
+         */
+        public static final int kryptanium_title_promt_marginLeft=0x7f0800ed;
+        /**  标题线 
+ 标题线 
+         */
+        public static final int kryptanium_titlebar_line_height=0x7f08015f;
+        public static final int kryptanium_titlebar_right_th=0x7f080086;
+        public static final int kryptanium_titlebar_right_wh=0x7f080085;
+        public static final int kryptanium_topic_add_image_wh=0x7f08003f;
+        public static final int kryptanium_topic_classify_menu_max=0x7f0800b5;
+        public static final int kryptanium_topic_classify_menu_max_h=0x7f0800b7;
+        public static final int kryptanium_topic_classify_menu_padding_top=0x7f0800b6;
+        public static final int kryptanium_topic_classify_text_max=0x7f0800b4;
+        public static final int kryptanium_topic_classify_title_h=0x7f0800b8;
+        public static final int kryptanium_topic_detail_button_wh=0x7f080040;
+        public static final int kryptanium_topic_detail_imageview_head_width_height=0x7f080182;
+        public static final int kryptanium_topic_detail_imageview_margin=0x7f080186;
+        public static final int kryptanium_topic_detail_layout_margin=0x7f080181;
+        /**  话题回复细节页面 
+         */
+        public static final int kryptanium_topic_detail_layout_marginBottom=0x7f080180;
+        public static final int kryptanium_topic_detail_textview_content_margin=0x7f080185;
+        public static final int kryptanium_topic_detail_textview_createtime_marginLeft=0x7f080187;
+        public static final int kryptanium_topic_detail_textview_marginLeft=0x7f080183;
+        public static final int kryptanium_topic_detail_textview_name_maxWidth=0x7f080184;
+        /**  发布主题PopupWindow尺寸 
+ 发布主题PopupWindow尺寸 
+         */
+        public static final int kryptanium_topic_dialog_layout_height=0x7f080100;
+        public static final int kryptanium_topic_image_wh=0x7f08003e;
+        public static final int kryptanium_topic_item_head_spacing=0x7f08008f;
+        public static final int kryptanium_topic_item_spacing_horizontal=0x7f08008d;
+        public static final int kryptanium_topic_item_spacing_vertical=0x7f08008e;
+        public static final int kryptanium_topic_reply_addbutton_layout_height=0x7f080174;
+        public static final int kryptanium_topic_reply_addbutton_layout_margin=0x7f080175;
+        public static final int kryptanium_topic_reply_button_wh=0x7f080041;
+        /**  话题reply页面 
+         */
+        public static final int kryptanium_topic_reply_lock_layout_margin=0x7f080171;
+        public static final int kryptanium_topic_reply_lock_layout_padding=0x7f080172;
+        public static final int kryptanium_topic_reply_lock_text_height=0x7f080173;
+        public static final int kryptanium_ui_element_unit=0x7f08001d;
+        /**  kt好友列表 
+         */
+        public static final int kryptanium_user_head_image_width_height=0x7f0801b1;
+        public static final int kryptanium_user_listview_spacing_big=0x7f0801b3;
+        public static final int kryptanium_user_listview_spacing_small=0x7f0801b2;
+        public static final int kryptanium_user_login__wifi_wh=0x7f080056;
+        public static final int kryptanium_user_login_boundary_spacing=0x7f080091;
+        public static final int kryptanium_user_login_edit_height=0x7f08005e;
+        public static final int kryptanium_user_login_edit_height_big=0x7f080060;
+        public static final int kryptanium_user_login_edit_height_middle=0x7f08005f;
+        public static final int kryptanium_user_login_edit_linearlayout_height=0x7f080062;
+        public static final int kryptanium_user_login_lan_h=0x7f080057;
+        public static final int kryptanium_user_login_slipbutton_wh=0x7f080061;
+        public static final int kryptanium_user_login_sns_icon_size_h=0x7f0800a6;
+        public static final int kryptanium_user_login_sns_icon_size_w=0x7f0800a5;
+        public static final int kryptanium_user_login_sns_margin=0x7f080059;
+        public static final int kryptanium_user_login_wh=0x7f080055;
+        public static final int kryptanium_user_login_wh_new=0x7f08005b;
+        public static final int kryptanium_user_login_wh_padding=0x7f08005c;
+        public static final int kryptanium_user_login_wh_padding_small=0x7f08005d;
+        public static final int kryptanium_user_login_wh_port=0x7f0801b9;
+        public static final int kryptanium_user_profile_big=0x7f080048;
+        public static final int kryptanium_user_profile_button_layout_count_textview_paddingLeft=0x7f080151;
+        public static final int kryptanium_user_profile_button_layout_count_textview_title_marginLeft=0x7f0801c1;
+        /**  用户跟踪button 部分  通用   比如我的讨论    我的称赞 
+ 用户跟踪button 部分  共同   比如我的讨论    我的称赞 
+         */
+        public static final int kryptanium_user_profile_button_layout_height=0x7f08014e;
+        public static final int kryptanium_user_profile_button_layout_imageview_marginLeft=0x7f0801c0;
+        public static final int kryptanium_user_profile_button_layout_imageview_title_marginLeft=0x7f0801bf;
+        public static final int kryptanium_user_profile_button_layout_new_msg_marginLeft=0x7f080153;
+        public static final int kryptanium_user_profile_button_layout_new_msg_width_height=0x7f080152;
+        public static final int kryptanium_user_profile_button_layout_paddingBottom=0x7f08014f;
+        public static final int kryptanium_user_profile_button_layout_paddingTop=0x7f080150;
+        public static final int kryptanium_user_profile_games_listview_height=0x7f080156;
+        public static final int kryptanium_user_profile_games_listview_marginBottom=0x7f080157;
+        /**  用户游戏  部分 
+ 用户游戏  部分 
+         */
+        public static final int kryptanium_user_profile_games_textview_title_marginBottom=0x7f080154;
+        public static final int kryptanium_user_profile_games_textview_title_marginTop=0x7f080155;
+        public static final int kryptanium_user_profile_listview_spacing=0x7f080158;
+        public static final int kryptanium_user_profile_mid=0x7f080049;
+        public static final int kryptanium_user_profile_own_th=0x7f0801ba;
+        /**  退出登陆 
+ 退出登陆 
+         */
+        public static final int kryptanium_user_profile_set_exit_layout_height=0x7f080167;
+        public static final int kryptanium_user_profile_set_flag_marginLeft=0x7f08015c;
+        public static final int kryptanium_user_profile_set_flag_marginRight=0x7f08015d;
+        public static final int kryptanium_user_profile_set_flag_width_height=0x7f08015b;
+        /**  设置个人头像布局 
+ 设置个人头像布局 
+         */
+        public static final int kryptanium_user_profile_set_head_layout_height=0x7f080163;
+        public static final int kryptanium_user_profile_set_headimage_image_width_height=0x7f080164;
+        public static final int kryptanium_user_profile_set_headimage_imageview_marginRight=0x7f0801c2;
+        public static final int kryptanium_user_profile_set_headimage_imageview_paddingRight=0x7f080166;
+        public static final int kryptanium_user_profile_set_headimage_imageview_width_height=0x7f080165;
+        /**  个人设置页面 
+ 设置全局 
+         */
+        public static final int kryptanium_user_profile_set_item_layout_height=0x7f08015a;
+        public static final int kryptanium_user_profile_set_status_marginRight=0x7f08015e;
+        /**  基本信息tilte 
+ 基本信息tilte 
+         */
+        public static final int kryptanium_user_profile_set_text_Information_height=0x7f080162;
+        public static final int kryptanium_user_profile_set_text_exit_height=0x7f0801c4;
+        public static final int kryptanium_user_profile_set_text_exit_width=0x7f0801c3;
+        public static final int kryptanium_user_profile_userinfo_head_image_margin=0x7f080149;
+        public static final int kryptanium_user_profile_userinfo_head_image_width_height=0x7f080148;
+        /**  个人用户页面 
+ 用户信息  部分 
+ 个人用户页面 
+ 用户信息  部分 
+         */
+        public static final int kryptanium_user_profile_userinfo_layout_height=0x7f080147;
+        public static final int kryptanium_user_profile_userinfo_nickname_textview_maxWidth=0x7f08014b;
+        public static final int kryptanium_user_profile_userinfo_nickname_textview_paddingLeft=0x7f08014c;
+        public static final int kryptanium_user_profile_userinfo_nickname_textview_paddingTop=0x7f08014d;
+        public static final int kryptanium_user_profile_userinfo_sex_image_marginLeft=0x7f08014a;
+        public static final int kryptanium_user_register_h=0x7f080058;
+        public static final int kryptanium_user_set_info_edittext_height=0x7f08019e;
+        public static final int kryptanium_user_set_info_edittext_padding=0x7f08019f;
+        public static final int kryptanium_user_set_info_layout_paddingTop=0x7f08019c;
+        /**  安全设置  密码修改页面 
+         */
+        public static final int kryptanium_user_set_info_layout_width=0x7f08019b;
+        public static final int kryptanium_user_set_info_textview_marginTop=0x7f0801a0;
+        public static final int kryptanium_user_set_info_title_describe_marginBottom=0x7f08019d;
+        public static final int kryptanium_user_topic_foot_layout_height=0x7f080170;
+        /**  foot 部分 
+         */
+        public static final int kryptanium_user_topic_foot_line_height=0x7f08016f;
+        public static final int kryptanium_user_topic_headtitle_classify_layout_height=0x7f080169;
+        /**  话题页面 
+ 标题部分 
+         */
+        public static final int kryptanium_user_topic_headtitle_classify_layout_width=0x7f080168;
+        public static final int kryptanium_user_topic_headtitle_imageview_width_height=0x7f08016d;
+        public static final int kryptanium_user_topic_headtitle_textview_marginLeft=0x7f08016a;
+        public static final int kryptanium_user_topic_headtitle_textview_marginRight=0x7f08016b;
+        public static final int kryptanium_user_topic_headtitle_textview_maxWidth=0x7f08016c;
+        /**  listview 部分 
+         */
+        public static final int kryptanium_user_topic_listview_dividerHeight=0x7f08016e;
+        public static final int kryptanium_users_group_ht=0x7f08007d;
+        public static final int kryptanium_users_head_wh=0x7f080042;
+        public static final int kryptanium_users_tophead_wh=0x7f08003d;
+        public static final int kryptanium_users_weight_list=0x7f08003a;
+        public static final int kryptanium_users_weight_list_spacing=0x7f08003c;
     }
     public static final class drawable {
         public static final int icon=0x7f020000;
+        public static final int kryptanium_2g3g_choose_backgrount=0x7f020001;
+        public static final int kryptanium_360logbtn=0x7f020002;
+        public static final int kryptanium_360logbtn_src=0x7f020003;
+        public static final int kryptanium_360logbtn_text_bg=0x7f020004;
+        public static final int kryptanium_addfriend_icon_bg=0x7f020005;
+        public static final int kryptanium_block_bg=0x7f020006;
+        public static final int kryptanium_btn_download_icon=0x7f020007;
+        public static final int kryptanium_button_add_image_icon=0x7f020008;
+        public static final int kryptanium_button_addfriend_icon=0x7f020009;
+        public static final int kryptanium_button_bg=0x7f02000a;
+        public static final int kryptanium_button_blue_n=0x7f02000b;
+        public static final int kryptanium_button_camera=0x7f02000c;
+        public static final int kryptanium_button_cancel=0x7f02000d;
+        public static final int kryptanium_button_clear_icon=0x7f02000e;
+        public static final int kryptanium_button_delete_icon=0x7f02000f;
+        public static final int kryptanium_button_disscusion_icon=0x7f020010;
+        public static final int kryptanium_button_disscusion_normal=0x7f020011;
+        public static final int kryptanium_button_friend_added_icon=0x7f020012;
+        public static final int kryptanium_button_fullscreen_close_icon=0x7f020013;
+        public static final int kryptanium_button_fullscreen_close_normal=0x7f020014;
+        public static final int kryptanium_button_many_words_n=0x7f020015;
+        public static final int kryptanium_button_menu_cancel=0x7f020016;
+        public static final int kryptanium_button_red=0x7f020017;
+        public static final int kryptanium_button_red_n=0x7f020018;
+        public static final int kryptanium_button_report_bg=0x7f020019;
+        public static final int kryptanium_button_report_pressed=0x7f02001a;
+        public static final int kryptanium_button_save_bg_n=0x7f02001b;
+        public static final int kryptanium_button_save_icon=0x7f02001c;
+        public static final int kryptanium_button_title_icon=0x7f02001d;
+        public static final int kryptanium_button_title_n=0x7f02001e;
+        public static final int kryptanium_button_to_addfriend_page=0x7f02001f;
+        public static final int kryptanium_button_two_words=0x7f020020;
+        public static final int kryptanium_button_warning=0x7f020021;
+        public static final int kryptanium_cancel_bg_black_alpha=0x7f020022;
+        public static final int kryptanium_check_false=0x7f020023;
+        public static final int kryptanium_check_true=0x7f020024;
+        public static final int kryptanium_checkbox=0x7f020025;
+        public static final int kryptanium_checkbox_circle=0x7f020026;
+        public static final int kryptanium_clear_input_button=0x7f020027;
+        public static final int kryptanium_close_dialog_img=0x7f020028;
+        public static final int kryptanium_close_icon=0x7f020029;
+        public static final int kryptanium_close_reply=0x7f02002a;
+        public static final int kryptanium_colorbg_adapter_item_image=0x7f02002b;
+        public static final int kryptanium_colorbg_black=0x7f02002c;
+        public static final int kryptanium_colorbg_black_close_dialog=0x7f02002d;
+        public static final int kryptanium_colorbg_blue=0x7f02002e;
+        public static final int kryptanium_colorbg_blue_btn_title=0x7f02002f;
+        public static final int kryptanium_colorbg_blue_disscusion=0x7f020030;
+        public static final int kryptanium_colorbg_classify_gray=0x7f020031;
+        public static final int kryptanium_colorbg_darkgray=0x7f020032;
+        public static final int kryptanium_colorbg_gray=0x7f020033;
+        public static final int kryptanium_colorbg_green=0x7f020034;
+        public static final int kryptanium_colorbg_green_rounded=0x7f020035;
+        public static final int kryptanium_colorbg_little_gray=0x7f020036;
+        public static final int kryptanium_colorbg_little_yellow=0x7f020037;
+        public static final int kryptanium_colorbg_orange=0x7f020038;
+        public static final int kryptanium_colorbg_orange_like=0x7f020039;
+        public static final int kryptanium_colorbg_purple=0x7f02003a;
+        public static final int kryptanium_colorbg_red=0x7f02003b;
+        public static final int kryptanium_colorbg_silvery=0x7f02003c;
+        public static final int kryptanium_colorbg_silvery_btn_add_image=0x7f02003d;
+        public static final int kryptanium_colorbg_silvery_btn_title=0x7f02003e;
+        public static final int kryptanium_colorbg_tran_black=0x7f02003f;
+        public static final int kryptanium_colorbg_tran_black_btn_close=0x7f020040;
+        public static final int kryptanium_colorbg_tran_black_btn_delete=0x7f020041;
+        public static final int kryptanium_colorbg_tran_black_btn_save=0x7f020042;
+        public static final int kryptanium_colorbg_white=0x7f020043;
+        public static final int kryptanium_colorbg_white_alpha=0x7f020044;
+        public static final int kryptanium_colorbg_white_select=0x7f020045;
+        public static final int kryptanium_colorbg_white_with_border=0x7f020046;
+        public static final int kryptanium_colorbg_white_with_border_incomplete=0x7f020047;
+        public static final int kryptanium_colorbg_white_with_border_no_rounded=0x7f020048;
+        public static final int kryptanium_colorbg_white_with_border_search=0x7f020049;
+        public static final int kryptanium_colorbg_yellow=0x7f02004a;
+        public static final int kryptanium_corner_bg_black_alpha=0x7f02004b;
+        public static final int kryptanium_corner_bg_gray=0x7f02004c;
+        public static final int kryptanium_corner_bg_gray_dx=0x7f02004d;
+        public static final int kryptanium_corner_bg_white=0x7f02004e;
+        public static final int kryptanium_corner_bg_white_dx=0x7f02004f;
+        public static final int kryptanium_corner_edittext_bg_gray_dx=0x7f020050;
+        public static final int kryptanium_corner_imgcon_bg_gray_dx=0x7f020051;
+        public static final int kryptanium_corner_menu_bg_white_dx=0x7f020052;
+        public static final int kryptanium_default_icon_app=0x7f020053;
+        public static final int kryptanium_default_icon_app_fitxy=0x7f020054;
+        public static final int kryptanium_default_icon_head=0x7f020055;
+        public static final int kryptanium_default_icon_image=0x7f020056;
+        public static final int kryptanium_default_icon_image_small=0x7f020057;
+        public static final int kryptanium_default_icon_oval_app=0x7f020058;
+        public static final int kryptanium_dialog_bg=0x7f020059;
+        public static final int kryptanium_dropdown_arrow=0x7f02005a;
+        public static final int kryptanium_female=0x7f02005b;
+        public static final int kryptanium_flag_back=0x7f02005c;
+        public static final int kryptanium_flag_caution=0x7f02005d;
+        public static final int kryptanium_flag_friend_invite_already=0x7f02005e;
+        public static final int kryptanium_flag_friend_invite_normal=0x7f02005f;
+        public static final int kryptanium_flag_friend_invite_selected=0x7f020060;
+        public static final int kryptanium_footer_retry=0x7f020061;
+        public static final int kryptanium_forget_sec=0x7f020062;
+        public static final int kryptanium_form_sina=0x7f020063;
+        public static final int kryptanium_frame_contex_left=0x7f020064;
+        public static final int kryptanium_frame_contex_padding=0x7f020065;
+        public static final int kryptanium_frame_contex_padding_left=0x7f020066;
+        public static final int kryptanium_frame_contex_padding_port=0x7f020067;
+        public static final int kryptanium_frame_contex_padding_right=0x7f020068;
+        public static final int kryptanium_frame_contex_port=0x7f020069;
+        public static final int kryptanium_frame_contex_right=0x7f02006a;
+        public static final int kryptanium_frame_fullscreen_bg=0x7f02006b;
+        public static final int kryptanium_frame_menu_left=0x7f02006c;
+        public static final int kryptanium_frame_menu_port=0x7f02006d;
+        public static final int kryptanium_frame_menu_right=0x7f02006e;
+        public static final int kryptanium_friend_activities_login=0x7f02006f;
+        public static final int kryptanium_friend_requests=0x7f020070;
+        public static final int kryptanium_friends_login=0x7f020071;
+        public static final int kryptanium_frineds_contacts=0x7f020072;
+        public static final int kryptanium_frineds_kt=0x7f020073;
+        public static final int kryptanium_frineds_nearby=0x7f020074;
+        public static final int kryptanium_frineds_red_point=0x7f020075;
+        public static final int kryptanium_from_game=0x7f020076;
+        public static final int kryptanium_game_inform_bg=0x7f020077;
+        public static final int kryptanium_game_inform_close=0x7f020078;
+        public static final int kryptanium_his_friend_icon=0x7f020079;
+        public static final int kryptanium_home_msg_icon=0x7f02007a;
+        public static final int kryptanium_hot_topic_backgrount=0x7f02007b;
+        public static final int kryptanium_hot_topic_dot_normal_backgrount=0x7f02007c;
+        public static final int kryptanium_hot_topic_dot_select_backgrount=0x7f02007d;
+        public static final int kryptanium_hotgame_btn_n=0x7f02007e;
+        public static final int kryptanium_icon_ktplay=0x7f02007f;
+        public static final int kryptanium_icon_openfile=0x7f020080;
+        public static final int kryptanium_icon_takephoto=0x7f020081;
+        public static final int kryptanium_leaderboard_log=0x7f020082;
+        public static final int kryptanium_leaderboard_login_facebook=0x7f020083;
+        public static final int kryptanium_leaderboard_login_sina=0x7f020084;
+        public static final int kryptanium_leaderboard_top_1=0x7f020085;
+        public static final int kryptanium_leaderboard_top_2=0x7f020086;
+        public static final int kryptanium_leaderboard_top_3=0x7f020087;
+        public static final int kryptanium_login_dialog_bg=0x7f020088;
+        public static final int kryptanium_male=0x7f020089;
+        public static final int kryptanium_menudialog_bg=0x7f02008a;
+        public static final int kryptanium_message_box_icon=0x7f02008b;
+        public static final int kryptanium_message_info=0x7f02008c;
+        public static final int kryptanium_new_msg=0x7f02008d;
+        public static final int kryptanium_number_bg=0x7f02008e;
+        public static final int kryptanium_open_reply=0x7f02008f;
+        public static final int kryptanium_own_title_button_left=0x7f020090;
+        public static final int kryptanium_own_title_button_right=0x7f020091;
+        public static final int kryptanium_placeholder_icon=0x7f020092;
+        public static final int kryptanium_players=0x7f020093;
+        public static final int kryptanium_praise=0x7f020094;
+        public static final int kryptanium_progress_dx=0x7f020095;
+        public static final int kryptanium_pull_refreshview_arrow=0x7f020096;
+        public static final int kryptanium_read_content_bt=0x7f020097;
+        public static final int kryptanium_read_content_left_bt=0x7f020098;
+        public static final int kryptanium_register=0x7f020099;
+        public static final int kryptanium_reply_bg=0x7f02009a;
+        public static final int kryptanium_reply_content_bt=0x7f02009b;
+        public static final int kryptanium_reward_button=0x7f02009c;
+        public static final int kryptanium_right_arrow=0x7f02009d;
+        public static final int kryptanium_right_content_backgrount=0x7f02009e;
+        public static final int kryptanium_send_to_sns_btn_icon=0x7f02009f;
+        public static final int kryptanium_setting_btn_icon=0x7f0200a0;
+        public static final int kryptanium_sns_selected=0x7f0200a1;
+        public static final int kryptanium_standalone_login_arrow_right=0x7f0200a2;
+        public static final int kryptanium_standalone_login_gamelogo=0x7f0200a3;
+        public static final int kryptanium_standalone_login_help=0x7f0200a4;
+        public static final int kryptanium_standalone_login_ktlogo=0x7f0200a5;
+        public static final int kryptanium_standalone_login_tip=0x7f0200a6;
+        public static final int kryptanium_standlone_login_button=0x7f0200a7;
+        public static final int kryptanium_standlone_login_frame=0x7f0200a8;
+        public static final int kryptanium_standlone_login_input=0x7f0200a9;
+        public static final int kryptanium_strong_submit_icon=0x7f0200aa;
+        public static final int kryptanium_tab_bg=0x7f0200ab;
+        public static final int kryptanium_tab_transparent_bg=0x7f0200ac;
+        public static final int kryptanium_tabicon_msgbox=0x7f0200ad;
+        public static final int kryptanium_tabindicator_button_hot=0x7f0200ae;
+        public static final int kryptanium_tabindicator_button_image=0x7f0200af;
+        public static final int kryptanium_tabindicator_button_profile_login=0x7f0200b0;
+        public static final int kryptanium_tabindicator_button_topic=0x7f0200b1;
+        public static final int kryptanium_tabindicator_button_users=0x7f0200b2;
+        public static final int kryptanium_textfield_bg=0x7f0200b3;
+        public static final int kryptanium_tip_email=0x7f0200b4;
+        public static final int kryptanium_tip_head=0x7f0200b5;
+        public static final int kryptanium_title_next=0x7f0200b6;
+        public static final int kryptanium_title_pro=0x7f0200b7;
+        public static final int kryptanium_titlebar_button_back_icon=0x7f0200b8;
+        public static final int kryptanium_titlebar_line=0x7f0200b9;
+        public static final int kryptanium_topic=0x7f0200ba;
+        public static final int kryptanium_topic_add_button=0x7f0200bb;
+        public static final int kryptanium_topic_category_bg=0x7f0200bc;
+        public static final int kryptanium_topic_classify_text_down=0x7f0200bd;
+        public static final int kryptanium_topic_classify_text_down_selected=0x7f0200be;
+        public static final int kryptanium_topic_classify_text_up=0x7f0200bf;
+        public static final int kryptanium_topic_detail_button_delete=0x7f0200c0;
+        public static final int kryptanium_topic_detail_button_like=0x7f0200c1;
+        public static final int kryptanium_topic_detail_button_report=0x7f0200c2;
+        public static final int kryptanium_topic_like_icon=0x7f0200c3;
+        public static final int kryptanium_topic_search_button_bg_n=0x7f0200c4;
+        public static final int kryptanium_topic_search_text_bg=0x7f0200c5;
+        public static final int kryptanium_topic_search_text_title=0x7f0200c6;
+        public static final int kryptanium_userhead_like=0x7f0200c7;
+        public static final int kryptanium_warning=0x7f0200c8;
+        public static final int ktplay_plugin_sns_button_close=0x7f0200c9;
+        public static final int ktplay_plugin_sns_button_close_normal=0x7f0200ca;
+        public static final int ktplay_plugin_sns_button_close_pressed=0x7f0200cb;
+        public static final int ktplay_plugin_sns_loading=0x7f0200cc;
+        public static final int ktplay_plugin_sns_loading_bg=0x7f0200cd;
+        public static final int ktplay_plugin_sns_null=0x7f0200ce;
+        public static final int ktplay_roundbg_dark=0x7f0200cf;
+    }
+    public static final class id {
+        public static final int game_description=0x7f09003e;
+        public static final int game_donwload_bt=0x7f09003b;
+        public static final int game_iocn=0x7f09003c;
+        public static final int game_screenshots=0x7f09003f;
+        public static final int game_title=0x7f09003d;
+        public static final int host=0x7f090123;
+        public static final int is_selected=0x7f090038;
+        public static final int ishascount=0x7f090146;
+        public static final int kryptanium_adapter_item_time=0x7f090070;
+        public static final int kryptanium_add_friends=0x7f0900fc;
+        public static final int kryptanium_add_friends_action=0x7f090098;
+        public static final int kryptanium_addfriend_foot_button=0x7f090097;
+        public static final int kryptanium_addfriend_kt_title_line=0x7f090094;
+        public static final int kryptanium_addfriend_nearby_title=0x7f090093;
+        public static final int kryptanium_addfriend_sns_title_line=0x7f0900a0;
+        public static final int kryptanium_addfromsns=0x7f0900e2;
+        public static final int kryptanium_addfromsns_invite_more=0x7f0900e4;
+        public static final int kryptanium_addfromsns_list=0x7f0900e3;
+        public static final int kryptanium_arrow_flag=0x7f090017;
+        public static final int kryptanium_button_test=0x7f090131;
+        public static final int kryptanium_button_test2=0x7f090132;
+        public static final int kryptanium_close_dialog=0x7f0900da;
+        public static final int kryptanium_complete_userprofile_avatar=0x7f0900ae;
+        public static final int kryptanium_complete_userprofile_done=0x7f0900b2;
+        public static final int kryptanium_complete_userprofile_gender=0x7f0900b0;
+        public static final int kryptanium_complete_userprofile_gender_text=0x7f0900b1;
+        public static final int kryptanium_complete_userprofile_nickname=0x7f0900af;
+        public static final int kryptanium_confrim=0x7f0901f2;
+        public static final int kryptanium_create_topic_image_open_all=0x7f0900ba;
+        public static final int kryptanium_create_topic_scrollview=0x7f0900bd;
+        public static final int kryptanium_create_topicreply_addbutton=0x7f0900b9;
+        public static final int kryptanium_create_topicreply_content=0x7f0900b5;
+        public static final int kryptanium_create_topicreply_image_group=0x7f0900b8;
+        public static final int kryptanium_create_topicreply_image_open_all=0x7f0900b4;
+        public static final int kryptanium_create_topicreply_image_open_group=0x7f0900b6;
+        public static final int kryptanium_create_topicreply_scrollview=0x7f0900b7;
+        public static final int kryptanium_createtopic_addbutton=0x7f0900bf;
+        public static final int kryptanium_createtopic_content=0x7f0900bb;
+        public static final int kryptanium_createtopic_image_group=0x7f0900be;
+        public static final int kryptanium_createtopic_image_open_group=0x7f0900bc;
+        public static final int kryptanium_dialog_contentview=0x7f090009;
+        public static final int kryptanium_dialog_message=0x7f090008;
+        public static final int kryptanium_dialog_negative_button=0x7f09000b;
+        public static final int kryptanium_dialog_positive_button=0x7f09000a;
+        public static final int kryptanium_dialog_title=0x7f090007;
+        /**  Custom Dialog 
+         */
+        public static final int kryptanium_dialog_title_container=0x7f090006;
+        public static final int kryptanium_dialog_wait_parentview=0x7f0900c0;
+        public static final int kryptanium_dialog_wait_progressbar=0x7f0900c1;
+        public static final int kryptanium_dialog_wait_text=0x7f0900c2;
+        public static final int kryptanium_discussion_lastest_reply=0x7f090088;
+        public static final int kryptanium_flag_caution_text=0x7f090136;
+        public static final int kryptanium_follow_button=0x7f0901cd;
+        public static final int kryptanium_footerview_progressbar=0x7f090090;
+        public static final int kryptanium_footerview_retry_button=0x7f090092;
+        public static final int kryptanium_footerview_text=0x7f090091;
+        public static final int kryptanium_frame_content=0x7f0900db;
+        public static final int kryptanium_frame_content_body=0x7f0900dc;
+        public static final int kryptanium_frame_content_body_detailedness=0x7f0900dd;
+        public static final int kryptanium_frame_game_inform=0x7f0900d3;
+        public static final int kryptanium_frame_game_inform_close=0x7f0900d5;
+        public static final int kryptanium_frame_game_inform_content=0x7f0900d7;
+        public static final int kryptanium_frame_game_inform_details=0x7f0900d8;
+        public static final int kryptanium_frame_game_inform_icon=0x7f0900d4;
+        public static final int kryptanium_frame_game_inform_title=0x7f0900d6;
+        public static final int kryptanium_friend_add_from_layout=0x7f090035;
+        public static final int kryptanium_friend_add_from_sns_description=0x7f090037;
+        public static final int kryptanium_friend_add_from_sns_icon=0x7f090036;
+        public static final int kryptanium_friend_invite_flag=0x7f09001a;
+        public static final int kryptanium_friend_kt_invite_finish=0x7f090020;
+        public static final int kryptanium_friend_kt_invite_finish_layout=0x7f09001c;
+        public static final int kryptanium_friend_kt_item_layout=0x7f090018;
+        public static final int kryptanium_friend_login_or_register_button_layout=0x7f0900ef;
+        public static final int kryptanium_friend_login_or_register_textview=0x7f0900f0;
+        public static final int kryptanium_friend_request_item_buttonlayout=0x7f090021;
+        public static final int kryptanium_friend_sns_invite_finish=0x7f090026;
+        public static final int kryptanium_friend_sns_invite_flag=0x7f090025;
+        public static final int kryptanium_friend_splashscreen_addfriend_text=0x7f0900f3;
+        public static final int kryptanium_friendrequest_listview=0x7f0900f4;
+        public static final int kryptanium_friends_action_nohascount=0x7f0900e8;
+        public static final int kryptanium_friends_contacts_friends_layout=0x7f0900ee;
+        public static final int kryptanium_friends_kt_friends_layout=0x7f0900ec;
+        public static final int kryptanium_friends_listview=0x7f0900fe;
+        public static final int kryptanium_friends_login_button=0x7f0900f1;
+        public static final int kryptanium_friends_login_sns_type=0x7f0900f2;
+        public static final int kryptanium_friends_nearby_friends_layout=0x7f0900ed;
+        public static final int kryptanium_friends_repuest_agree=0x7f090024;
+        public static final int kryptanium_friends_repuest_refuse=0x7f090023;
+        public static final int kryptanium_friends_search_button=0x7f09009a;
+        public static final int kryptanium_friends_search_clear=0x7f09009b;
+        public static final int kryptanium_friends_search_layout=0x7f090099;
+        public static final int kryptanium_friends_search_text=0x7f09009d;
+        public static final int kryptanium_friends_search_text_title=0x7f09009c;
+        public static final int kryptanium_friends_unbid_layout=0x7f09009e;
+        public static final int kryptanium_friends_unbid_title=0x7f09009f;
+        public static final int kryptanium_friendspage_friends_request_layout=0x7f0900f6;
+        public static final int kryptanium_friendspage_friends_request_view=0x7f0900f5;
+        public static final int kryptanium_fullscreen_image=0x7f090105;
+        public static final int kryptanium_game_relogin=0x7f0901c1;
+        public static final int kryptanium_game_relogin_info=0x7f0901c0;
+        public static final int kryptanium_home_news=0x7f090116;
+        public static final int kryptanium_hot_game_desc=0x7f09010f;
+        public static final int kryptanium_hot_game_donwload=0x7f09010c;
+        public static final int kryptanium_hot_game_name=0x7f09010e;
+        public static final int kryptanium_hot_game_portrait=0x7f09010d;
+        public static final int kryptanium_hot_gome_button=0x7f090122;
+        public static final int kryptanium_hot_item_image=0x7f090084;
+        public static final int kryptanium_hot_item_image_bg=0x7f090109;
+        public static final int kryptanium_hot_item_image_head=0x7f09010a;
+        public static final int kryptanium_hot_item_image_msg=0x7f09010b;
+        public static final int kryptanium_hot_item_player_iv=0x7f090039;
+        public static final int kryptanium_hot_lvimage=0x7f09011e;
+        public static final int kryptanium_hot_lvimage_fl=0x7f09011d;
+        public static final int kryptanium_hot_lvplayer=0x7f090121;
+        public static final int kryptanium_hot_messagebox=0x7f090119;
+        public static final int kryptanium_hot_player_top5=0x7f0901f4;
+        public static final int kryptanium_hot_playertitle=0x7f090120;
+        public static final int kryptanium_hot_rightbuttom=0x7f090118;
+        public static final int kryptanium_hot_topic_container=0x7f09011a;
+        public static final int kryptanium_hot_topic_dot=0x7f09011c;
+        public static final int kryptanium_hot_topic_gallery=0x7f09011b;
+        public static final int kryptanium_hot_topic_head_iv=0x7f090111;
+        public static final int kryptanium_hot_topic_head_tvname=0x7f090112;
+        public static final int kryptanium_hot_topic_rl=0x7f090110;
+        public static final int kryptanium_hot_topic_rl_bottom=0x7f09011f;
+        public static final int kryptanium_hot_topic_tvcomment_content=0x7f090115;
+        public static final int kryptanium_hot_topic_tvcomment_replay=0x7f090113;
+        public static final int kryptanium_hot_topic_tvcomment_time=0x7f090114;
+        public static final int kryptanium_hot_user_count=0x7f090117;
+        public static final int kryptanium_image_author_avatar=0x7f090044;
+        public static final int kryptanium_image_author_name=0x7f090045;
+        public static final int kryptanium_image_description=0x7f090047;
+        public static final int kryptanium_image_fullscreen_close_button=0x7f090107;
+        public static final int kryptanium_image_imageview=0x7f090041;
+        public static final int kryptanium_image_imageview_rl=0x7f090040;
+        public static final int kryptanium_image_info_group=0x7f090042;
+        public static final int kryptanium_image_info_group_1=0x7f090043;
+        public static final int kryptanium_image_likeview_count=0x7f090086;
+        public static final int kryptanium_image_publishtime=0x7f090046;
+        public static final int kryptanium_image_save_button=0x7f090106;
+        public static final int kryptanium_image_thumbnail=0x7f0900a5;
+        public static final int kryptanium_image_thumbnail_delete=0x7f0900a6;
+        public static final int kryptanium_image_thumbnail_layout=0x7f0900a4;
+        public static final int kryptanium_image_topic_count=0x7f090085;
+        public static final int kryptanium_imagepreview_loader=0x7f090016;
+        public static final int kryptanium_include_show_rl=0x7f090108;
+        public static final int kryptanium_info_page_text=0x7f09012e;
+        public static final int kryptanium_invite_contact_nickname=0x7f090053;
+        public static final int kryptanium_invite_contact_phonenumber=0x7f090054;
+        public static final int kryptanium_invite_contact_status=0x7f090055;
+        public static final int kryptanium_invite_contact_status_layout=0x7f090052;
+        public static final int kryptanium_invite_contacts_listview=0x7f09012f;
+        public static final int kryptanium_inviteuser_avatar=0x7f090057;
+        public static final int kryptanium_inviteuser_check=0x7f090056;
+        public static final int kryptanium_inviteuser_distance=0x7f09005c;
+        public static final int kryptanium_inviteuser_gender=0x7f090058;
+        public static final int kryptanium_inviteuser_likes=0x7f09005a;
+        public static final int kryptanium_inviteuser_nickname=0x7f090059;
+        public static final int kryptanium_inviteuser_status=0x7f09005b;
+        public static final int kryptanium_ishasfriends=0x7f090096;
+        public static final int kryptanium_ishasfriends_ll=0x7f0900fb;
+        public static final int kryptanium_ishasrequests=0x7f0900f7;
+        public static final int kryptanium_item_image=0x7f090083;
+        public static final int kryptanium_kt_image_like=0x7f090049;
+        public static final int kryptanium_kt_image_reply_count=0x7f090048;
+        public static final int kryptanium_leaderboard_add_friend=0x7f090019;
+        public static final int kryptanium_leaderboard_add_friend1=0x7f09003a;
+        public static final int kryptanium_leaderboard_count=0x7f090076;
+        public static final int kryptanium_leaderboard_footer_add=0x7f090140;
+        public static final int kryptanium_leaderboard_footer_next_page=0x7f090141;
+        public static final int kryptanium_leaderboard_footer_other=0x7f09013f;
+        public static final int kryptanium_leaderboard_footer_previous_page=0x7f090142;
+        public static final int kryptanium_leaderboard_footer_title=0x7f09013e;
+        public static final int kryptanium_leaderboard_friend_info=0x7f09001b;
+        public static final int kryptanium_leaderboard_friend_info_content=0x7f090022;
+        public static final int kryptanium_leaderboard_friend_info_hand_image=0x7f09001d;
+        public static final int kryptanium_leaderboard_friend_info_nickname=0x7f09001e;
+        public static final int kryptanium_leaderboard_friend_played_games=0x7f09001f;
+        public static final int kryptanium_leaderboard_friend_title=0x7f090027;
+        public static final int kryptanium_leaderboard_head_image=0x7f09005f;
+        public static final int kryptanium_leaderboard_listview=0x7f090145;
+        public static final int kryptanium_leaderboard_nickname=0x7f090060;
+        public static final int kryptanium_leaderboard_number=0x7f09005d;
+        public static final int kryptanium_leaderboard_score=0x7f09005e;
+        public static final int kryptanium_leaderboard_title_image=0x7f090143;
+        public static final int kryptanium_leaderboard_title_textview=0x7f090144;
+        public static final int kryptanium_listview_layout=0x7f0900f8;
+        public static final int kryptanium_login_channel_imageview=0x7f0901bd;
+        public static final int kryptanium_login_channel_imageview_textview=0x7f0901be;
+        public static final int kryptanium_login_dialog_bg=0x7f090148;
+        public static final int kryptanium_login_dialog_close=0x7f09014a;
+        public static final int kryptanium_login_dialog_container=0x7f090149;
+        public static final int kryptanium_login_dialog_content=0x7f09014b;
+        public static final int kryptanium_login_dialog_gamelogo=0x7f09014c;
+        public static final int kryptanium_login_ktlogo=0x7f0901bf;
+        public static final int kryptanium_login_landing_loginlink=0x7f09014f;
+        public static final int kryptanium_login_landing_register=0x7f09014e;
+        public static final int kryptanium_login_landing_sns_list=0x7f09014d;
+        public static final int kryptanium_logincontainer_sns=0x7f090174;
+        public static final int kryptanium_loginout_dialog_comfirm=0x7f09015c;
+        public static final int kryptanium_loginout_dialog_edit=0x7f09015e;
+        public static final int kryptanium_loginout_dialog_line=0x7f09015d;
+        public static final int kryptanium_loginout_dialog_title=0x7f09015b;
+        public static final int kryptanium_menu_cancel=0x7f0901fd;
+        public static final int kryptanium_menu_dialog_cancel=0x7f090005;
+        /**  Menu Dialog 
+         */
+        public static final int kryptanium_menu_dialog_item_button=0x7f090000;
+        public static final int kryptanium_menu_dialog_item_icon=0x7f090001;
+        public static final int kryptanium_menu_dialog_item_list=0x7f090003;
+        public static final int kryptanium_menu_dialog_item_text=0x7f090002;
+        public static final int kryptanium_menu_dialog_line_1=0x7f090166;
+        public static final int kryptanium_menu_dialog_title=0x7f090004;
+        public static final int kryptanium_menu_openfile=0x7f0901fc;
+        public static final int kryptanium_menu_takescreenshot=0x7f0901fb;
+        public static final int kryptanium_menudialog_select_gender_cancel_button=0x7f090163;
+        public static final int kryptanium_menudialog_select_gender_header=0x7f090160;
+        public static final int kryptanium_menudialog_select_gender_liner=0x7f090162;
+        public static final int kryptanium_menudialog_select_gender_liner_1=0x7f090161;
+        public static final int kryptanium_menudialog_select_gender_top=0x7f09015f;
+        public static final int kryptanium_menudialog_select_topic_creply_cancel_button=0x7f090167;
+        public static final int kryptanium_menudialog_select_topic_creply_header=0x7f090165;
+        public static final int kryptanium_menudialog_select_topic_creply_top=0x7f090164;
+        public static final int kryptanium_msgbox_frame=0x7f090068;
+        public static final int kryptanium_msgbox_item_body=0x7f09006a;
+        public static final int kryptanium_msgbox_item_buttonlayout=0x7f09006b;
+        public static final int kryptanium_msgbox_item_content=0x7f09006e;
+        public static final int kryptanium_msgbox_item_deeplinkbuttom=0x7f090075;
+        public static final int kryptanium_msgbox_item_delete=0x7f090072;
+        public static final int kryptanium_msgbox_item_downloadbuttom=0x7f090074;
+        public static final int kryptanium_msgbox_item_icon=0x7f090069;
+        public static final int kryptanium_msgbox_item_rewardbuttom=0x7f090073;
+        public static final int kryptanium_msgbox_item_time_layout=0x7f09006f;
+        public static final int kryptanium_msgbox_listview=0x7f09016d;
+        public static final int kryptanium_msgbox_more_textview=0x7f090071;
+        public static final int kryptanium_msgbox_null=0x7f09016c;
+        public static final int kryptanium_msgbox_textview_linealayout=0x7f09006c;
+        public static final int kryptanium_myfriends_titlebar_addfriends=0x7f09016e;
+        public static final int kryptanium_myfriends_titlebar_newmsg=0x7f090170;
+        public static final int kryptanium_myfriends_titlebar_textview=0x7f09016f;
+        public static final int kryptanium_new_replay_title=0x7f090087;
+        public static final int kryptanium_nofriends_textview=0x7f0900fd;
+        public static final int kryptanium_notice_dialog_content=0x7f090171;
+        public static final int kryptanium_other_friends_listview=0x7f090173;
+        public static final int kryptanium_phone_retrievepwd_countrycode=0x7f090185;
+        public static final int kryptanium_phone_retrievepwd_get_verifycode=0x7f090188;
+        public static final int kryptanium_phone_retrievepwd_next=0x7f09018a;
+        public static final int kryptanium_phone_retrievepwd_number=0x7f090186;
+        public static final int kryptanium_phone_retrievepwd_password=0x7f090187;
+        public static final int kryptanium_phone_retrievepwd_to_username_retrievepwd=0x7f09018b;
+        public static final int kryptanium_phone_retrievepwd_verifycode=0x7f090189;
+        public static final int kryptanium_phonebinding_countrycode=0x7f0900a8;
+        public static final int kryptanium_phonebinding_done=0x7f0900ad;
+        public static final int kryptanium_phonebinding_get_verifycode=0x7f0900ab;
+        public static final int kryptanium_phonebinding_number=0x7f0900a9;
+        public static final int kryptanium_phonebinding_password=0x7f0900aa;
+        public static final int kryptanium_phonebinding_verifycode=0x7f0900ac;
+        public static final int kryptanium_phonelogin_countrycode=0x7f090150;
+        public static final int kryptanium_phonelogin_forgetpassword=0x7f090154;
+        public static final int kryptanium_phonelogin_login=0x7f090153;
+        public static final int kryptanium_phonelogin_number=0x7f090151;
+        public static final int kryptanium_phonelogin_password=0x7f090152;
+        public static final int kryptanium_phonelogin_usernamelogin=0x7f090155;
+        public static final int kryptanium_phoneregister_countrycode=0x7f090178;
+        public static final int kryptanium_phoneregister_get_verifycode=0x7f09017b;
+        public static final int kryptanium_phoneregister_number=0x7f090179;
+        public static final int kryptanium_phoneregister_password=0x7f09017a;
+        public static final int kryptanium_phoneregister_privacy=0x7f09017e;
+        public static final int kryptanium_phoneregister_register=0x7f09017d;
+        public static final int kryptanium_phoneregister_to_usernameregister=0x7f09017f;
+        public static final int kryptanium_phoneregister_verifycode=0x7f09017c;
+        public static final int kryptanium_players_listview=0x7f090095;
+        public static final int kryptanium_profile_button_logout=0x7f0901ce;
+        public static final int kryptanium_profile_city=0x7f090066;
+        public static final int kryptanium_profile_friend_status=0x7f0901cc;
+        public static final int kryptanium_profile_friend_status_bottom_layout=0x7f0901c3;
+        public static final int kryptanium_profile_friends_count_textview=0x7f0900c5;
+        public static final int kryptanium_profile_friends_count_textview_title=0x7f0900c4;
+        public static final int kryptanium_profile_friends_flag=0x7f0900c6;
+        public static final int kryptanium_profile_friends_follow_button=0x7f0901c7;
+        public static final int kryptanium_profile_friends_imageview_title=0x7f0900c3;
+        public static final int kryptanium_profile_games_layout=0x7f0901c9;
+        public static final int kryptanium_profile_games_list=0x7f0901cb;
+        public static final int kryptanium_profile_games_list_title=0x7f0901ca;
+        public static final int kryptanium_profile_head_image=0x7f090062;
+        public static final int kryptanium_profile_hispraise_count=0x7f090064;
+        public static final int kryptanium_profile_map_count_textview=0x7f0900c7;
+        public static final int kryptanium_profile_map_count_textview_title=0x7f0900c8;
+        public static final int kryptanium_profile_map_new_msg=0x7f0900c9;
+        public static final int kryptanium_profile_nickname=0x7f090063;
+        public static final int kryptanium_profile_parentview_login=0x7f0901c2;
+        public static final int kryptanium_profile_praise_count_textview=0x7f0900cc;
+        public static final int kryptanium_profile_praise_count_textview_title=0x7f0900cb;
+        public static final int kryptanium_profile_praise_flag=0x7f0900ce;
+        public static final int kryptanium_profile_praise_follow_button=0x7f0901c6;
+        public static final int kryptanium_profile_praise_imageview_title=0x7f0900ca;
+        public static final int kryptanium_profile_praise_new_msg=0x7f0900cd;
+        public static final int kryptanium_profile_setting_email=0x7f0901df;
+        public static final int kryptanium_profile_setting_email_flag=0x7f0901e1;
+        public static final int kryptanium_profile_setting_email_linearlayout=0x7f0901de;
+        public static final int kryptanium_profile_setting_email_status=0x7f0901e0;
+        public static final int kryptanium_profile_setting_gender_layout=0x7f0901d8;
+        public static final int kryptanium_profile_setting_head_image=0x7f0901ba;
+        public static final int kryptanium_profile_setting_head_image_flag=0x7f0901d0;
+        public static final int kryptanium_profile_setting_head_image_linearlayout=0x7f0901cf;
+        public static final int kryptanium_profile_setting_is_always_send_messige=0x7f0901e9;
+        public static final int kryptanium_profile_setting_man=0x7f0901d9;
+        public static final int kryptanium_profile_setting_nickname=0x7f0901d3;
+        public static final int kryptanium_profile_setting_nickname_arrow=0x7f0901d4;
+        public static final int kryptanium_profile_setting_nickname_linearlayout=0x7f0901d1;
+        public static final int kryptanium_profile_setting_nickname_title=0x7f0901d2;
+        public static final int kryptanium_profile_setting_pass=0x7f0901e7;
+        public static final int kryptanium_profile_setting_pass_linearlayout=0x7f0901e6;
+        public static final int kryptanium_profile_setting_pass_status=0x7f0901e8;
+        public static final int kryptanium_profile_setting_privacypolicy_layout=0x7f0901ea;
+        public static final int kryptanium_profile_setting_sex_status=0x7f0901db;
+        public static final int kryptanium_profile_setting_username=0x7f0901d7;
+        public static final int kryptanium_profile_setting_username_linearlayout=0x7f0901d5;
+        public static final int kryptanium_profile_setting_username_title=0x7f0901d6;
+        public static final int kryptanium_profile_setting_woman=0x7f0901da;
+        public static final int kryptanium_profile_sex=0x7f090065;
+        public static final int kryptanium_profile_sex_image=0x7f0901eb;
+        public static final int kryptanium_profile_topic_button_layout=0x7f0901c4;
+        public static final int kryptanium_profile_topic_count_textview=0x7f0900d1;
+        public static final int kryptanium_profile_topic_count_textview_title=0x7f0900d0;
+        public static final int kryptanium_profile_topic_flag=0x7f090067;
+        public static final int kryptanium_profile_topic_follow_button=0x7f0901c5;
+        public static final int kryptanium_profile_topic_imageview_title=0x7f0900cf;
+        public static final int kryptanium_profile_topic_liner=0x7f0901c8;
+        public static final int kryptanium_profile_topic_new_msg=0x7f0900d2;
+        public static final int kryptanium_profile_username_layout=0x7f0901ec;
+        public static final int kryptanium_provision_text=0x7f090175;
+        public static final int kryptanium_pull_refresh_viewgroup=0x7f0900e9;
+        public static final int kryptanium_pull_refreshview_image=0x7f090177;
+        public static final int kryptanium_pull_refreshview_progress=0x7f090176;
+        public static final int kryptanium_recommend_friends_invite=0x7f0900e5;
+        public static final int kryptanium_reply_item_content=0x7f090089;
+        public static final int kryptanium_scrollview=0x7f0900ff;
+        public static final int kryptanium_select_sns_listview=0x7f0900eb;
+        public static final int kryptanium_selectimage_gridview=0x7f090193;
+        public static final int kryptanium_selectimage_loading=0x7f09007a;
+        public static final int kryptanium_selectimage_view=0x7f090079;
+        public static final int kryptanium_send_to_sns_cancel=0x7f09016b;
+        public static final int kryptanium_send_to_sns_facebook_layout=0x7f090197;
+        public static final int kryptanium_send_to_sns_icon_rl=0x7f090168;
+        public static final int kryptanium_send_to_sns_icon_title=0x7f090169;
+        public static final int kryptanium_setting_snssync_container=0x7f0901dc;
+        public static final int kryptanium_settings_phonebinding_arrow=0x7f0901e5;
+        public static final int kryptanium_settings_phonebinding_container=0x7f0901e2;
+        public static final int kryptanium_settings_phonebinding_status=0x7f0901e4;
+        public static final int kryptanium_settings_phonebinding_tip=0x7f0901e3;
+        public static final int kryptanium_share_sns_item_container=0x7f090194;
+        public static final int kryptanium_share_sns_item_friend_text=0x7f090196;
+        public static final int kryptanium_shareto_sns_grid=0x7f09016a;
+        public static final int kryptanium_shareto_sns_item_friend_icon=0x7f090195;
+        public static final int kryptanium_shareto_sns_item_icon=0x7f090198;
+        public static final int kryptanium_shareto_sns_item_text=0x7f090199;
+        public static final int kryptanium_show_listview=0x7f090124;
+        public static final int kryptanium_show_listview_tag=0x7f090104;
+        public static final int kryptanium_show_listview_tag_ll=0x7f090102;
+        public static final int kryptanium_simpletitlebar_divider=0x7f09019e;
+        public static final int kryptanium_simpletitlebar_left=0x7f09019a;
+        public static final int kryptanium_simpletitlebar_right=0x7f09019d;
+        public static final int kryptanium_simpletitlebar_tip=0x7f09019c;
+        public static final int kryptanium_simpletitlebar_title=0x7f09019b;
+        public static final int kryptanium_slidingdrawer=0x7f0900d9;
+        public static final int kryptanium_sns_addfriends_foot_layout=0x7f0900a2;
+        public static final int kryptanium_sns_auth_webview=0x7f0900a7;
+        public static final int kryptanium_sns_friends_invite_bt=0x7f0900a3;
+        public static final int kryptanium_sns_friends_listview=0x7f0900a1;
+        public static final int kryptanium_strong_content_text=0x7f0901aa;
+        public static final int kryptanium_strong_friend_info_hand_image=0x7f0901a1;
+        public static final int kryptanium_strong_friend_info_layout=0x7f0901a0;
+        public static final int kryptanium_strong_msg_bottom_friends_listview=0x7f0901ae;
+        public static final int kryptanium_strong_msg_bottom_layout=0x7f0901a4;
+        public static final int kryptanium_strong_msg_bottom_title_text=0x7f0901ad;
+        public static final int kryptanium_strong_msg_layout=0x7f0901a2;
+        public static final int kryptanium_strong_msg_top_layout=0x7f0901a3;
+        public static final int kryptanium_strong_new_msg_close=0x7f090172;
+        public static final int kryptanium_strong_scrollview=0x7f0901a7;
+        public static final int kryptanium_strong_strong_notice_content=0x7f0901a6;
+        public static final int kryptanium_strong_submit_button=0x7f0901ab;
+        public static final int kryptanium_strong_submit_layout=0x7f0901a8;
+        public static final int kryptanium_strong_submit_ok_layout=0x7f0901ac;
+        public static final int kryptanium_strong_title_msg_image=0x7f0901a5;
+        public static final int kryptanium_strong_title_text=0x7f0901a9;
+        public static final int kryptanium_tab_titlebar_content=0x7f0901af;
+        public static final int kryptanium_tabindicator_image=0x7f0901b0;
+        public static final int kryptanium_tabindicator_new_msg=0x7f0900fa;
+        public static final int kryptanium_tabindicator_new_msg_layout=0x7f0900f9;
+        public static final int kryptanium_tabpage_content_parentview=0x7f0900df;
+        public static final int kryptanium_tabpage_indicator_parentview=0x7f0900de;
+        public static final int kryptanium_text_count=0x7f0901bc;
+        public static final int kryptanium_text_title=0x7f0901bb;
+        public static final int kryptanium_textview_info=0x7f090130;
+        public static final int kryptanium_title_describe=0x7f0901ee;
+        public static final int kryptanium_title_liner=0x7f0900e6;
+        public static final int kryptanium_titlebar_left=0x7f090134;
+        public static final int kryptanium_titlebar_left2=0x7f090135;
+        public static final int kryptanium_titlebar_left_layout=0x7f090133;
+        public static final int kryptanium_titlebar_own=0x7f090139;
+        public static final int kryptanium_titlebar_own_left=0x7f09013b;
+        public static final int kryptanium_titlebar_own_right=0x7f09013c;
+        public static final int kryptanium_titlebar_right=0x7f090137;
+        public static final int kryptanium_titlebar_right_text=0x7f090138;
+        public static final int kryptanium_titlebar_title=0x7f09013d;
+        public static final int kryptanium_top5_rl=0x7f0901f3;
+        public static final int kryptanium_topic_addbutton=0x7f0901b7;
+        public static final int kryptanium_topic_addbutton_donothing=0x7f0901b5;
+        public static final int kryptanium_topic_classify_flag=0x7f0901b9;
+        public static final int kryptanium_topic_classify_text=0x7f0901b8;
+        public static final int kryptanium_topic_detail_button_delete=0x7f09012c;
+        public static final int kryptanium_topic_detail_button_like=0x7f09012d;
+        public static final int kryptanium_topic_detail_button_report=0x7f09004f;
+        public static final int kryptanium_topic_detail_content=0x7f090129;
+        public static final int kryptanium_topic_detail_content_control=0x7f09012a;
+        public static final int kryptanium_topic_detail_create_time=0x7f090127;
+        public static final int kryptanium_topic_detail_creator_head=0x7f090125;
+        public static final int kryptanium_topic_detail_creator_name=0x7f090126;
+        public static final int kryptanium_topic_detail_image=0x7f0901b1;
+        public static final int kryptanium_topic_detail_image_group=0x7f09012b;
+        public static final int kryptanium_topic_detail_like_num=0x7f0901b4;
+        public static final int kryptanium_topic_detail_reply_num=0x7f090128;
+        public static final int kryptanium_topic_detail_text_delete=0x7f0901b2;
+        public static final int kryptanium_topic_detail_text_report=0x7f0901b3;
+        public static final int kryptanium_topic_info_rl=0x7f090031;
+        public static final int kryptanium_topic_item_content=0x7f09002f;
+        public static final int kryptanium_topic_item_create_stick=0x7f09007b;
+        public static final int kryptanium_topic_item_create_time=0x7f090032;
+        public static final int kryptanium_topic_item_creator_head=0x7f09002a;
+        public static final int kryptanium_topic_item_creator_name=0x7f09002d;
+        public static final int kryptanium_topic_item_creator_name_layout=0x7f09002b;
+        public static final int kryptanium_topic_item_creator_type=0x7f09002e;
+        public static final int kryptanium_topic_item_image=0x7f09002c;
+        public static final int kryptanium_topic_item_image_group=0x7f090034;
+        public static final int kryptanium_topic_item_like_reply_num=0x7f090033;
+        public static final int kryptanium_topic_item_reply_content=0x7f090030;
+        public static final int kryptanium_topic_item_reply_num=0x7f09008b;
+        public static final int kryptanium_topic_listview=0x7f0900ea;
+        public static final int kryptanium_topic_listview_item=0x7f090028;
+        public static final int kryptanium_topic_lock=0x7f0901b6;
+        public static final int kryptanium_topic_new_msg=0x7f090061;
+        public static final int kryptanium_topic_num_group=0x7f0900e7;
+        public static final int kryptanium_topic_reply_item_image_group=0x7f09008a;
+        public static final int kryptanium_topic_search_button=0x7f09018f;
+        public static final int kryptanium_topic_search_clear=0x7f090190;
+        public static final int kryptanium_topic_search_text=0x7f090192;
+        public static final int kryptanium_topic_search_text_title=0x7f090191;
+        public static final int kryptanium_topicrepley_addbutton=0x7f090101;
+        public static final int kryptanium_topicrepley_content=0x7f090100;
+        public static final int kryptanium_topicrepley_listview=0x7f090103;
+        public static final int kryptanium_topicreply_item_button_delete=0x7f09007d;
+        public static final int kryptanium_topicreply_item_button_like=0x7f090081;
+        public static final int kryptanium_topicreply_item_button_report=0x7f09007f;
+        public static final int kryptanium_topicreply_item_content=0x7f09004d;
+        public static final int kryptanium_topicreply_item_create_time=0x7f09004c;
+        public static final int kryptanium_topicreply_item_creator_head=0x7f09004a;
+        public static final int kryptanium_topicreply_item_creator_name=0x7f09004b;
+        public static final int kryptanium_topicreply_item_delete=0x7f090050;
+        public static final int kryptanium_topicreply_item_image=0x7f09007c;
+        public static final int kryptanium_topicreply_item_image_group=0x7f09004e;
+        public static final int kryptanium_topicreply_item_like=0x7f090051;
+        public static final int kryptanium_topicreply_item_like_num=0x7f090082;
+        public static final int kryptanium_topicreply_item_text_delete=0x7f09007e;
+        public static final int kryptanium_topicreply_item_text_report=0x7f090080;
+        public static final int kryptanium_user_change_edit_one=0x7f0901ef;
+        public static final int kryptanium_user_change_edit_two=0x7f0901f1;
+        public static final int kryptanium_user_change_line_one=0x7f0901f0;
+        public static final int kryptanium_user_info_rl=0x7f090029;
+        public static final int kryptanium_user_login_email=0x7f090013;
+        public static final int kryptanium_user_login_password=0x7f090014;
+        public static final int kryptanium_user_profile_username=0x7f0901ed;
+        public static final int kryptanium_user_register_email=0x7f090010;
+        public static final int kryptanium_user_register_nickname=0x7f090011;
+        public static final int kryptanium_user_register_password=0x7f090012;
+        public static final int kryptanium_user_setting_sync_title=0x7f0901dd;
+        public static final int kryptanium_userfromsns_add=0x7f09008f;
+        public static final int kryptanium_userfromsns_avatar=0x7f09008c;
+        public static final int kryptanium_userfromsns_nickname=0x7f09008d;
+        public static final int kryptanium_userfromsns_snsnickname=0x7f09008e;
+        public static final int kryptanium_username_retrievepwd_email=0x7f09018c;
+        public static final int kryptanium_username_retrievepwd_send=0x7f09018d;
+        public static final int kryptanium_username_retrievepwd_to_phone_retrievepwd=0x7f09018e;
+        public static final int kryptanium_usernamelogin_forgetpassword=0x7f090159;
+        public static final int kryptanium_usernamelogin_login=0x7f090158;
+        public static final int kryptanium_usernamelogin_password=0x7f090157;
+        public static final int kryptanium_usernamelogin_to_phonelogin=0x7f09015a;
+        public static final int kryptanium_usernamelogin_username=0x7f090156;
+        public static final int kryptanium_usernameregister_password=0x7f090181;
+        public static final int kryptanium_usernameregister_privacy=0x7f090183;
+        public static final int kryptanium_usernameregister_register=0x7f090182;
+        public static final int kryptanium_usernameregister_to_phoneregister=0x7f090184;
+        public static final int kryptanium_usernameregister_username=0x7f090180;
+        public static final int kryptanium_users_city_id=0x7f09000e;
+        public static final int kryptanium_users_forget_password_email=0x7f090015;
+        public static final int kryptanium_users_grieview_id=0x7f09000f;
+        public static final int kryptanium_users_head_id=0x7f09000c;
+        public static final int kryptanium_users_nickname_id=0x7f09000d;
+        public static final int kryptaniun_integration_error_button=0x7f0900e0;
+        public static final int kryptaniun_testapp_hint=0x7f0900e1;
+        public static final int ktplay_plugin_auth_parentview=0x7f0901f7;
+        public static final int ktplay_plugin_sns_button_close=0x7f0901fa;
+        public static final int ktplay_plugin_sns_loading_anim=0x7f0901f5;
+        public static final int ktplay_plugin_sns_loading_hint=0x7f0901f6;
+        public static final int ktplay_plugin_sns_scrollview=0x7f0901f8;
+        public static final int ktplay_plugin_sns_webview=0x7f0901f9;
+        public static final int list_body=0x7f09019f;
+        public static final int radioGroup1=0x7f09013a;
+        public static final int s_kt_input_surplus_characters=0x7f0900b3;
+        public static final int s_kt_loading_progressbar=0x7f090147;
+        public static final int s_kt_title_inbox=0x7f09006d;
+        public static final int type_image=0x7f090077;
+        public static final int type_name=0x7f090078;
+    }
+    public static final class integer {
+        public static final int kryptanium_foundation_max_imageheight=0x7f0a0001;
+        public static final int kryptanium_foundation_max_imagewidth=0x7f0a0000;
+    }
+    public static final class layout {
+        public static final int kryptanium_adapter_item_friend=0x7f030000;
+        public static final int kryptanium_adapter_item_friend_kt=0x7f030001;
+        public static final int kryptanium_adapter_item_friend_request=0x7f030002;
+        public static final int kryptanium_adapter_item_friend_sns=0x7f030003;
+        public static final int kryptanium_adapter_item_friend_title=0x7f030004;
+        public static final int kryptanium_adapter_item_friends_action=0x7f030005;
+        public static final int kryptanium_adapter_item_friends_add_from=0x7f030006;
+        public static final int kryptanium_adapter_item_friends_adder=0x7f030007;
+        public static final int kryptanium_adapter_item_friends_recommendation_kt=0x7f030008;
+        public static final int kryptanium_adapter_item_game_promotion_layout=0x7f030009;
+        public static final int kryptanium_adapter_item_image=0x7f03000a;
+        public static final int kryptanium_adapter_item_imagereply=0x7f03000b;
+        public static final int kryptanium_adapter_item_invite_contacts=0x7f03000c;
+        public static final int kryptanium_adapter_item_inviteuser=0x7f03000d;
+        public static final int kryptanium_adapter_item_inviteuser_nearby=0x7f03000e;
+        public static final int kryptanium_adapter_item_leaderboard=0x7f03000f;
+        public static final int kryptanium_adapter_item_liker=0x7f030010;
+        public static final int kryptanium_adapter_item_msgbox=0x7f030011;
+        public static final int kryptanium_adapter_item_other_user_friends=0x7f030012;
+        public static final int kryptanium_adapter_item_select_friend=0x7f030013;
+        public static final int kryptanium_adapter_item_selectimage=0x7f030014;
+        public static final int kryptanium_adapter_item_topic=0x7f030015;
+        public static final int kryptanium_adapter_item_topicreply=0x7f030016;
+        public static final int kryptanium_adapter_item_user_image=0x7f030017;
+        public static final int kryptanium_adapter_item_user_topic=0x7f030018;
+        public static final int kryptanium_adapter_item_user_topicreply=0x7f030019;
+        public static final int kryptanium_adapter_item_userfromsns=0x7f03001a;
+        public static final int kryptanium_adapterview_footer=0x7f03001b;
+        public static final int kryptanium_adapterview_footer_vertical=0x7f03001c;
+        public static final int kryptanium_add_friend_nearby_layout=0x7f03001d;
+        public static final int kryptanium_add_friend_players_layout=0x7f03001e;
+        public static final int kryptanium_add_friend_sns_layout=0x7f03001f;
+        public static final int kryptanium_add_friend_title=0x7f030020;
+        public static final int kryptanium_add_image_thumbnail_item_layout=0x7f030021;
+        public static final int kryptanium_auth_layout=0x7f030022;
+        public static final int kryptanium_bind_phone=0x7f030023;
+        public static final int kryptanium_complete_user_profile=0x7f030024;
+        public static final int kryptanium_create_topicreply_layout=0x7f030025;
+        public static final int kryptanium_createtopic_layout=0x7f030026;
+        public static final int kryptanium_dialog=0x7f030027;
+        public static final int kryptanium_dialog_wait_layout=0x7f030028;
+        public static final int kryptanium_dialogitem_cancel=0x7f030029;
+        public static final int kryptanium_dialogitem_header=0x7f03002a;
+        public static final int kryptanium_dialogitem_normal=0x7f03002b;
+        public static final int kryptanium_dialogitem_topic=0x7f03002c;
+        public static final int kryptanium_dialogitem_topic_cancel=0x7f03002d;
+        public static final int kryptanium_follow_button_friends_layout=0x7f03002e;
+        public static final int kryptanium_follow_button_map_layout=0x7f03002f;
+        public static final int kryptanium_follow_button_praise_layout=0x7f030030;
+        public static final int kryptanium_follow_button_topic_layout=0x7f030031;
+        public static final int kryptanium_frame_game_inform_layout=0x7f030032;
+        public static final int kryptanium_frame_layout=0x7f030033;
+        public static final int kryptanium_friend_addfromsns=0x7f030034;
+        public static final int kryptanium_friend_recommendation_kt=0x7f030035;
+        public static final int kryptanium_friend_route=0x7f030036;
+        public static final int kryptanium_friends_action_layout=0x7f030037;
+        public static final int kryptanium_friends_add_pathway_layout=0x7f030038;
+        public static final int kryptanium_friends_head=0x7f030039;
+        public static final int kryptanium_friends_login_layout=0x7f03003a;
+        public static final int kryptanium_friends_splashscreen_layout=0x7f03003b;
+        public static final int kryptanium_friendship_request_layout=0x7f03003c;
+        public static final int kryptanium_friendslist_layout=0x7f03003d;
+        public static final int kryptanium_full_image_reply=0x7f03003e;
+        public static final int kryptanium_fullscreen_layout=0x7f03003f;
+        public static final int kryptanium_game_store_layout=0x7f030040;
+        public static final int kryptanium_header=0x7f030041;
+        public static final int kryptanium_hot_item_game_layout=0x7f030042;
+        public static final int kryptanium_hot_item_image_layout=0x7f030043;
+        public static final int kryptanium_hot_item_player_layout=0x7f030044;
+        public static final int kryptanium_hot_item_player_store_layout=0x7f030045;
+        public static final int kryptanium_hot_item_topic_layout=0x7f030046;
+        public static final int kryptanium_hot_layout=0x7f030047;
+        public static final int kryptanium_image_creator_layout=0x7f030048;
+        public static final int kryptanium_image_detail=0x7f030049;
+        public static final int kryptanium_imagepreview_layout=0x7f03004a;
+        public static final int kryptanium_imagereply_layout=0x7f03004b;
+        public static final int kryptanium_info_page=0x7f03004c;
+        public static final int kryptanium_invite_contacts_layout=0x7f03004d;
+        public static final int kryptanium_layout_test=0x7f03004e;
+        public static final int kryptanium_layout_titlebar=0x7f03004f;
+        public static final int kryptanium_leaderboard_footer_layout=0x7f030050;
+        public static final int kryptanium_leaderboard_header_layout=0x7f030051;
+        public static final int kryptanium_leaderboard_layout=0x7f030052;
+        public static final int kryptanium_liker_layout=0x7f030053;
+        public static final int kryptanium_line=0x7f030054;
+        public static final int kryptanium_loading_layout=0x7f030055;
+        public static final int kryptanium_login_dialog=0x7f030056;
+        public static final int kryptanium_login_landing=0x7f030057;
+        public static final int kryptanium_login_landing_nonsns=0x7f030058;
+        public static final int kryptanium_login_with_phone=0x7f030059;
+        public static final int kryptanium_login_with_username=0x7f03005a;
+        public static final int kryptanium_loingout_dialog=0x7f03005b;
+        public static final int kryptanium_menudialog=0x7f03005c;
+        public static final int kryptanium_menudialog_select_gender=0x7f03005d;
+        public static final int kryptanium_menudialog_select_topic_creply=0x7f03005e;
+        public static final int kryptanium_menudialog_send_to_sns=0x7f03005f;
+        public static final int kryptanium_menudialog_topic_change=0x7f030060;
+        public static final int kryptanium_mg_button=0x7f030061;
+        public static final int kryptanium_msgbox_layout=0x7f030062;
+        public static final int kryptanium_myfriends_titlebar=0x7f030063;
+        public static final int kryptanium_notice_dialog=0x7f030064;
+        public static final int kryptanium_other_user_friends_list=0x7f030065;
+        public static final int kryptanium_provision_layout=0x7f030066;
+        public static final int kryptanium_pull_refreshview_head=0x7f030067;
+        public static final int kryptanium_register_with_phone=0x7f030068;
+        public static final int kryptanium_register_with_username=0x7f030069;
+        public static final int kryptanium_retrievepwd_with_phone=0x7f03006a;
+        public static final int kryptanium_retrievepwd_with_username=0x7f03006b;
+        public static final int kryptanium_search=0x7f03006c;
+        public static final int kryptanium_selectimage_layout=0x7f03006d;
+        public static final int kryptanium_share_sns_friend=0x7f03006e;
+        public static final int kryptanium_share_sns_item_friend=0x7f03006f;
+        public static final int kryptanium_shareto_sns_item=0x7f030070;
+        public static final int kryptanium_simple_titlebar=0x7f030071;
+        public static final int kryptanium_simple_titlebar_back=0x7f030072;
+        public static final int kryptanium_simple_titlebar_close=0x7f030073;
+        public static final int kryptanium_simple_titlebar_imagebutton=0x7f030074;
+        public static final int kryptanium_simple_titlebar_textbutton=0x7f030075;
+        public static final int kryptanium_simple_titlebar_tip=0x7f030076;
+        public static final int kryptanium_sns_auth_layout=0x7f030077;
+        public static final int kryptanium_sns_select_type_item_line=0x7f030078;
+        public static final int kryptanium_sns_select_type_layout=0x7f030079;
+        public static final int kryptanium_strong_adapter_item_friend=0x7f03007a;
+        public static final int kryptanium_strong_notice_layout=0x7f03007b;
+        public static final int kryptanium_tab_titlebar=0x7f03007c;
+        public static final int kryptanium_tab_titlebar_text=0x7f03007d;
+        public static final int kryptanium_tabindicator=0x7f03007e;
+        public static final int kryptanium_tabpage_layout=0x7f03007f;
+        public static final int kryptanium_topic_detail=0x7f030080;
+        public static final int kryptanium_topic_footerview=0x7f030081;
+        public static final int kryptanium_topic_layout=0x7f030082;
+        public static final int kryptanium_topic_layout_own=0x7f030083;
+        public static final int kryptanium_topiccategory_selector=0x7f030084;
+        public static final int kryptanium_topicreply_layout=0x7f030085;
+        public static final int kryptanium_user_album_layout=0x7f030086;
+        public static final int kryptanium_user_login_channel=0x7f030087;
+        public static final int kryptanium_user_login_game=0x7f030088;
+        public static final int kryptanium_user_other_profile_layout=0x7f030089;
+        public static final int kryptanium_user_profile_layout=0x7f03008a;
+        public static final int kryptanium_user_profile_setting_layout=0x7f03008b;
+        public static final int kryptanium_user_profile_userinfo_layout=0x7f03008c;
+        public static final int kryptanium_user_set_info_layout=0x7f03008d;
+        public static final int kryptanium_users_item_layout=0x7f03008e;
+        public static final int kryptanium_users_layout=0x7f03008f;
+        public static final int kryptanium_users_top5_item_layout=0x7f030090;
+        public static final int ktplay_plugin_sns_loading=0x7f030091;
+        public static final int ktplay_plugin_sns_loading_bg=0x7f030092;
+        public static final int ktplay_plugin_sns_native_auth=0x7f030093;
+    }
+    public static final class menu {
+        public static final int kryptanium_menu_screenshot=0x7f0c0000;
     }
     public static final class string {
-        public static final int app_name=0x7f030000;
+        public static final int app_name=0x7f070224;
+        public static final int kryptanium_add=0x7f070181;
+        public static final int kryptanium_auth_failed=0x7f070187;
+        public static final int kryptanium_back=0x7f07017d;
+        public static final int kryptanium_bottom_title_text=0x7f070215;
+        public static final int kryptanium_cancel=0x7f070180;
+        public static final int kryptanium_commons_date=0x7f07018c;
+        public static final int kryptanium_commons_date_all=0x7f070190;
+        public static final int kryptanium_commons_date_time=0x7f07018f;
+        public static final int kryptanium_commons_date_year=0x7f07018b;
+        public static final int kryptanium_commons_datetime=0x7f07018d;
+        public static final int kryptanium_commons_datetime_detail=0x7f07018e;
+        public static final int kryptanium_commons_waiting=0x7f070182;
+        public static final int kryptanium_connection_failed=0x7f070188;
+        public static final int kryptanium_content_more=0x7f07021b;
+        public static final int kryptanium_continue=0x7f07017e;
+        public static final int kryptanium_deeplink_button_text=0x7f07021c;
+        public static final int kryptanium_exit=0x7f070184;
+        public static final int kryptanium_finish=0x7f07017f;
+        public static final int kryptanium_invite_button_text=0x7f07021d;
+        public static final int kryptanium_lastyear=0x7f07021a;
+        public static final int kryptanium_network_error=0x7f070186;
+        public static final int kryptanium_network_unavailable=0x7f070185;
+        public static final int kryptanium_no_data=0x7f070189;
+        public static final int kryptanium_notification_button_text=0x7f070218;
+        public static final int kryptanium_ok=0x7f07017b;
+        public static final int kryptanium_post=0x7f07017c;
+        public static final int kryptanium_pull_refresh_loading=0x7f070192;
+        public static final int kryptanium_pull_refresh_loosenfresh=0x7f070191;
+        public static final int kryptanium_pull_refresh_pullrefresh=0x7f07018a;
+        public static final int kryptanium_pull_refresh_unknown=0x7f070194;
+        public static final int kryptanium_pull_refresh_updateat=0x7f070193;
+        public static final int kryptanium_reward_button_text=0x7f070216;
+        public static final int kryptanium_rewarded_button_text=0x7f070217;
+        public static final int kryptanium_submit=0x7f070214;
+        public static final int kryptanium_update=0x7f070183;
+        public static final int kryptanium_yesterday=0x7f070219;
+        public static final int ktplay_plugin_sns_dialog_waiting=0x7f070223;
+        public static final int s_kt_24hours_blacklist_user_msg=0x7f070196;
+        public static final int s_kt_accept_friend_request=0x7f0700d5;
+        public static final int s_kt_accessing_appstore=0x7f070101;
+        public static final int s_kt_active_player=0x7f0701e1;
+        public static final int s_kt_add=0x7f070175;
+        public static final int s_kt_add_friends=0x7f0700c2;
+        public static final int s_kt_addfriendsFromGame_section_title=0x7f0700ff;
+        public static final int s_kt_addfriends_fromplayers=0x7f07010e;
+        public static final int s_kt_album_acccss_authorty=0x7f070117;
+        public static final int s_kt_all_discussion_menu=0x7f07005c;
+        public static final int s_kt_app_type_hint=0x7f07007d;
+        public static final int s_kt_auth_fail=0x7f070007;
+        public static final int s_kt_back=0x7f07000e;
+        public static final int s_kt_bind_email=0x7f0700fa;
+        public static final int s_kt_bind_email_label=0x7f070126;
+        public static final int s_kt_binding_email_150211=0x7f070173;
+        public static final int s_kt_black_TA=0x7f07010b;
+        public static final int s_kt_black_remove_black=0x7f070102;
+        public static final int s_kt_black_user_title=0x7f0700e3;
+        public static final int s_kt_blacklist_user=0x7f070008;
+        public static final int s_kt_build_nickname_describe=0x7f0701c6;
+        public static final int s_kt_cancel=0x7f07003d;
+        public static final int s_kt_change_gender=0x7f07004a;
+        public static final int s_kt_change_login_password=0x7f07003b;
+        public static final int s_kt_chat_add_friend=0x7f0700f5;
+        public static final int s_kt_chat_chat_prompt1=0x7f070118;
+        public static final int s_kt_chat_chat_prompt2=0x7f0700bd;
+        public static final int s_kt_chat_chat_prompt3=0x7f0700c3;
+        public static final int s_kt_chat_conform_unfriend=0x7f0701a8;
+        public static final int s_kt_chat_friend_setting=0x7f0700e1;
+        public static final int s_kt_chat_friends_title=0x7f0700db;
+        public static final int s_kt_chat_input_placeholder=0x7f070110;
+        public static final int s_kt_chat_select_user_chat=0x7f0700be;
+        public static final int s_kt_chat_to_user_nomore=0x7f0700c9;
+        public static final int s_kt_chat_unfriends=0x7f070107;
+        public static final int s_kt_check_email=0x7f07006f;
+        public static final int s_kt_clear=0x7f0700f6;
+        public static final int s_kt_clear_success=0x7f0700ca;
+        public static final int s_kt_close_btn=0x7f070121;
+        public static final int s_kt_complete_btn=0x7f070125;
+        public static final int s_kt_complete_profile=0x7f070162;
+        public static final int s_kt_confirm=0x7f07010d;
+        public static final int s_kt_confirm_discussion=0x7f070023;
+        public static final int s_kt_confirm_reply=0x7f070022;
+        public static final int s_kt_confirm_report=0x7f070030;
+        public static final int s_kt_contact_dialog_message=0x7f07014e;
+        public static final int s_kt_contacts_friends_add=0x7f07014d;
+        public static final int s_kt_contacts_friends_invite=0x7f07014c;
+        public static final int s_kt_content_empty_limit=0x7f07002a;
+        public static final int s_kt_create_discussion=0x7f070036;
+        public static final int s_kt_create_discussion_success=0x7f070029;
+        public static final int s_kt_create_reply=0x7f070031;
+        public static final int s_kt_current_screen_mode=0x7f0701c7;
+        public static final int s_kt_delete=0x7f0700d2;
+        public static final int s_kt_delmsg_success=0x7f070069;
+        public static final int s_kt_delsuccess_discussion=0x7f070032;
+        public static final int s_kt_delsuccess_reply=0x7f07002e;
+        public static final int s_kt_deny_friend_request=0x7f0700c6;
+        public static final int s_kt_details=0x7f0700e2;
+        public static final int s_kt_discussion_count=0x7f07019e;
+        public static final int s_kt_discussion_lastest_reply=0x7f07019b;
+        public static final int s_kt_discussion_num_topic=0x7f07019a;
+        public static final int s_kt_discussion_praise=0x7f07002f;
+        public static final int s_kt_discussion_prompt=0x7f070034;
+        public static final int s_kt_discussion_search_noresult=0x7f070037;
+        public static final int s_kt_discussion_top=0x7f070033;
+        public static final int s_kt_email_null=0x7f070136;
+        public static final int s_kt_email_set_success=0x7f070135;
+        public static final int s_kt_emaileditview_setdescription=0x7f07003a;
+        public static final int s_kt_empty_msg=0x7f070065;
+        public static final int s_kt_engine_formaterr=0x7f0700c5;
+        public static final int s_kt_error=0x7f0701d7;
+        public static final int s_kt_error_code_150001=0x7f07007e;
+        public static final int s_kt_error_code_150002=0x7f07007f;
+        public static final int s_kt_error_code_150003=0x7f070080;
+        public static final int s_kt_error_code_150004=0x7f070081;
+        public static final int s_kt_error_code_150005=0x7f070082;
+        public static final int s_kt_error_code_150101=0x7f070083;
+        public static final int s_kt_error_code_150102=0x7f070084;
+        public static final int s_kt_error_code_150103=0x7f070085;
+        public static final int s_kt_error_code_150104=0x7f070086;
+        public static final int s_kt_error_code_150105=0x7f070087;
+        public static final int s_kt_error_code_150106=0x7f070088;
+        public static final int s_kt_error_code_150107=0x7f070089;
+        public static final int s_kt_error_code_150108=0x7f07008a;
+        public static final int s_kt_error_code_150109=0x7f07008b;
+        public static final int s_kt_error_code_150201=0x7f07008c;
+        public static final int s_kt_error_code_150202=0x7f07008d;
+        public static final int s_kt_error_code_150203=0x7f07008e;
+        public static final int s_kt_error_code_150204=0x7f07008f;
+        public static final int s_kt_error_code_150205=0x7f070090;
+        public static final int s_kt_error_code_150206=0x7f070091;
+        public static final int s_kt_error_code_150207=0x7f070092;
+        public static final int s_kt_error_code_150208=0x7f070093;
+        public static final int s_kt_error_code_150209=0x7f070094;
+        public static final int s_kt_error_code_150210=0x7f070095;
+        public static final int s_kt_error_code_150211=0x7f070096;
+        public static final int s_kt_error_code_150213=0x7f070097;
+        public static final int s_kt_error_code_150214=0x7f070098;
+        public static final int s_kt_error_code_150215=0x7f070099;
+        public static final int s_kt_error_code_150216=0x7f07009a;
+        public static final int s_kt_error_code_150217=0x7f07009b;
+        public static final int s_kt_error_code_150221=0x7f07009c;
+        public static final int s_kt_error_code_150222=0x7f07009d;
+        public static final int s_kt_error_code_150223=0x7f07009e;
+        public static final int s_kt_error_code_150303=0x7f07009f;
+        public static final int s_kt_error_code_150304=0x7f0700a0;
+        public static final int s_kt_error_code_150305=0x7f0700a1;
+        public static final int s_kt_error_code_150306=0x7f0700a2;
+        public static final int s_kt_error_code_150307=0x7f0700a3;
+        public static final int s_kt_error_code_150308=0x7f0700a4;
+        public static final int s_kt_error_code_150309=0x7f0700a5;
+        public static final int s_kt_error_code_150322=0x7f0700a6;
+        public static final int s_kt_error_code_150324=0x7f0700a7;
+        public static final int s_kt_error_code_150325=0x7f0700a8;
+        public static final int s_kt_error_code_150326=0x7f0700a9;
+        public static final int s_kt_error_code_150327=0x7f0700aa;
+        public static final int s_kt_error_code_150328=0x7f0700ab;
+        public static final int s_kt_error_code_150402=0x7f0700ac;
+        public static final int s_kt_error_code_150403=0x7f0700ad;
+        public static final int s_kt_error_code_150404=0x7f0700ae;
+        public static final int s_kt_error_code_150405=0x7f0700af;
+        public static final int s_kt_error_code_150422=0x7f0700b0;
+        public static final int s_kt_error_code_150423=0x7f0700b1;
+        public static final int s_kt_error_code_150501=0x7f0700b2;
+        public static final int s_kt_error_code_150502=0x7f0700b3;
+        public static final int s_kt_error_code_150701=0x7f0700b4;
+        public static final int s_kt_error_code_150702=0x7f0700b5;
+        public static final int s_kt_error_code_150703=0x7f0700b6;
+        public static final int s_kt_error_code_150704=0x7f0700b7;
+        public static final int s_kt_error_code_150705=0x7f0700b8;
+        public static final int s_kt_error_code_150706=0x7f0700b9;
+        public static final int s_kt_error_code_150801=0x7f0700ba;
+        public static final int s_kt_error_code_150802=0x7f0700bb;
+        public static final int s_kt_error_code__1009=0x7f0700bc;
+        public static final int s_kt_error_code_defult=0x7f0701b6;
+        public static final int s_kt_error_failurereason=0x7f070207;
+        public static final int s_kt_error_recoverysuggestion=0x7f070208;
+        public static final int s_kt_exit_complete_bind_email=0x7f07004d;
+        public static final int s_kt_exit_complete_btnprompt=0x7f07005b;
+        public static final int s_kt_exit_confirm=0x7f07004f;
+        public static final int s_kt_fast_login=0x7f0700c4;
+        public static final int s_kt_female=0x7f070049;
+        public static final int s_kt_fileheader=0x7f0701bd;
+        public static final int s_kt_finish_registeration=0x7f0701db;
+        public static final int s_kt_forget_pwd=0x7f07000c;
+        public static final int s_kt_friendShip_reomve_friend_success=0x7f070119;
+        public static final int s_kt_friend_import_add_fail=0x7f070106;
+        public static final int s_kt_friend_import_add_friend=0x7f0701a6;
+        public static final int s_kt_friend_import_add_success=0x7f0700c7;
+        public static final int s_kt_friend_import_from_game=0x7f0700ea;
+        public static final int s_kt_friend_import_invite=0x7f0701a9;
+        public static final int s_kt_friend_import_playing=0x7f07019f;
+        public static final int s_kt_friend_import_playing_s=0x7f0701a3;
+        public static final int s_kt_friend_import_playing_s_s=0x7f0701aa;
+        public static final int s_kt_friend_invite_finish=0x7f0700f9;
+        public static final int s_kt_friend_inviteothers=0x7f070115;
+        public static final int s_kt_friend_request_accept=0x7f07010c;
+        public static final int s_kt_friend_requst_content=0x7f0700ed;
+        public static final int s_kt_friend_requst_tobe_friend=0x7f070113;
+        public static final int s_kt_friend_search=0x7f07005e;
+        public static final int s_kt_friend_search_invite=0x7f0701ab;
+        public static final int s_kt_friend_search_nofriend=0x7f07010a;
+        public static final int s_kt_friend_share_content=0x7f070142;
+        public static final int s_kt_friend_share_title=0x7f070143;
+        public static final int s_kt_friendactiveview_action_nohascount=0x7f070213;
+        public static final int s_kt_friendactiveview_add_reply=0x7f070211;
+        public static final int s_kt_friendactiveview_add_topic=0x7f070210;
+        public static final int s_kt_friendactiveview_like_reply=0x7f07020f;
+        public static final int s_kt_friendactiveview_like_topic=0x7f07020e;
+        public static final int s_kt_friendactiveview_no_content=0x7f07014b;
+        public static final int s_kt_friendactiveview_reply_to=0x7f070212;
+        public static final int s_kt_friendlist_addfriend_prompt1=0x7f0700df;
+        public static final int s_kt_friendlist_addfriend_prompt2=0x7f0700e0;
+        public static final int s_kt_friendlist_invitation_alter=0x7f0700cc;
+        public static final int s_kt_friendlist_section1_gamename=0x7f0701b1;
+        public static final int s_kt_friendlist_section1_title=0x7f0700d1;
+        public static final int s_kt_friendlist_section2_title=0x7f0700d9;
+        public static final int s_kt_friendrequest_next_group=0x7f07013b;
+        public static final int s_kt_friends_invite_facebook_text=0x7f0701c8;
+        public static final int s_kt_friends_invite_other_friends_to_play=0x7f07013a;
+        public static final int s_kt_friends_invite_out_of_range=0x7f0701de;
+        public static final int s_kt_friends_invite_players_text=0x7f0701ca;
+        public static final int s_kt_friends_invite_sina_text=0x7f0701c9;
+        public static final int s_kt_friends_login_from_facebook=0x7f0701d0;
+        public static final int s_kt_friends_no_sns_friends=0x7f0701d1;
+        public static final int s_kt_friends_no_sns_friends_facebook=0x7f0701d3;
+        public static final int s_kt_friends_no_sns_friends_sina=0x7f0701d2;
+        public static final int s_kt_friends_nofriends=0x7f0701cd;
+        public static final int s_kt_friends_request_title=0x7f0701dd;
+        public static final int s_kt_friends_search_from_facebook=0x7f0701cf;
+        public static final int s_kt_friends_search_from_sina=0x7f0701ce;
+        public static final int s_kt_friends_unbid_text=0x7f0701cb;
+        public static final int s_kt_friendship_getfriends_fail=0x7f0700da;
+        public static final int s_kt_friendship_rquest_success=0x7f0700f2;
+        public static final int s_kt_frindlist_sns_from=0x7f0701ac;
+        public static final int s_kt_frindlist_title=0x7f07005d;
+        public static final int s_kt_game_relogin=0x7f070201;
+        public static final int s_kt_get_verifycode=0x7f070158;
+        public static final int s_kt_get_verifycode_second=0x7f070159;
+        public static final int s_kt_getpassword_setdescription=0x7f070070;
+        public static final int s_kt_getpwd_confirm_btn=0x7f070128;
+        public static final int s_kt_getpwd_textfield_email=0x7f070127;
+        public static final int s_kt_hotgames=0x7f07006a;
+        public static final int s_kt_iknow=0x7f07014a;
+        public static final int s_kt_import_recommend=0x7f0701a1;
+        public static final int s_kt_import_recommend_anybody=0x7f0701a2;
+        public static final int s_kt_input_discussion_tip=0x7f07005a;
+        public static final int s_kt_input_email=0x7f070072;
+        public static final int s_kt_input_nickname_noformat=0x7f0700e8;
+        public static final int s_kt_input_password_format_error=0x7f0701d8;
+        public static final int s_kt_input_reply_tip=0x7f070026;
+        public static final int s_kt_input_search_content_empty=0x7f0701bf;
+        public static final int s_kt_input_search_content_illegal=0x7f0701c0;
+        public static final int s_kt_input_surplus=0x7f0701c1;
+        public static final int s_kt_input_valid_email=0x7f070003;
+        public static final int s_kt_integration_error=0x7f07007c;
+        public static final int s_kt_integration_no_sharableplugins_found=0x7f070206;
+        public static final int s_kt_invite_fail=0x7f0700dc;
+        public static final int s_kt_invite_friends_cell_beliked_num=0x7f070149;
+        public static final int s_kt_invite_more_frineds=0x7f070176;
+        public static final int s_kt_invite_more_than_10=0x7f070112;
+        public static final int s_kt_invite_success=0x7f0700e7;
+        public static final int s_kt_is_refuse_all_friend_requests=0x7f0701e3;
+        public static final int s_kt_join_now=0x7f070151;
+        public static final int s_kt_kt_auth_fail=0x7f07012a;
+        public static final int s_kt_kt_check_email=0x7f070130;
+        public static final int s_kt_kt_input_valid_email=0x7f07012f;
+        public static final int s_kt_kt_ligin_failure=0x7f070132;
+        public static final int s_kt_kt_login_success=0x7f070131;
+        public static final int s_kt_kt_login_text_error=0x7f070129;
+        public static final int s_kt_kt_pwd_lenth_err=0x7f07012d;
+        public static final int s_kt_kt_pwd_login_password_fromat=0x7f07012e;
+        public static final int s_kt_kt_register_nickname_pwd_null=0x7f07012b;
+        public static final int s_kt_kt_youmeng_nickname_length_limit=0x7f07012c;
+        public static final int s_kt_ktplay_info=0x7f07000f;
+        public static final int s_kt_ktplay_introduce=0x7f070120;
+        public static final int s_kt_ktplay_title=0x7f07014f;
+        public static final int s_kt_lastupdate=0x7f0700de;
+        public static final int s_kt_lastyear=0x7f07020d;
+        public static final int s_kt_lbs_dialog_alert_message=0x7f070220;
+        public static final int s_kt_lbs_dialog_setting_message=0x7f07021f;
+        public static final int s_kt_like_self_err=0x7f0700c8;
+        public static final int s_kt_like_self_reply_err=0x7f0700d7;
+        public static final int s_kt_likesuccess_discussion=0x7f07001d;
+        public static final int s_kt_likesuccess_reply=0x7f07001e;
+        public static final int s_kt_limit_date_format=0x7f070114;
+        public static final int s_kt_limit_user_tip=0x7f0701b0;
+        public static final int s_kt_livenessplayer=0x7f070038;
+        public static final int s_kt_load_failed_retry=0x7f0701c3;
+        public static final int s_kt_loading=0x7f0701c2;
+        public static final int s_kt_loadmore_normal=0x7f0700d3;
+        public static final int s_kt_loadmore_pulling=0x7f0700f4;
+        public static final int s_kt_locked_loginchannel_plugin_missed=0x7f07020a;
+        public static final int s_kt_locked_loginchannel_plugin_missed_suggestion=0x7f07020b;
+        public static final int s_kt_log_appkey=0x7f0701e7;
+        public static final int s_kt_log_appkey_notshow_reason=0x7f0701ff;
+        public static final int s_kt_log_appkey_notshow_recoverysuggestion=0x7f070200;
+        public static final int s_kt_log_appsecret=0x7f0701e8;
+        public static final int s_kt_log_communitylistener_description=0x7f0701f5;
+        public static final int s_kt_log_communitylistener_reason=0x7f0701f6;
+        public static final int s_kt_log_communitylistener_recoverysuggestion=0x7f0701f7;
+        public static final int s_kt_log_kryptanium_button_coordinate=0x7f0701f1;
+        public static final int s_kt_log_kryptanium_channelid=0x7f0701f0;
+        public static final int s_kt_log_kryptanium_didappear=0x7f0701f2;
+        public static final int s_kt_log_kryptanium_diddisappear=0x7f0701f3;
+        public static final int s_kt_log_kryptanium_notshow_description=0x7f0701fb;
+        public static final int s_kt_log_kryptanium_notshow_reason=0x7f0701fc;
+        public static final int s_kt_log_kryptanium_notshow_recoverysuggestion=0x7f0701fd;
+        public static final int s_kt_log_kryptanium_onresume_error=0x7f0701fe;
+        public static final int s_kt_log_kryptanium_onreward=0x7f0701f4;
+        public static final int s_kt_log_kryptanium_type=0x7f0701ea;
+        public static final int s_kt_log_kryptanium_type_baidu=0x7f0701ef;
+        public static final int s_kt_log_kryptanium_type_china=0x7f0701eb;
+        public static final int s_kt_log_kryptanium_type_international=0x7f0701ec;
+        public static final int s_kt_log_kryptanium_type_qihoo360=0x7f0701ee;
+        public static final int s_kt_log_kryptanium_type_universal=0x7f0701ed;
+        public static final int s_kt_log_kryptanium_version=0x7f0701e9;
+        public static final int s_kt_log_screenshot_description=0x7f0701f8;
+        public static final int s_kt_log_screenshot_reason=0x7f0701f9;
+        public static final int s_kt_log_screenshot_recoverysuggestion=0x7f0701fa;
+        public static final int s_kt_login=0x7f070016;
+        public static final int s_kt_login_360_text=0x7f0701e2;
+        public static final int s_kt_login_btn=0x7f07011e;
+        public static final int s_kt_login_channel_text=0x7f0701e4;
+        public static final int s_kt_login_fail_retrieve_password=0x7f070014;
+        public static final int s_kt_login_friends_activities_text=0x7f070138;
+        public static final int s_kt_login_from_game_btn=0x7f0700f8;
+        public static final int s_kt_login_from_game_title=0x7f070103;
+        public static final int s_kt_login_nickname_email=0x7f07011a;
+        public static final int s_kt_login_now=0x7f070152;
+        public static final int s_kt_login_or_register=0x7f0700f7;
+        public static final int s_kt_login_reg_text=0x7f070137;
+        public static final int s_kt_login_success=0x7f070006;
+        public static final int s_kt_login_text_error=0x7f07001c;
+        public static final int s_kt_login_textfield_nickname=0x7f07011c;
+        public static final int s_kt_login_textfield_password=0x7f07011d;
+        public static final int s_kt_login_with_phone=0x7f070155;
+        public static final int s_kt_login_with_sns=0x7f070150;
+        public static final int s_kt_login_with_username=0x7f070154;
+        public static final int s_kt_loginview_emailornickname=0x7f070019;
+        public static final int s_kt_loginview_pwd=0x7f070013;
+        public static final int s_kt_mail_box_no_content=0x7f070066;
+        public static final int s_kt_main_reply_count=0x7f070197;
+        public static final int s_kt_mainpage_peopleplay=0x7f070012;
+        public static final int s_kt_mainpageview_active_users=0x7f070011;
+        public static final int s_kt_mainpageview_populargames=0x7f070010;
+        public static final int s_kt_male=0x7f07004c;
+        public static final int s_kt_message_box_already_claim=0x7f070067;
+        public static final int s_kt_message_box_claim=0x7f070068;
+        public static final int s_kt_modifyprofileview_fillemail=0x7f0700e6;
+        public static final int s_kt_modifyprofileview_fillpwd=0x7f07011b;
+        public static final int s_kt_modifyprofileview_inputemail=0x7f070100;
+        public static final int s_kt_modifyprofileview_inputnewpwd=0x7f07006d;
+        public static final int s_kt_modifyprofileview_inputnickname=0x7f070052;
+        public static final int s_kt_modifyprofileview_inputoldpwd=0x7f07006e;
+        public static final int s_kt_modifyprofileview_inputpwd=0x7f0700cf;
+        public static final int s_kt_modifyprofileview_nullpwd=0x7f070053;
+        public static final int s_kt_modifyprofileview_samepwd=0x7f070071;
+        public static final int s_kt_more=0x7f070222;
+        public static final int s_kt_mydiscView_mydisc=0x7f07005f;
+        public static final int s_kt_mydiscView_mynodisc=0x7f070027;
+        public static final int s_kt_mydiscView_myreply=0x7f0700d8;
+        public static final int s_kt_mydiscView_othernodisc=0x7f070059;
+        public static final int s_kt_mydiscView_othersdisc=0x7f070050;
+        public static final int s_kt_mydiscView_othersreply=0x7f0700ce;
+        public static final int s_kt_net_error=0x7f0701b7;
+        public static final int s_kt_network_error=0x7f07007b;
+        public static final int s_kt_network_unavailable=0x7f070140;
+        public static final int s_kt_new_friend_requests=0x7f0700dd;
+        public static final int s_kt_newaccount_label=0x7f07011f;
+        public static final int s_kt_next=0x7f07015b;
+        public static final int s_kt_nickname=0x7f07013e;
+        public static final int s_kt_nicknameeditview_setdescription=0x7f0700e4;
+        public static final int s_kt_nicknameeditview_setnickname=0x7f0700bf;
+        public static final int s_kt_no_binding=0x7f07004e;
+        public static final int s_kt_no_install_client_prompt=0x7f0701a7;
+        public static final int s_kt_no_setting=0x7f07004b;
+        public static final int s_kt_nomore_snsfriends=0x7f070178;
+        public static final int s_kt_ok=0x7f07002c;
+        public static final int s_kt_otheruserfriends=0x7f070058;
+        public static final int s_kt_otheruserlikeview_nolikehe=0x7f070055;
+        public static final int s_kt_otheruserlikeview_nolikeme=0x7f070056;
+        public static final int s_kt_otheruserlikeview_wholikeher=0x7f070054;
+        public static final int s_kt_otheruserlikeview_wholikeme=0x7f070057;
+        public static final int s_kt_phone_binding=0x7f070170;
+        public static final int s_kt_phone_binding_success=0x7f070171;
+        public static final int s_kt_phone_number=0x7f070153;
+        public static final int s_kt_photogroupview_camera=0x7f070079;
+        public static final int s_kt_play_count=0x7f07019d;
+        public static final int s_kt_please_wait=0x7f0701be;
+        public static final int s_kt_plugin_not_found=0x7f070209;
+        public static final int s_kt_pluginmiss_qq=0x7f070204;
+        public static final int s_kt_pluginmiss_sinaweibo=0x7f070203;
+        public static final int s_kt_pluginmiss_umeng_analytics=0x7f070202;
+        public static final int s_kt_pluginmiss_weixin=0x7f070205;
+        public static final int s_kt_post_and_share_success=0x7f0700d4;
+        public static final int s_kt_pressagain_to_quit=0x7f0701da;
+        public static final int s_kt_profile_add_friend=0x7f070061;
+        public static final int s_kt_profile_complete_setting=0x7f070172;
+        public static final int s_kt_profile_delete_friend=0x7f0701b5;
+        public static final int s_kt_profile_friend_request_check=0x7f0700e5;
+        public static final int s_kt_profile_send_msg=0x7f070111;
+        public static final int s_kt_profile_setting=0x7f07013d;
+        public static final int s_kt_profileview_btndiscussion=0x7f0701a4;
+        public static final int s_kt_profileview_btnlike=0x7f0701ad;
+        public static final int s_kt_profileview_isplay=0x7f07019c;
+        public static final int s_kt_profileview_me_btn=0x7f07000d;
+        public static final int s_kt_profileview_other_btn=0x7f070002;
+        public static final int s_kt_pullrefresh_loading=0x7f0700fe;
+        public static final int s_kt_pullrefresh_normal=0x7f070108;
+        public static final int s_kt_pullrefresh_pulling=0x7f0700e9;
+        public static final int s_kt_pwd_lenth_err=0x7f07006c;
+        public static final int s_kt_pwd_login_password_fromat=0x7f070116;
+        public static final int s_kt_recommend_friend_title=0x7f0700cb;
+        public static final int s_kt_reenter=0x7f070160;
+        public static final int s_kt_register=0x7f07000a;
+        public static final int s_kt_register_150211=0x7f070174;
+        public static final int s_kt_register_clause=0x7f0701b9;
+        public static final int s_kt_register_clause_and_privacy=0x7f0701b8;
+        public static final int s_kt_register_nickname_pwd_null=0x7f0700ef;
+        public static final int s_kt_register_pls_and=0x7f0701ba;
+        public static final int s_kt_register_privacy=0x7f0701bb;
+        public static final int s_kt_register_sns_nickname_welcome=0x7f07013c;
+        public static final int s_kt_register_textfield_nickname=0x7f070122;
+        public static final int s_kt_register_textfield_password=0x7f070123;
+        public static final int s_kt_register_username_null=0x7f0700ee;
+        public static final int s_kt_register_with_phone=0x7f070157;
+        public static final int s_kt_register_with_username=0x7f070156;
+        public static final int s_kt_registerview_email=0x7f070005;
+        public static final int s_kt_registerview_legal=0x7f0701af;
+        public static final int s_kt_registerview_pwd=0x7f07001a;
+        public static final int s_kt_registerview_texterror_email=0x7f070078;
+        public static final int s_kt_registerview_texterror_pwd=0x7f070004;
+        public static final int s_kt_relogin_tip=0x7f0701dc;
+        public static final int s_kt_reoply_topic_btnlike=0x7f0701ae;
+        public static final int s_kt_reply_count=0x7f070199;
+        public static final int s_kt_reply_locked=0x7f070021;
+        public static final int s_kt_reply_shar_sns=0x7f0700f3;
+        public static final int s_kt_reply_success=0x7f070028;
+        public static final int s_kt_replycell_somebody=0x7f0700ec;
+        public static final int s_kt_replycell_timestring=0x7f0700fb;
+        public static final int s_kt_replyview_defalutreportreason=0x7f070104;
+        public static final int s_kt_report=0x7f07002b;
+        public static final int s_kt_report_discussion_reply=0x7f070020;
+        public static final int s_kt_report_error=0x7f0700d0;
+        public static final int s_kt_report_success=0x7f07002d;
+        public static final int s_kt_reset=0x7f07015e;
+        public static final int s_kt_resetpwd_success=0x7f07015f;
+        public static final int s_kt_retrieve_password=0x7f070015;
+        public static final int s_kt_retrievepwd_with_phone=0x7f07015d;
+        public static final int s_kt_retrievepwd_with_username=0x7f07015c;
+        public static final int s_kt_reward_get_ok=0x7f070064;
+        public static final int s_kt_reward_not_exist=0x7f0700d6;
+        public static final int s_kt_sdcard_unavailable=0x7f0701e5;
+        public static final int s_kt_security_create_email=0x7f070077;
+        public static final int s_kt_security_prompt_exit=0x7f070060;
+        public static final int s_kt_security_prompt_reward=0x7f0700fd;
+        public static final int s_kt_securitysettingview_email=0x7f070105;
+        public static final int s_kt_select_gender=0x7f070161;
+        public static final int s_kt_send=0x7f070163;
+        public static final int s_kt_send_invite=0x7f0700f0;
+        public static final int s_kt_service_policy=0x7f0701b3;
+        public static final int s_kt_service_policy_label=0x7f0701b2;
+        public static final int s_kt_set_nickname_title=0x7f070144;
+        public static final int s_kt_setnickname_textfield=0x7f070124;
+        public static final int s_kt_setting_create_password=0x7f070109;
+        public static final int s_kt_setting_email_unbind=0x7f0701d5;
+        public static final int s_kt_setting_email_unbind_locked_login_channel=0x7f0701d6;
+        public static final int s_kt_setting_pass_setting_title=0x7f0701d4;
+        public static final int s_kt_setting_pass_success=0x7f0701d9;
+        public static final int s_kt_settingview_exitlogin=0x7f070047;
+        public static final int s_kt_settingview_plsredo=0x7f070048;
+        public static final int s_kt_share_error1=0x7f070024;
+        public static final int s_kt_share_to_sina=0x7f0701c4;
+        public static final int s_kt_sheet_photo=0x7f070001;
+        public static final int s_kt_sheet_screenshot=0x7f070000;
+        public static final int s_kt_sina_friend=0x7f0701e0;
+        public static final int s_kt_skip=0x7f070221;
+        public static final int s_kt_sns_app_unavailable=0x7f0701e6;
+        public static final int s_kt_sns_auth_failed=0x7f0701bc;
+        public static final int s_kt_sns_invite_friend_format_string=0x7f0701cc;
+        public static final int s_kt_sns_reg_nickname_hint=0x7f070139;
+        public static final int s_kt_snsfrineds_playing_curgame=0x7f070177;
+        public static final int s_kt_string_share_success=0x7f070025;
+        public static final int s_kt_think_you_like=0x7f0701df;
+        public static final int s_kt_time_1=0x7f07000b;
+        public static final int s_kt_time_2=0x7f070198;
+        public static final int s_kt_time_3=0x7f070195;
+        public static final int s_kt_time_4=0x7f0700f1;
+        public static final int s_kt_time_5=0x7f07010f;
+        public static final int s_kt_tip_topic_content_not_allow=0x7f0701c5;
+        public static final int s_kt_title_choose_albums=0x7f07007a;
+        public static final int s_kt_title_choose_photo=0x7f0700eb;
+        public static final int s_kt_title_discussion_reply=0x7f07001f;
+        public static final int s_kt_title_friend_search=0x7f0700cd;
+        public static final int s_kt_title_friend_sns=0x7f0701a5;
+        public static final int s_kt_title_friend_sns_search=0x7f0701a0;
+        public static final int s_kt_title_inbox=0x7f070063;
+        public static final int s_kt_title_login_phone=0x7f070017;
+        public static final int s_kt_title_login_username=0x7f070018;
+        public static final int s_kt_title_reset_password=0x7f070073;
+        public static final int s_kt_title_reset_password_email=0x7f070074;
+        public static final int s_kt_title_reset_password_phone=0x7f070075;
+        public static final int s_kt_title_security_setting=0x7f070076;
+        public static final int s_kt_title_set_email=0x7f0700c1;
+        public static final int s_kt_title_set_nickname=0x7f0700fc;
+        public static final int s_kt_title_set_password=0x7f070039;
+        public static final int s_kt_title_setting=0x7f07003c;
+        public static final int s_kt_title_sign_up=0x7f07001b;
+        public static final int s_kt_title_switch_country=0x7f070035;
+        public static final int s_kt_title_user_profile=0x7f070051;
+        public static final int s_kt_unfriends=0x7f070062;
+        public static final int s_kt_update_success=0x7f07006b;
+        public static final int s_kt_user_face=0x7f070046;
+        public static final int s_kt_user_recommend_skip=0x7f070148;
+        public static final int s_kt_user_setting_basic_info=0x7f07003e;
+        public static final int s_kt_user_setting_email_bind=0x7f070042;
+        public static final int s_kt_user_setting_gender=0x7f070045;
+        public static final int s_kt_user_setting_notify_msg=0x7f070041;
+        public static final int s_kt_user_setting_pass_describe=0x7f07003f;
+        public static final int s_kt_user_setting_protocol_flag=0x7f070040;
+        public static final int s_kt_user_setting_sync=0x7f070043;
+        public static final int s_kt_user_setting_username=0x7f070044;
+        public static final int s_kt_username=0x7f07013f;
+        public static final int s_kt_username_field=0x7f070141;
+        public static final int s_kt_username_format=0x7f070133;
+        public static final int s_kt_username_set=0x7f070134;
+        public static final int s_kt_verifycode=0x7f07015a;
+        public static final int s_kt_verifycode_sent=0x7f070179;
+        public static final int s_kt_view_discussion_friend_active=0x7f070145;
+        public static final int s_kt_view_user_tab_all_users=0x7f070146;
+        public static final int s_kt_view_user_tab_friends=0x7f070147;
+        public static final int s_kt_wordcount_tip=0x7f0700c0;
+        public static final int s_kt_writedisview_sharediscuss=0x7f0701b4;
+        public static final int s_kt_yesterday=0x7f07020c;
+        public static final int s_kt_youmeng_nickname_length_limit=0x7f070009;
+        public static final int ui_addfriendsfromcontactbookview_msg_content=0x7f070164;
+        public static final int ui_addfriendsfromcontactbookview_table_section_title=0x7f070165;
+        public static final int ui_addfriendsfromcontactbookview_title=0x7f070166;
+        public static final int ui_addfriendsfromgameview_channel_contact=0x7f070167;
+        public static final int ui_addfriendsfromgameview_channel_neighbor=0x7f070168;
+        public static final int ui_addfriendsfromgameview_channel_social=0x7f070169;
+        public static final int ui_addfriendsfromgameview_sns_title=0x7f07016a;
+        public static final int ui_addfriendsfromlbs_table_section_title=0x7f07016b;
+        public static final int ui_addfriendsfromlbsview_location_error=0x7f07017a;
+        public static final int ui_addfriendsfromlbsview_table_distance=0x7f07021e;
+        public static final int ui_addfriendsfromlbsview_table_distance_unit_one=0x7f07016c;
+        public static final int ui_addfriendsfromlbsview_table_distance_unit_two=0x7f07016d;
+        public static final int ui_addfriendsfromlbsview_title=0x7f07016e;
+        public static final int ui_importfriendnewcell_friend_lable_text=0x7f07016f;
+    }
+    public static final class style {
+        public static final int AppTheme=0x7f0b0000;
+        public static final int kryptanium_activity_home=0x7f0b000a;
+        public static final int kryptanium_activity_home_animation=0x7f0b000b;
+        public static final int kryptanium_buttom_style_addedfriend=0x7f0b000e;
+        /**  各种常用按钮的样式 
+         */
+        public static final int kryptanium_buttom_style_addfriend=0x7f0b000d;
+        public static final int kryptanium_buttom_style_confirm=0x7f0b000f;
+        public static final int kryptanium_buttom_style_delete=0x7f0b0011;
+        public static final int kryptanium_buttom_style_download=0x7f0b0010;
+        public static final int kryptanium_button_style_main=0x7f0b0012;
+        /**  Dialog全屏的样式 
+         */
+        public static final int kryptanium_dialog_fullscreen_style=0x7f0b0009;
+        /**  Dialog全屏的样式 
+         */
+        public static final int kryptanium_dialog_showcenter_style=0x7f0b000c;
+        /**  Dialog的样式 
+         */
+        public static final int kryptanium_dialog_style=0x7f0b0008;
+        /**  输入框 
+         */
+        public static final int kryptanium_edittext=0x7f0b0017;
+        /** 
+         <style name="kryptanium_font_username">
+        <item name="android:textColor">@color/kryptanium_gray</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_middle</item>
+    </style>
+    <style name="kryptanium_font_modelinfo">
+        <item name="android:textColor">@color/kryptanium_gray</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_small</item>
+    </style>
+    <style name="kryptanium_font_modelcontent">
+        <item name="android:textColor">@color/kryptanium_black</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_big</item>
+    </style>
+    <style name="kryptanium_font_button_light_text">
+        <item name="android:textColor">@color/kryptanium_white</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_big</item>
+    </style>
+    <style name="kryptanium_font_button_dark_text">
+        <item name="android:textColor">@color/kryptanium_text_dark</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_big</item>
+    </style>
+    <style name="kryptanium_font_input_text">
+    	<item name="android:textColor">@color/kryptanium_text_dark</item>
+        <item name="android:textSize">@dimen/kryptanium_text_base_size_middle_2</item>
+    </style>
+    <style name="kryptanium_edittext">
+    	<item name="android:textColor">@color/kryptanium_text_dark</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_middle</item>
+        <item name="android:background">@drawable/kryptanium_edittext</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+ Button 
+
+         <style name="kryptanium_color_button">
+    	<item name="android:textColor">@color/kryptanium_text_white</item>
+        <item name="android:textSize">@dimen/kryptanium_fontsize_big</item>
+    </style>
+    <style name="kryptanium_button_blue" parent="kryptanium_color_button">
+        <item name="android:background">@drawable/kryptanium_button_blue</item>
+    </style>
+    <style name="kryptanium_button_red">
+        <item name="android:background">@drawable/kryptanium_button_red</item>
+    </style>
+    
+         */
+        public static final int kryptanium_head_image_border=0x7f0b0001;
+        /**  链接文字 
+         */
+        public static final int kryptanium_link_text=0x7f0b0016;
+        public static final int kryptanium_menudialog_anim=0x7f0b0006;
+        public static final int kryptanium_menudialog_anim_topic=0x7f0b0007;
+        /**  分隔线 
+         */
+        public static final int kryptanium_seperate_line=0x7f0b0015;
+        public static final int kryptanium_style_content=0x7f0b0004;
+        /**  Image 
+ Head image 
+
+    <style name="kryptanium_head_image_base">
+		<item name="android:background">@drawable/kryptanium_corner_bg_white</item>
+		<item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="kryptanium_head_image_thumbnail_small" parent="kryptanium_head_image_base">
+		<item name="android:layout_width">@dimen/kryptanium_thumbnailimage_wh</item>
+		<item name="android:layout_height">@dimen/kryptanium_thumbnailimage_wh</item>
+    </style>
+    <style name="kryptanium_head_image_thumbnail_middle" parent="kryptanium_head_image_base">
+		<item name="android:layout_width">@dimen/kryptanium_thumbnailimage_wh</item>
+		<item name="android:layout_height">@dimen/kryptanium_thumbnailimage_wh</item>
+    </style>
+    <style name="kryptanium_head_image_thumbnail_big" parent="kryptanium_head_image_base">
+		<item name="android:layout_width">@dimen/kryptanium_thumbnailimage_wh</item>
+		<item name="android:layout_height">@dimen/kryptanium_thumbnailimage_wh</item>
+    </style>
+    <style name="kryptanium_head_image_clear_small" parent="kryptanium_head_image_base">
+		<item name="android:layout_width">@dimen/kryptanium_thumbnailimage_wh</item>
+		<item name="android:layout_height">@dimen/kryptanium_thumbnailimage_wh</item>
+    </style>
+    <style name="kryptanium_head_image_clear_middle" parent="kryptanium_head_image_base">
+		<item name="android:layout_width">@dimen/kryptanium_thumbnailimage_wh</item>
+		<item name="android:layout_height">@dimen/kryptanium_thumbnailimage_wh</item>
+    </style>
+    
+         */
+        public static final int kryptanium_style_image_oper_button=0x7f0b0002;
+        public static final int kryptanium_style_item_touch=0x7f0b0014;
+        public static final int kryptanium_style_topic_oper_button=0x7f0b0003;
+        public static final int kryptanium_textview_2_button=0x7f0b0005;
+        public static final int ktplay_style_subtitle_line=0x7f0b0013;
     }
 }

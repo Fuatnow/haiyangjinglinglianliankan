@@ -346,7 +346,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Cell.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCBool.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
- jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h
+ jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
+ jni/../../Classes/Audio.h jni/../../Classes/Define.h \
+ jni/../../Classes/Resounce.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/Export.h
 
 jni/../../Classes/Cell.h:
 
@@ -1045,3 +1049,13 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCString.h:
 jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
+
+jni/../../Classes/Audio.h:
+
+jni/../../Classes/Define.h:
+
+jni/../../Classes/Resounce.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/Export.h:
