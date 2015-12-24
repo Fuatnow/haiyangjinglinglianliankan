@@ -40,7 +40,7 @@ void HelloWorld::initView()
 	_background = _tileMap->layerNamed("map01");
 	auto width = _tileMap->getMapSize().width;
 	auto height = _tileMap->getMapSize().height;
-	CCLOG("%f %f", width, height);
+	log("%f %f", width, height);
 	auto tile1 = _background->tileAt(Vec2(0, 3));
 	tile1->runAction(MoveTo::create(5, Vec2(800, 100)));
 	addChild(_tileMap);*/

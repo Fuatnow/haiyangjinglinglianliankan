@@ -4,12 +4,12 @@
     <ThemeType>1</ThemeType>
     <Bg>1</Bg>
     <Music>1</Music>
-    <Kinds>14</Kinds>
+    <Kinds>15</Kinds>
     <Map_ROW>8</Map_ROW>
     <Map_COL>8</Map_COL>
     <Cell_Width>72</Cell_Width>
     <Cell_Height>72</Cell_Height>
-    <ISIncreace>1</ISIncreace>
+    <ISIncreace>930</ISIncreace>
     <UnLockProp>0</UnLockProp>
     <Gravity num="0">
         <Pos>
@@ -34,7 +34,7 @@
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>55</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

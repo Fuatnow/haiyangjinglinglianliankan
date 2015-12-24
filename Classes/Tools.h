@@ -11,6 +11,12 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
+typedef enum
+{
+    k_Operate_Pause = 0,
+    k_Operate_Resume
+}OperateFlag;
+
 static Node* seekNodeByName(Node* root, const std::string& name)
 {
     if (!root)
@@ -35,6 +41,32 @@ static Node* seekNodeByName(Node* root, const std::string& name)
         }
     }
     return nullptr;
+}
+
+
+static void operateAllSchedulerAndActions(cocos2d::Node* node, OperateFlag flag)
+{
+    if(node->isRunning())
+    {
+        switch (flag)
+        {
+            case k_Operate_Pause:
+                node->pause();
+                break;
+            case k_Operate_Resume:
+                node->resume();
+                break;
+            default:
+                break;
+        }
+        auto array = node->getChildren();
+        ssize_t count = array.size();
+        for(ssize_t i=0;i<count;i++)
+        {
+            auto child = array.at(i);
+            operateAllSchedulerAndActions(child, flag);
+        }
+    }
 }
 
 #endif /* defined(__Link__Tools__) */

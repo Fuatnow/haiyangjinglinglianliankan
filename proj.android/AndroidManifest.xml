@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.fuatnow.game.sealink"
-      android:versionCode="1"
-      android:versionName="1.0"
+      android:versionCode="16"
+      android:versionName="v4.1.6"
       android:installLocation="auto">
 
     <uses-sdk android:minSdkVersion="9"/>
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         
-          		<!-- KTPlay SDK配置开始 -->
+        <!-- KTPlay SDK配置开始 -->
         <activity
             android:name="com.ktplay.activity.GetPhotoActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -37,9 +37,123 @@
         
         <meta-data
             android:name="KTPLAY_CHANNELID"
-            android:value="GP"
+            android:value="360"
             />
          <!-- KTPlay SDK配置结束 -->
+         
+	     <!-- bmob pay sdk activity begin ,please put below code into application tag -->
+		  <activity
+		      android:name="com.alipay.sdk.app.H5PayActivity"
+		      android:configChanges="orientation|keyboardHidden|navigation"
+		      android:exported="false"
+		      android:screenOrientation="behind"
+		      android:windowSoftInputMode="adjustResize|stateHidden" >
+		  </activity>
+		  <activity
+		      android:name="com.bmob.pay.tool.PayActivity"
+		      android:theme="@android:style/Theme.Translucent" />
+		  <!-- bmob pay sdk activity end -->
+	
+	   <!-- 【必须】 信鸽receiver广播接收 -->
+	    <receiver
+	        android:name="com.tencent.android.tpush.XGPushReceiver"
+	        android:process=":xg_service_v2" >
+	        <intent-filter android:priority="0x7fffffff" >
+	            <!-- 【必须】 信鸽SDK的内部广播 -->
+	            <action android:name="com.tencent.android.tpush.action.SDK" />
+	            <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+	            <!-- 【必须】 系统广播：开屏和网络切换 -->
+	            <action android:name="android.intent.action.USER_PRESENT" />
+	            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+	            
+	            <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+	            <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+	            <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+	            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+	        </intent-filter>
+	    </receiver>
+	
+	    <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+	    <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理-->
+	     <activity
+	         android:name="com.tencent.android.tpush.XGPushActivity"
+	         android:exported="true" >
+	         <intent-filter>
+	            <!-- 若使用AndroidStudio，请设置android:name="android.intent.action"-->
+	             <action android:name="" />
+	         </intent-filter>
+	    </activity>
+	
+	    <!-- 【必须】 信鸽service -->
+	    <service
+	        android:name="com.tencent.android.tpush.service.XGPushService"
+	        android:exported="true"
+	        android:persistent="true"
+	        android:process=":xg_service_v2" />
+	 
+	    <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+	    <service
+	        android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+	        android:exported="true" >
+	        <intent-filter>
+	            <action android:name="com.fuatnow.game.sealink.PUSH_ACTION" />
+	        </intent-filter>
+	    </service>
+	
+	    <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+	    <meta-data 
+	        android:name="XG_V2_ACCESS_ID"
+	        android:value="2100105261" />
+	    <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+	    <meta-data 
+	        android:name="XG_V2_ACCESS_KEY" 
+	        android:value="ANN4ZM51H99C" />
+	    
+		
+		<!-- shareSDK -->
+		<activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>	
+	
+		<!--微信分享回调 -->
+		 <activity
+		 android:name=".wxapi.WXEntryActivity"
+		 android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		 android:configChanges="keyboardHidden|orientation|screenSize"
+		 android:exported="true"
+		 android:screenOrientation="portrait" /> 
+		 
+		 
+		<!-- 友盟反馈 --> 
+		 <activity 
+		     android:name="com.umeng.fb.ConversationActivity" 
+		     android:theme="@android:style/Theme.Light"/>
+       		<meta-data
+       			 android:value="554e072767e58e1046008800"
+       			 android:name="UMENG_APPKEY"/>
+        	<meta-data
+        		android:value="Channel ID"
+        		android:name="UMENG_CHANNEL"/>
+        	
+        	<!-- admob -->
+        	<!-- <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/> 
+   		    <activity android:name="com.google.android.gms.ads.AdActivity"
+   		         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/> -->
     </application>
 
     <supports-screens android:anyDensity="true"
@@ -60,4 +174,93 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- KTPlay SDK 权限配置结束 -->
+    
+    
+   <!-- alipay sdk permission begin -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!-- alipay sdk permission end -->
+    
+    <!-- 【必须】 信鸽SDK所需权限 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 【可选】 信鸽SDK所需权限 -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BATTERY_STATS" />
+	
+	<!-- 掌芸 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.GET_TASKS" /> 
+	
+	<!-- Bmob -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    
+    <!-- UMeng -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+	
+	<!-- 友盟反馈 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+	<!-- share sdk -->
+	<uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+     <!--bugly 必须的权限： -->
+    <uses-permission android:name= "android.permission.READ_PHONE_STATE" />  <!-- 获取设备信息 -->
+    <uses-permission android:name= "android.permission.INTERNET" /> <!-- 网络通信-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取MAC地址-->
+       
+    <!-- 可选的权限： -->
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 获取logcat日志 -->
+    
+    
+    <!-- 道有道 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 </manifest> 

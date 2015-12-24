@@ -35,8 +35,11 @@ public:
     void updateLeftCellsCount(int hasCellCount);
     virtual void update(float dt);
     void setSerialLink(Vec2 pos);
+    void setDisable();
+    void createNewCells(float dt);
     static MenuLayer* create(GameLayer* game);
 public:
+    CC_SYNTHESIZE(TextBMFont*, alarmNumLab, AlarmNumLab);
     CC_SYNTHESIZE(TextBMFont*, searchNumLab, SearchNumLab);
     CC_SYNTHESIZE(TextBMFont*, swapNumLab, SwapNumLab);
     CC_SYNTHESIZE(TextBMFont*, bombNumLab, BombNumLab);
@@ -46,21 +49,27 @@ public:
     CC_SYNTHESIZE(TextBMFont*, bestScoreLabel, BestScoreLabel);
     CC_SYNTHESIZE(LoadingBar*, lenBar, LenBar);
     CC_SYNTHESIZE(LoadingBar*, shortBar, ShortBar);
+    CC_SYNTHESIZE(float, leftTime, LeftTime);
+    CC_SYNTHESIZE(int, scoreNum, ScoreNum);
+    CC_SYNTHESIZE(int, levelNum, LevelNum);
+    CC_SYNTHESIZE(int, searchNum, SearchNum);
+    CC_SYNTHESIZE(int, swapNum, SwapNum);
+    CC_SYNTHESIZE(int, bombNum, BombNum);
 private:
-    int levelNum;
-    int searchNum;
-    int swapNum;
-    int bombNum;
     int leftNum;
-    int scoreNum;
     float shortTime;
     float shortTimer;
     float lenTime;
     float lenTimer;
+    //生成新小方块的时间timer
+    float createCellTimer;
+    float createCellInterval;
+    float createCellParis;
     bool isSerialLink;//是否连击
     int serialLinkTimes;//连击次数
     GameLayer* _game;
     Board* board ;
+    bool timeNotEnough;
 };
 
 #endif /* defined(__Link__MenuLayer__) */

@@ -19,7 +19,7 @@ typedef const char* (*MULTI_ENCRYPT_FUNC)(const char* enc, size_t encLen, size_t
 typedef const char* (*MULTI_DECRYPT_FUNC)(const char* plain, size_t plainLen, size_t* encLen, int algorithm);
 
 // 通过角度计算位置
-static inline CCPoint ccpDegree(float d) 
+static inline Vec2 ccpDegree(float d)
 {
 	float r = CC_DEGREES_TO_RADIANS(d);
 	return ccp(cosf(r), sinf(r));
@@ -31,10 +31,10 @@ typedef vector<string>	StringList;
 // aabb盒
 typedef struct ccAABB 
 { 
-	CCPoint min;
-	CCPoint max; 
+	Vec2 min;
+	Vec2 max;
 } SAABB;
-static inline SAABB ccaabb(const CCPoint min, const CCPoint max) 
+static inline SAABB ccaabb(const Vec2 min, const Vec2 max)
 {
 	SAABB b = {
 		min,
@@ -139,8 +139,8 @@ public:
 	float	y()const{return m_v[1];}
 	float*	getArray(){return m_v;}
 
-	static	Cv2 CCPToV2(const CCPoint&point){ Cv2 v(point.x,point.y);return v; }
-	static	CCPoint V2ToCCP(const Cv2&v){ CCPoint point(v.x(),v.y()); return point; }
+	static	Cv2 CCPToV2(const Vec2 &point){ Cv2 v(point.x,point.y);return v; }
+	static	Vec2 V2ToCCP(const Cv2&v){ Vec2 point(v.x(),v.y()); return point; }
 protected:
 	float m_v[2];
 };

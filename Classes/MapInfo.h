@@ -40,7 +40,7 @@ public:
     int mapCol;
     int cellWidth;
     int cellHeight;
-    bool isIncrease;
+    int increaseData;
     int unLockType;
     vector<Pos> gravityPosVec;
     vector<vector<int>> mapArray;

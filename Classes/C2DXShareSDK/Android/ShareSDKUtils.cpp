@@ -211,7 +211,8 @@ bool multiShare(CCArray *platTypes, CCDictionary *content, C2DXShareResultEvent 
 	return true;
 }
 
-bool onekeyShare(int platformId, CCDictionary *content, C2DXShareResultEvent callback) {
+bool onekeyShare(int platformId, CCDictionary *content, C2DXShareResultEvent callback)
+{
 	JniMethodInfo mi;
 	if (platformId > 0) {
 		bool isHave = getMethod(mi, "onekeyShare", "(ILjava/lang/String;)V");

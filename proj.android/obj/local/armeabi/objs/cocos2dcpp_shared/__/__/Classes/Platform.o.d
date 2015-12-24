@@ -346,7 +346,23 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/Platform.o: \
  jni/../../cocos2d/cocos/3d/../deprecated/CCBool.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCString.h \
  jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h \
- jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h
+ jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
+ jni/../../Classes/../cocos2d/external/json/rapidjson.h \
+ /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring \
+ jni/../../Classes/../cocos2d/external/json/document.h \
+ jni/../../Classes/../cocos2d/external/json/reader.h \
+ jni/../../Classes/../cocos2d/external/json/rapidjson.h \
+ jni/../../Classes/../cocos2d/external/json/internal/pow10.h \
+ jni/../../Classes/../cocos2d/external/json/internal/stack.h \
+ /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/csetjmp \
+ jni/../../Classes/../cocos2d/external/json/internal/strfunc.h \
+ jni/../../Classes/../cocos2d/external/json/writer.h \
+ /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio \
+ jni/../../Classes/../cocos2d/external/json/stringbuffer.h \
+ jni/../../Classes/../cocos2d/external/libMobClickCpp/include/MobClickCpp.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h \
+ /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h
 
 jni/../../Classes/Platform.h:
 
@@ -1043,3 +1059,35 @@ jni/../../cocos2d/cocos/3d/../deprecated/CCString.h:
 jni/../../cocos2d/cocos/3d/../deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
+
+jni/../../Classes/../cocos2d/external/json/rapidjson.h:
+
+/Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring:
+
+jni/../../Classes/../cocos2d/external/json/document.h:
+
+jni/../../Classes/../cocos2d/external/json/reader.h:
+
+jni/../../Classes/../cocos2d/external/json/rapidjson.h:
+
+jni/../../Classes/../cocos2d/external/json/internal/pow10.h:
+
+jni/../../Classes/../cocos2d/external/json/internal/stack.h:
+
+/Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/csetjmp:
+
+jni/../../Classes/../cocos2d/external/json/internal/strfunc.h:
+
+jni/../../Classes/../cocos2d/external/json/writer.h:
+
+/Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio:
+
+jni/../../Classes/../cocos2d/external/json/stringbuffer.h:
+
+jni/../../Classes/../cocos2d/external/libMobClickCpp/include/MobClickCpp.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h:
+
+/Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h:

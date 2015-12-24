@@ -27,6 +27,7 @@ public:
     void setSoundCanPlay(bool canPlay);
     void playMusic(std::string fileName, bool isLoop);
     void playEffect(std::string fileName);
+    void stopAllEffects();
 private:
     bool musicPlay;
     bool soundPlay;

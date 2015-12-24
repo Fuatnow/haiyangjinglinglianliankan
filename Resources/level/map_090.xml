@@ -9,7 +9,7 @@
     <Map_COL>8</Map_COL>
     <Cell_Width>72</Cell_Width>
     <Cell_Height>72</Cell_Height>
-    <ISIncreace>1</ISIncreace>
+    <ISIncreace>410</ISIncreace>
     <UnLockProp>0</UnLockProp>
     <Gravity num="0">
         <Pos>
@@ -22,19 +22,19 @@
         </Pos>
     </Gravity>
     <Map_Array>
-        <Array>0 , 0 , 1 , 0 , 0 , 1 , 1 , 0</Array>
-        <Array>0 , 0 , 1 , 0 , 0 , 1 , 1 , 0</Array>
-        <Array>0 , 0 , 1 , 0 , 0 , 1 , 1 , 0</Array>
+        <Array>0 ,-1 , 1 , 0 , 0 , 1 , 1 , 0</Array>
+        <Array>0 ,-1 , 1 , 0 , 0 , 1 , 1 , 0</Array>
+        <Array>0 ,-1 , 1 , 0 , 0 , 1 , 1 , 0</Array>
         <Array>0 , 1 , 1 , 0 , 0 , 1 , 1 , 0</Array>
         <Array>0 , 1 , 1 , 0 , 0 , 1 , 1 , 0</Array>
-        <Array>0 , 1 , 1 , 0 , 0 , 1 , 0 , 0</Array>
-        <Array>0 , 1 , 1 , 0 , 0 , 1 , 0 , 0</Array>
-        <Array>0 , 1 , 1 , 0 , 0 , 1 , 0 , 0</Array>
+        <Array>0 , 1 , 1 , 0 , 0 , 1 ,-1 , 0</Array>
+        <Array>0 , 1 , 1 , 0 , 0 , 1 ,-1 , 0</Array>
+        <Array>0 , 1 , 1 , 0 , 0 , 1 ,-1 , 0</Array>
     </Map_Array>
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>55</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

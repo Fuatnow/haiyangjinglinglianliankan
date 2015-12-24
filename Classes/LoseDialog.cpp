@@ -65,21 +65,21 @@ void LoseDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
         switch (tag)
         {
             case 1:
-                CCLOG("replay_callBack");
+                log("replay_callBack");
             {
                 auto sc = GameLayer::scene();
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
             }
                 break;
             case 6:
-                CCLOG("homeBtn");
+                log("homeBtn");
             {
                 auto sc = LevelLayer::scene();
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
             }
                 break;
             case 8:
-                CCLOG("closeBtn");
+                log("closeBtn");
             {
                 auto sc = LevelLayer::scene();
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));

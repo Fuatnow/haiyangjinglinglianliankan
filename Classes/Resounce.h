@@ -13,8 +13,8 @@
 #define sound_click         "click.mp3"
 #define sound_click2        "click2.mp3"
 #define sound_coin          "coin1.mp3"
-#define sound_gamelose      "gamelose.mp3"
-#define sound_gamewin       "gamewin.mp3"
+#define sound_gamelose      "lose.mp3"
+#define sound_gamewin       "win.wav"
 #define sound_newLevel      "newLevel.mp3"
 #define sound_alarm         "timer.mp3"
 #define sound_unlock        "unlock.mp3"
@@ -24,8 +24,12 @@
 #define sound_search        "search.mp3"
 #define sound_bomb          "bomb.mp3"
 #define sound_fall          "click2.mp3"
-
-
+#define sound_select        "select.mp3"
+#define sound_startgame     "startgame.wav"
+#define sound_drop          "drop.mp3"
+#define sound_combo         "combo.mp3"
+#define sound_award         "award.mp3"
+#define sound_bomb          "bomb.mp3"
 
 #define particle_path       "score.plist"
 #endif

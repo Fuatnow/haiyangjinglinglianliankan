@@ -7,7 +7,7 @@ class BasicLayer : public Layer
 public:
 	BasicLayer(){}
 	virtual ~BasicLayer(){}
-	virtual bool init();
+    virtual bool init();
 	CREATE_FUNC(BasicLayer);
 public:
 	Size winSize;

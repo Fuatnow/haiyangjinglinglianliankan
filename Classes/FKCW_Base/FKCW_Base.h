@@ -68,5 +68,6 @@ todo:
 	平台相异的众多功能（例如获得系统内存量，弹出系统级的messageBox等）
 */ 
 //-------------------------------------------------------------------------
-#include "FKCW_Base_Macro.h"
-#include "FKCW_Base_Utils.h"
+//#include "FKCW_Base_Macro.h"
+//#include "FKCW_Base_Utils.h"
+#include "FKCW_Base_Types.h"

@@ -6,8 +6,8 @@ bool BasicLayer::init()
 	winWidth = winSize.width;
 	winHeight = winSize.height;
 	winCenter = Point(winWidth / 2, winHeight / 2);
-	float ppux = winWidth / 1280;
-	float ppuy = winHeight / 720;
+	float ppux = winWidth / 1136;
+	float ppuy = winHeight / 640;
 	ppuScale = ((ppux > ppuy) ? ppux : ppuy);
 	return true;
 }

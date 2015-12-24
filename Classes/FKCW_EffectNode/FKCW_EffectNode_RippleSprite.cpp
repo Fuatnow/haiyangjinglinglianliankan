@@ -207,8 +207,8 @@ void FKCW_EffectNode_RippleSprite::draw()
 	glEnable(GL_SCISSOR_TEST);
 	// 剪裁测试，计算世界矩形
 	auto contentSize=this->getContentSize();
-	auto rect_local= Rect(0,0,contentSize.width,contentSize.height);
-	auto rect_world=CCRectApplyAffineTransform(rect_local, this->nodeToWorldTransform());
+    auto rect_local= cocos2d::Rect(0,0,contentSize.width,contentSize.height);
+	auto rect_world= RectApplyAffineTransform(rect_local, this->nodeToWorldTransform());
 	// 不要使用glScissor，使用cocos2dx的API CCEGLView::setScissorInPoints，所以要注意，其参数是世界空间坐标。
     Director::getInstance()->getOpenGLView()->setScissorInPoints(rect_world.getMinX(), rect_world.getMinY(), rect_world.size.width, rect_world.size.height);
 	// 更换shader
@@ -256,7 +256,7 @@ void FKCW_EffectNode_RippleSprite::drawWire()
 		Cv2 v0=m_mesh->vlist[IDtri.getvIDByIndex(0)];
 		Cv2 v1=m_mesh->vlist[IDtri.getvIDByIndex(1)];
 		Cv2 v2=m_mesh->vlist[IDtri.getvIDByIndex(2)];
-		CCPoint vertices[]={CCPoint(v0.x(),v0.y()),CCPoint(v1.x(),v1.y()),CCPoint(v2.x(),v2.y())};
+		Vec2 vertices[]={Vec2(v0.x(),v0.y()),Vec2(v1.x(),v1.y()),Vec2(v2.x(),v2.y())};
 		ccDrawPoly(vertices, 3, true);
 	}
 }

@@ -9,6 +9,8 @@
 #include "SuccessDialog.h"
 #include "GameLayer.h"
 #include "LevelLayer.h"
+#include "RankLayer.h"
+#include "Toast.h"
 bool SuccessDialog::init()
 {
     Node::init();
@@ -31,43 +33,69 @@ void SuccessDialog::initData()
     ss << level ;
     levelLabel->setString(ss.str());
     
-    auto playerBestLabel = (TextBMFont*)seekNodeByName(root, "playerBestLabel");
-    playerBestLabel->setString("0");
     
+    int starNum = GameData::getInstance()->getCurLevelStar();
+    int curScore = GameData::getInstance()->getCurLevelScore();
+    ss.clear();
+    ss.str("");
+    ss << curScore;
+    auto curScoreLabel = (TextBMFont*)seekNodeByName(root, "playerBestLabel");
+    curScoreLabel->setString(ss.str());
+    
+    int selfBestNum =  GameData::getInstance()->getBestScoreNum();
+    ss.clear();
+    ss.str("");
+    ss << selfBestNum;
     auto selfBestLabel = (TextBMFont*)seekNodeByName(root, "selfBestLabel");
-    selfBestLabel->setString("1");
+    selfBestLabel->setString(ss.str());
     
+    gainCoinNum = starNum * starNum * 10;
+    GameData::getInstance()->addCoin(gainCoinNum);
     auto gainCoinLabel = (TextBMFont*)seekNodeByName(root, "gainCoinLabel");
-    gainCoinLabel->setString("2");
+    ss.clear();
+    ss.str("");
+    ss << gainCoinNum;
+    gainCoinLabel->setString(ss.str());
     
     float runTime = 0.1f;
-    
-    auto star1 = (Node*)seekNodeByName(root, "star1");
-    star1->setScale(30);
-    star1->setOpacity(10);
-    auto pos = star1->getPosition();
-    star1->setPosition(pos+Vec2(0,-200));
-    auto moveTo = MoveTo::create(runTime, pos);
-    auto scaleTo = ScaleTo::create(runTime, 1.0f);
-    auto fadeIn = FadeIn::create(runTime);
-    auto spawn = Spawn::create(scaleTo,moveTo,fadeIn, NULL);
-    auto callBack = CallFuncN::create(CC_CALLBACK_1(SuccessDialog::star_callBack,this));
-    auto starAct = Sequence::create(spawn, callBack,NULL);
-    star1->runAction(starAct);
-    
-    auto star2 = (Node*)seekNodeByName(root, "star2");
-    star2->setScale(30);
-    star2->setOpacity(30);
-    pos = star2->getPosition();
-    star2->setPosition(pos+Vec2(0,-200));
-    star2->runAction(Sequence::create(DelayTime::create(runTime),starAct,NULL));
-    
-    auto star3 = (Node*)seekNodeByName(root, "star3");
-    star3->setScale(10);
-    star3->setOpacity(10);
-    pos = star3->getPosition();
-    star3->setPosition(pos+Vec2(0,-200));
-    star3->runAction(Sequence::create(DelayTime::create(runTime*2),starAct,NULL));
+    if(starNum > 0)
+    {
+        auto star1 = (Node*)seekNodeByName(root, "star1");
+        star1->setVisible(true);
+        star1->setScale(30);
+        star1->setOpacity(10);
+        auto pos = star1->getPosition();
+        star1->setPosition(pos+Vec2(0,-200));
+        auto moveTo = MoveTo::create(runTime, pos);
+        auto scaleTo = ScaleTo::create(runTime, 1.0f);
+        auto fadeIn = FadeIn::create(runTime);
+        auto spawn = Spawn::create(scaleTo,moveTo,fadeIn, NULL);
+        auto callBack = CallFuncN::create(CC_CALLBACK_1(SuccessDialog::star_callBack,this));
+        auto starAct = Sequence::create(spawn, callBack,NULL);
+        star1->runAction(starAct);
+        
+        if(starNum > 1)
+        {
+            auto star2 = (Node*)seekNodeByName(root, "star2");
+            star2->setVisible(true);
+            star2->setScale(30);
+            star2->setOpacity(30);
+            pos = star2->getPosition();
+            star2->setPosition(pos+Vec2(0,-200));
+            star2->runAction(Sequence::create(DelayTime::create(runTime),starAct,NULL));
+        }
+        
+        if(starNum > 2)
+        {
+            auto star3 = (Node*)seekNodeByName(root, "star3");
+            star3->setVisible(true);
+            star3->setScale(10);
+            star3->setOpacity(10);
+            pos = star3->getPosition();
+            star3->setPosition(pos+Vec2(0,-200));
+            star3->runAction(Sequence::create(DelayTime::create(runTime*2),starAct,NULL));
+        }
+    }
     
     
     
@@ -78,6 +106,9 @@ void SuccessDialog::initData()
     auto nextBtn = (Button*)seekNodeByName(root, "nextBtn");
     nextBtn->addTouchEventListener(CC_CALLBACK_2(SuccessDialog::btn_callBack, this));
     
+    auto rankBtn = (Button*)seekNodeByName(root, "rankBtn");
+    rankBtn->addTouchEventListener(CC_CALLBACK_2(SuccessDialog::btn_callBack, this));
+    
     auto closeBtn = (Button*)seekNodeByName(root, "closeBtn");
     closeBtn->addTouchEventListener(CC_CALLBACK_2(SuccessDialog::btn_callBack, this));
 }
@@ -86,7 +117,7 @@ void SuccessDialog::initData()
 void SuccessDialog::star_callBack(cocos2d::Ref *pSender)
 {
     //播放音xiao
-    CCLOG("star_callBack");
+    log("star_callBack");
 }
 
 void SuccessDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
@@ -99,17 +130,25 @@ void SuccessDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
         switch (tag)
         {
             case 1:
-                CCLOG("replay_callBack");
+                log("replay_callBack");
                 {
                     auto sc = GameLayer::scene();
                     Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
                 }
                 break;
             case 2:
-                CCLOG("next_callBack");
+                log("next_callBack");
                 {
                     int curLevel = GameData::getInstance()->getLevel();
                     int maxLevel = GameData::getInstance()->getMaxLevel();
+                    
+                    if(maxLevel == 150)
+                    {
+                        Toast::toast("你已经通关");
+                        return;
+                    }
+                    
+                    
                     if(curLevel ==  maxLevel)
                     {
                         GameData::getInstance()->setLevel(curLevel+1);
@@ -130,8 +169,33 @@ void SuccessDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
                 }
                 break;
             case 3:
-                CCLOG("close_callBack");
+                log("rank_callBack");
                 {
+                    GameData::getInstance()->setQuaryTotalScore(false);
+                    auto rankLayer = RankLayer::create();
+                    int curLevel = GameData::getInstance()->getLevel();
+                    rankLayer->loadLeaderboard(curLevel);
+                    addChild(rankLayer,curLevel);
+                }
+                break;
+            case 4:
+                log("close_callBack");
+                {
+//                    int curLevel = GameData::getInstance()->getLevel();
+//                    int maxLevel = GameData::getInstance()->getMaxLevel();
+//                    
+//                    if(maxLevel == 150)
+//                    {
+//                        Toast::toast("你已经通关");
+//                        return;
+//                    }
+//                    
+//                    
+//                    if(curLevel ==  maxLevel)
+//                    {
+//                        GameData::getInstance()->setLevel(curLevel+1);
+//                        GameData::getInstance()->setMaxLevel(curLevel+1);
+//                    }
                     auto sc = LevelLayer::scene();
                     Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
                 }

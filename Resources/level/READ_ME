@@ -5,9 +5,10 @@
 5.  Map_Height 	           map高度
 6.  Cell_Width 	           cell长度
 7.  Cell_Height            cell高度
-8.  IsIncreace             是否自增加
+8.  IsIncreace             是否自增加三位数  十位是间隔时间 个位是生产对数 百位用于扩展
 9.  UnLockProp             解锁道具 0表示没有
-10.  Gravity                下落朝向
-                           x,y        0 , 0表示没有 数目可能大于一个
+10. Gravity                下落朝向
+                           [0]x,y 第一个pos的是参考点 其实就是重力线
+                           [1]x,y 第二个pos表示的是方向
 11. Map_Array              (-1:固定格子 0:空格子 1:普通格子 2:雪块)
 12. Aim_Pass               (1:消除所有 2:表示分数 3:表示消除种类个数 4:表示消除冰块个数)

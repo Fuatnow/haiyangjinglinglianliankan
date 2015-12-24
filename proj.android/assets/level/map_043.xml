@@ -4,37 +4,37 @@
     <ThemeType>1</ThemeType>
     <Bg>2</Bg>
     <Music>2</Music>
-    <Kinds>6</Kinds>
+    <Kinds>12</Kinds>
     <Map_ROW>8</Map_ROW>
     <Map_COL>8</Map_COL>
     <Cell_Width>72</Cell_Width>
     <Cell_Height>72</Cell_Height>
     <ISIncreace>1</ISIncreace>
     <UnLockProp>0</UnLockProp>
-    <Gravity num="0">
+    <Gravity num="2">
         <Pos>
-            <X>0</X>
+            <X>2</X>
             <Y>0</Y>
         </Pos>
         <Pos>
-            <X>0</X>
-            <Y>0</Y>
+            <X>1</X>
+            <Y>-1</Y>
         </Pos>
     </Gravity>
     <Map_Array>
         <Array>1 , 1 , 1 , 1 , 1 , 1 , 1 , 1</Array>
-        <Array>1 , 0 , 0 , 0 , 0 , 0 , 0 , 1</Array>
+        <Array>1 , 0 , 0 ,-1 ,-1 , 0 , 0 , 1</Array>
         <Array>1 , 0 , 0 , 1 , 1 , 0 , 0 , 1</Array>
-        <Array>1 , 0 , 1 , 0 , 0 , 1 , 0 , 1</Array>
-        <Array>1 , 0 , 1 , 0 , 0 , 1 , 0 , 1</Array>
+        <Array>1 ,-1 , 1 , 0 ,-1 , 1 , 0 , 1</Array>
+        <Array>1 , 0 , 1 ,-1 , 0 , 1 ,-1 , 1</Array>
         <Array>1 , 0 , 0 , 1 , 1 , 0 , 0 , 1</Array>
-        <Array>1 , 0 , 0 , 0 , 0 , 0 , 0 , 1</Array>
+        <Array>1 , 0 , 0 ,-1 ,-1 , 0 , 0 , 1</Array>
         <Array>1 , 1 , 1 , 1 , 1 , 1 , 1 , 1</Array>
     </Map_Array>
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>44</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

@@ -64,6 +64,7 @@ void Audio::playMusic(std::string fileName, bool isLoop)
     if (musicPlay)
     {
         hadMusicPlay = true;
+        audioEngine->pauseBackgroundMusic();
         audioEngine->playBackgroundMusic(fileName.c_str(),isLoop);
     }
 }
@@ -80,4 +81,9 @@ void Audio::purgeInstance()
 {
     delete instance;
     instance = NULL;
+}
+
+void Audio::stopAllEffects()
+{
+    audioEngine->stopAllEffects();
 }

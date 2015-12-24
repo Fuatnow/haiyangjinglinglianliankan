@@ -40,12 +40,12 @@ bool TestLayer::init()
 
 void TestLayer::initView()
 {
-    CCLOG("initView");
+    log("initView");
     
     for(int level = 0 ; level < 150 ; level++)
     {
         
-        string resPath = "/Users/fuatnow/cocos2d-x-3.3/projects/Link/Resources/level/";
+        string resPath = "/Users/fuatnow/cocos2d-x-3.3/projects/SeaLink/Resources/level/";
         const char* flieName = String::createWithFormat("map_%03d.xml",level+1)->getCString();
         string flieNamePath = resPath + string(flieName);
         
@@ -55,7 +55,7 @@ void TestLayer::initView()
         auto tileLayer = tileMap->getLayer("map01");
         auto row = tileMap->getMapSize().width;
         auto col = tileMap->getMapSize().height;
-        CCLOG("%f %f", row, col);
+        log("%f %f", row, col);
         
         TiXmlDocument* document = new TiXmlDocument();
         document->LoadFile();
@@ -79,15 +79,18 @@ void TestLayer::initView()
         rootElement->LinkEndChild(themeTypeElement);
         
         
+        std::stringstream ss;
+        ss << (level / 25 + 1);
+        
         //1. bg type
         TiXmlElement* bgTypeElement = new TiXmlElement("Bg");
-        TiXmlText* bgContent = new TiXmlText("1");
+        TiXmlText* bgContent = new TiXmlText(ss.str().c_str());
         bgTypeElement->LinkEndChild(bgContent);
         rootElement->LinkEndChild(bgTypeElement);
         
         //2. muisc type
         TiXmlElement* musicTypeElement = new TiXmlElement("Music");
-        TiXmlText* musicContent = new TiXmlText("1");
+        TiXmlText* musicContent = new TiXmlText(ss.str().c_str());
         musicTypeElement->LinkEndChild(musicContent);
         rootElement->LinkEndChild(musicTypeElement);
         
@@ -95,7 +98,8 @@ void TestLayer::initView()
         //3. kinds
         int kinds = level % 13 + 3;
         TiXmlElement* cellKindsElement = new TiXmlElement("Kinds");
-        std::stringstream ss;
+        ss.clear();
+        ss.str("");
         ss << kinds ;
         TiXmlText* kindsContent = new TiXmlText(ss.str().c_str());
         cellKindsElement->LinkEndChild(kindsContent);
@@ -209,7 +213,10 @@ void TestLayer::initView()
         passTypeElement->LinkEndChild(passTypeContent);
         
         TiXmlElement* lenTimeElement = new TiXmlElement("LenTime");
-        TiXmlText* lenTimeContent = new TiXmlText("60");
+        ss.str("");
+        int time = 60 - level % 25;
+        ss << time;
+        TiXmlText* lenTimeContent = new TiXmlText(ss.str().c_str());
         lenTimeElement->LinkEndChild(lenTimeContent);
         
         TiXmlElement* shortTimeElement = new TiXmlElement("ShorTime");

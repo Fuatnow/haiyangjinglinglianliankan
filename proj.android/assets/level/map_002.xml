@@ -25,16 +25,16 @@
         <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
         <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
         <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
-        <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
-        <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
-        <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
+        <Array>0 ,-1 , 1 , 1 , 1 , 1 ,-1 , 0</Array>
+        <Array>0 ,-1 , 1 , 1 , 1 , 1 ,-1 , 0</Array>
+        <Array>0 ,-1 , 1 , 1 , 1 , 1 ,-1 , 0</Array>
         <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
         <Array>0 , 0 , 1 , 1 , 1 , 1 , 0 , 0</Array>
     </Map_Array>
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>20</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

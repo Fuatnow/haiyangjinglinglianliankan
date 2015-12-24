@@ -351,8 +351,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HomeLayer.o: \
  jni/../../Classes/LevelManager.h jni/../../Classes/GameData.h \
  jni/../../Classes/Define.h jni/../../Classes/MapInfo.h \
  /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream \
- jni/../../Classes/Board.h jni/../../Classes/Cell.h \
- jni/../../Classes/BackgroundLayer.h \
+ jni/../../Classes/RankLayer.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CocoStudio.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CCActionFrame.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CocosStudioExport.h \
@@ -420,7 +419,6 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HomeLayer.o: \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCActionTimeline.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CCTimeLine.h \
  jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h \
- jni/../../Classes/MenuLayer.h \
  jni/../../cocos2d/cocos/3d/../ui/CocosGUI.h \
  jni/../../cocos2d/cocos/3d/../ui/UIButton.h \
  jni/../../cocos2d/cocos/3d/../ui/UICheckBox.h \
@@ -446,11 +444,15 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HomeLayer.o: \
  jni/../../cocos2d/cocos/3d/../ui/UIScale9Sprite.h \
  jni/../../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h \
  jni/../../cocos2d/cocos/3d/../ui/UILayoutComponent.h \
+ jni/../../Classes/Board.h jni/../../Classes/Cell.h \
+ jni/../../Classes/BackgroundLayer.h jni/../../Classes/MenuLayer.h \
  jni/../../Classes/LevelLayer.h jni/../../Classes/TransitionMoveLR.h \
- jni/../../Classes/Audio.h jni/../../Classes/Resounce.h \
+ jni/../../Classes/TransitionMoveRL.h jni/../../Classes/PackageLayer.h \
+ jni/../../Classes/ShopLayer.h jni/../../Classes/Audio.h \
+ jni/../../Classes/Resounce.h \
  jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/3d/../audio/include/Export.h \
- jni/../../Classes/Platform.h \
+ jni/../../Classes/GlobalNode.h jni/../../Classes/Platform.h \
  jni/../../Classes/../cocos2d/external/json/rapidjson.h \
  jni/../../Classes/../cocos2d/external/json/document.h \
  jni/../../Classes/../cocos2d/external/json/writer.h \
@@ -458,7 +460,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/HomeLayer.o: \
  jni/../../Classes/../cocos2d/external/json/internal/stack.h \
  jni/../../Classes/../cocos2d/external/json/internal/strfunc.h \
  /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio \
- jni/../../Classes/../cocos2d/external/json/stringbuffer.h
+ jni/../../Classes/../cocos2d/external/json/stringbuffer.h \
+ jni/../../Classes/../cocos2d/external/libMobClickCpp/include/MobClickCpp.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h \
+ jni/../../Classes/Toast.h
 
 jni/../../Classes/HomeLayer.h:
 
@@ -1172,11 +1178,7 @@ jni/../../Classes/MapInfo.h:
 
 /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:
 
-jni/../../Classes/Board.h:
-
-jni/../../Classes/Cell.h:
-
-jni/../../Classes/BackgroundLayer.h:
+jni/../../Classes/RankLayer.h:
 
 jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/CocoStudio.h:
 
@@ -1312,8 +1314,6 @@ jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/C
 
 jni/../../cocos2d/cocos/editor-support/cocostudio/../cocostudio/ActionTimeline/CSLoader.h:
 
-jni/../../Classes/MenuLayer.h:
-
 jni/../../cocos2d/cocos/3d/../ui/CocosGUI.h:
 
 jni/../../cocos2d/cocos/3d/../ui/UIButton.h:
@@ -1364,9 +1364,23 @@ jni/../../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h:
 
 jni/../../cocos2d/cocos/3d/../ui/UILayoutComponent.h:
 
+jni/../../Classes/Board.h:
+
+jni/../../Classes/Cell.h:
+
+jni/../../Classes/BackgroundLayer.h:
+
+jni/../../Classes/MenuLayer.h:
+
 jni/../../Classes/LevelLayer.h:
 
 jni/../../Classes/TransitionMoveLR.h:
+
+jni/../../Classes/TransitionMoveRL.h:
+
+jni/../../Classes/PackageLayer.h:
+
+jni/../../Classes/ShopLayer.h:
 
 jni/../../Classes/Audio.h:
 
@@ -1375,6 +1389,8 @@ jni/../../Classes/Resounce.h:
 jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/3d/../audio/include/Export.h:
+
+jni/../../Classes/GlobalNode.h:
 
 jni/../../Classes/Platform.h:
 
@@ -1393,3 +1409,11 @@ jni/../../Classes/../cocos2d/external/json/internal/strfunc.h:
 /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio:
 
 jni/../../Classes/../cocos2d/external/json/stringbuffer.h:
+
+jni/../../Classes/../cocos2d/external/libMobClickCpp/include/MobClickCpp.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h:
+
+jni/../../Classes/Toast.h:

@@ -4,7 +4,7 @@
     <ThemeType>1</ThemeType>
     <Bg>4</Bg>
     <Music>4</Music>
-    <Kinds>5</Kinds>
+    <Kinds>12</Kinds>
     <Map_ROW>8</Map_ROW>
     <Map_COL>8</Map_COL>
     <Cell_Width>72</Cell_Width>
@@ -22,19 +22,19 @@
         </Pos>
     </Gravity>
     <Map_Array>
-        <Array>1 , 0 , 0 , 1 , 1 , 0 , 0 , 1</Array>
+        <Array>1 ,-1 ,-1 , 1 , 1 ,-1 ,-1 , 1</Array>
         <Array>1 , 0 , 0 , 1 , 1 , 0 , 0 , 1</Array>
         <Array>1 , 0 , 0 , 1 , 1 , 0 , 0 , 1</Array>
         <Array>1 , 1 , 1 , 1 , 1 , 1 , 1 , 1</Array>
         <Array>1 , 1 , 1 , 1 , 1 , 1 , 1 , 1</Array>
         <Array>1 , 1 , 1 , 1 , 1 , 1 , 1 , 1</Array>
         <Array>1 , 0 , 0 , 0 , 0 , 0 , 0 , 1</Array>
-        <Array>1 , 0 , 0 , 0 , 0 , 0 , 0 , 1</Array>
+        <Array>1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 , 1</Array>
     </Map_Array>
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>40</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

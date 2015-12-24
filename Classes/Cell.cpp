@@ -1,4 +1,5 @@
 #include "Cell.h"
+#include "Audio.h"
 Cell* Cell::create(int xx, int yy, int type, const char* frameName)
 {
     Cell* cell = new Cell;
@@ -69,31 +70,23 @@ void Cell::initData()
 
 void Cell::setSelected()
 {
-    CCLOG("setSelected");
+    log("setSelected");
     auto scale1 = ScaleTo::create(0.5f, 0.8f);
     auto scale2 = ScaleTo::create(0.5, 1.0f);
     auto seq = Sequence::create(scale1, scale2, NULL);
     runAction(RepeatForever::create(seq));
+    Audio::getInstance()->playEffect(sound_select);
 }
 
 void Cell::unSelected()
 {
-    CCLOG("unSelected");
+    log("unSelected");
     setScale(1);
     stopAllActions();
 }
 
 void Cell::swap(Cell* cell)
 {
-    //交换两个贴图 和 类型
-//    auto curFrame = this->getSpriteFrame();
-//    int curType = this->type;
-//    auto aimFrame = cell->getSpriteFrame();
-//    int aimType = cell->type;
-//    this->setDisplayFrame(aimFrame);
-//    this->type = aimType;
-//    cell->setDisplayFrame(curFrame);
-//    cell->type = curType;
     int row = x;
     int col = y;
     int aimRow = cell->x;
@@ -110,4 +103,24 @@ void Cell::addParticle(std::string fileStr)
     patricle->setPosition(getContentSize()/2);
     patricle->setAutoRemoveOnFinish(true);
     addChild(patricle,-1);
+}
+
+CELL_KIND Cell::getCellKind()
+{
+    auto kind = KIND_NORMAL;
+    if(type == -1)
+    {
+        kind = KIND_WALL;
+    }
+    return kind;
+}
+
+bool Cell::canBeExchage()
+{
+    bool canChange = false;
+    if(getCellKind() != KIND_WALL && isPoping == false)
+    {
+        canChange = true;
+    }
+    return canChange;
 }

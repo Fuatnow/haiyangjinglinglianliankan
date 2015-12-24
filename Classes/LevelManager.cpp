@@ -28,7 +28,7 @@ void LevelManager::loadLevel(int level)
 //    auto tileLayer = tileMap->getLayer("map01");
 //    auto row = tileMap->getMapSize().width;
 //    auto col = tileMap->getMapSize().height;
-//    CCLOG("%f %f", row, col);
+//    log("%f %f", row, col);
 //    
 //    for (int i = 0; i < row + 2; i++)
 //    {
@@ -92,19 +92,11 @@ bool GetNodePointerByName(TiXmlElement* pRootEle,std::string &strNodeName,TiXmlE
 
 void LevelManager::gainMapInfo(MapInfo &mapInfo , int level)
 {
-    const char* levelPath1 = String::createWithFormat("CloseNormal.png")->getCString();
-//    MessageBox(levelPath1, "levelPath1");
     const char* levelPath = String::createWithFormat("map_%03d.xml",level)->getCString();
-//    MessageBox(levelPath, "levelPath");
     string xmlFilePath = FileUtils::getInstance()->fullPathForFilename(levelPath);
-//    MessageBox(xmlFilePath.c_str(), "xmlFilePath");
-//    //读取的字节数，读取失败则为0
-//    ssize_t bffSize;
-//    //获取指定地址的内容
-//    unsigned char *bff  = FileUtils::getInstance()->getFileData(xmlFilePath,"r", &bffSize);
     
     string str = FileUtils::getInstance()->getStringFromFile(xmlFilePath);
-    MessageBox(str.c_str(), "bff");
+//    MessageBox(str.c_str(), "bff");
    
     TiXmlDocument* document = new TiXmlDocument();
     document->Parse(str.c_str(), 0 , TIXML_ENCODING_UTF8);
@@ -160,7 +152,7 @@ void LevelManager::gainMapInfo(MapInfo &mapInfo , int level)
     elementStr = "ISIncreace";
     parseFlag = GetNodePointerByName(rootElement,elementStr,element);
     CCASSERT(parseFlag, "parseErr");
-    mapInfo.isIncrease = atoi(element->GetText());
+    mapInfo.increaseData = atoi(element->GetText());
     
     
     elementStr = "UnLockProp";
@@ -172,8 +164,16 @@ void LevelManager::gainMapInfo(MapInfo &mapInfo , int level)
     elementStr = "Gravity";
     parseFlag = GetNodePointerByName(rootElement,elementStr,element);
     CCASSERT(parseFlag, "parseErr");
+    TiXmlAttribute* attrEle = element->FirstAttribute();
+    CCASSERT(parseFlag, "parseErr");
+    std::string strAttName = attrEle->Name();
+    std::string strAttValue = attrEle->Value();
+//    log("strAttName:%s strAttValue:%s",strAttName.c_str(),strAttValue.c_str());
+    int num = atoi(strAttValue.c_str());
+    parseFlag = GetNodePointerByName(rootElement,elementStr,element);
     TiXmlElement* childEle = element->FirstChildElement();
-    while (childEle)
+    mapInfo.gravityPosVec.clear();
+    while (num > 0 && childEle)
     {
         TiXmlElement* eleTemp = NULL;
         elementStr = "X";
@@ -261,7 +261,7 @@ void LevelManager::debugMap(int row,int col)
             else if (mapVec[j][i] == 2) str += " | ";
             else str += " | ";
         }
-        CCLOG("%s",str.c_str());
+        log("%s",str.c_str());
     }
     /******************************************
      输出类似这样

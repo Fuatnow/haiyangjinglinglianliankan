@@ -34,7 +34,7 @@
     <Aim_Pass>
         <DiscriPtion>规定的时间内消除所有方格</DiscriPtion>
         <PassType>1</PassType>
-        <LenTime>60</LenTime>
+        <LenTime>57</LenTime>
         <ShorTime>2</ShorTime>
     </Aim_Pass>
 </Map>

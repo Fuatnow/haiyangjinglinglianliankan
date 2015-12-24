@@ -11,6 +11,8 @@
 #include "GameLayer.h"
 #include "LevelManager.h"
 #include "Audio.h"
+#include "Toast.h"
+#include "Platform.h"
 MenuLayer* MenuLayer::create(GameLayer *game)
 {
     MenuLayer* layer = new MenuLayer;
@@ -32,19 +34,29 @@ void MenuLayer::initData()
 {
     board = _game->board;
     MapInfo mapInfo = GameData::getInstance()->getMapInfo();
-    int curLevel = GameData::getInstance()->getLevel();
-    levelNum = GameData::getInstance()->getBestScoreNum(curLevel);
+    levelNum = GameData::getInstance()->getLevel();
     shortTime = mapInfo.aimpassInfo.shortTime;
     lenTime = mapInfo.aimpassInfo.lenTime;
     shortTimer = 0;
     lenTimer = 0;
     isSerialLink = false;
-    searchNum = GameData::getInstance()->getSearchNum();
-    swapNum = GameData::getInstance()->getSwapNum();
-    bombNum = GameData::getInstance()->getBombNum();
+    timeNotEnough = false;
+    
+    
+    searchNum = GameData::getInstance()->getTakeSearchNum();
+    swapNum = GameData::getInstance()->getTakeSwapNum();
+    bombNum = GameData::getInstance()->getTakeBombNum();
+    
+    
     leftNum = board->getHasCellCount();
     scoreNum = 0;
     serialLinkTimes = 0;
+    leftTime = 0;
+    createCellTimer = 0;
+    int increateNum = mapInfo.increaseData;
+    createCellInterval = increateNum / 100;
+    createCellParis = (increateNum / 10) % 10;
+    if(increateNum < 100) createCellInterval = 9999999;
 }
 
 void MenuLayer::initView()
@@ -62,6 +74,11 @@ void MenuLayer::initView()
     menuItem->addTouchEventListener(CC_CALLBACK_2(MenuLayer::menu_callBack, this));
     
     std::stringstream ss;
+    ss << lenTime;
+    alarmNumLab = (TextBMFont*)seekNodeByName(root, "timeLabel");
+    alarmNumLab->setString(ss.str());
+    ss.clear();
+    ss.str("");
     ss << leftNum;
     leftLabel = (TextBMFont*)seekNodeByName(root, "leftLabel");
     leftLabel->setString(ss.str());
@@ -109,7 +126,12 @@ void MenuLayer::swap_callBack(Ref *pSender, Widget::TouchEventType type)
 {
     if(type == Widget::TouchEventType::ENDED)
     {
-        CCLOG("swap_callBack");
+        if(swapNum <=0)
+        {
+            Toast::toast("该局[交换]道具已经使用完毕");
+        }
+        
+        log("swap_callBack");
         if(board->isMoving == false && board->isReady == true
            && swapNum > 0 && _game->getGameState() == Game_Play)
         {
@@ -119,6 +141,12 @@ void MenuLayer::swap_callBack(Ref *pSender, Widget::TouchEventType type)
             swapNumLab->setString("x"+ss.str());
             board->exchangeCells(true);
             Audio::getInstance()->playEffect(sound_swap);
+            
+            int totalSwapNum = GameData::getInstance()->getSwapNum() - 1;
+            GameData::getInstance()->setSwapNum(totalSwapNum);
+            
+            // 使用道具.
+            umeng::MobClickCpp::use("swapProp", 1 , 1);
         }
     }
 }
@@ -127,7 +155,13 @@ void MenuLayer::search_callBack(Ref *pSender, Widget::TouchEventType type)
 {
     if(type == Widget::TouchEventType::ENDED)
     {
-        CCLOG("search_callBack");
+        log("search_callBack");
+        
+        if(searchNum <=0)
+        {
+            Toast::toast("该局[自动消除]道具已经使用完毕");
+        }
+        
         if(board->isMoving == false && board->isReady == true
            && searchNum > 0 && _game->getGameState() == Game_Play)
         {
@@ -137,6 +171,13 @@ void MenuLayer::search_callBack(Ref *pSender, Widget::TouchEventType type)
             searchNumLab->setString("x"+ss.str());
             board->removeOnePairCell();
             Audio::getInstance()->playEffect(sound_search);
+            
+            
+            int totalSearchNum = GameData::getInstance()->getSearchNum() - 1;
+            GameData::getInstance()->setSearchNum(totalSearchNum);
+            
+            // 使用道具.
+            umeng::MobClickCpp::use("searchProp", 1 , 1);
         }
     }
 }
@@ -145,7 +186,13 @@ void MenuLayer::bomb_callBack(Ref *pSender, Widget::TouchEventType type)
 {
     if(type == Widget::TouchEventType::ENDED)
     {
-        CCLOG("bomb_callBack");
+        log("bomb_callBack");
+        
+        if(bombNum <=0)
+        {
+            Toast::toast("该局[炸弹]道具已经使用完毕");
+        }
+        
         if(board->isMoving == false && board->isReady == true
            && bombNum>0 && _game->getGameState() == Game_Play)
         {
@@ -154,6 +201,13 @@ void MenuLayer::bomb_callBack(Ref *pSender, Widget::TouchEventType type)
             ss << bombNum;
             bombNumLab->setString("x"+ss.str());
             board->removeOneType();
+            Audio::getInstance()->playEffect(sound_bomb);
+            
+            int totalBombNum = GameData::getInstance()->getBombNum() - 1;
+            GameData::getInstance()->setBombNum(totalBombNum);
+            
+            // 使用道具.
+            umeng::MobClickCpp::use("bombProp", 1 , 1);
         }
     }
 }
@@ -164,28 +218,28 @@ void MenuLayer::menu_callBack(Ref *pSender, Widget::TouchEventType type)
     {
         case Widget::TouchEventType::BEGAN:
         {
-            CCLOG("BEGAN");
+            log("BEGAN");
             //board->fallToBoard();
         }
             break;
         case Widget::TouchEventType::MOVED:
         {
-            CCLOG("MOVED");
+            log("MOVED");
         }
             break;
         case Widget::TouchEventType::ENDED:
         {
             if(board->isMoving == false && board->isReady == true
-               && bombNum>0 && _game->getGameState() == Game_Play)
+               && _game->getGameState() == Game_Play)
             {
                 _game->pauseGame();
             }
-            CCLOG("ENDED");
+            log("ENDED");
         }
             break;
         case Widget::TouchEventType::CANCELED:
         {
-            CCLOG("CANCELED");
+            log("CANCELED");
         }
             break;
         default:
@@ -201,13 +255,34 @@ void MenuLayer::update(float dt)
     float per = 1-lenTimer/lenTime;
     if(per < 0.001f)
     {
-//        _game->setGameState(Game_Lose);
-//        _game->gameOver();
-//        unscheduleUpdate();
+        _game->setGameState(Game_Lose);
+        _game->gameOver();
+        setDisable();
         return;
     }
+    
+    leftTime = lenTime - lenTimer;
+    //小于5秒 闹钟响起
+    if(leftTime < 5.0f && timeNotEnough == false)
+    {
+        timeNotEnough = true;
+        Audio::getInstance()->playEffect(sound_alarm);
+    }
+    else if(leftTime > 5.0f && timeNotEnough)
+    {
+        timeNotEnough = false;
+        Audio::getInstance()->stopAllEffects();
+    }
+    
+    if(leftTime+0.1f > (int)leftTime)
+    {
+        const char* str = String::createWithFormat("%d",(int)(leftTime+0.9f))->getCString();
+        alarmNumLab->setString(str);
+    }
+    
     lenBar->setPercent(per*100);
     
+    //连击了
     if(isSerialLink)
     {
         shortTimer += dt;
@@ -219,6 +294,20 @@ void MenuLayer::update(float dt)
             isSerialLink = false;
         }
         shortBar->setPercent(per*100);
+    }
+    
+    createNewCells(dt);
+}
+
+void MenuLayer::createNewCells(float dt)
+{
+    createCellTimer += dt;
+    if(createCellTimer > createCellInterval)
+    {
+        createCellTimer = 0;
+        MapInfo mapInfo = GameData::getInstance()->getMapInfo();
+        board->createNextCells(createCellParis,mapInfo.kinds);
+        updateLeftCellsCount(board->getHasCellCount());
     }
 }
 
@@ -246,8 +335,12 @@ void MenuLayer::setSerialLink(Vec2 pos)
     if(serialLinkTimes > 0)
     {
         std::stringstream ss;
-        ss << serialLinkTimes ;
-        string str = "连击+" + ss.str();
+        std::stringstream sc;
+        ss << serialLinkTimes;
+        int addScore = serialLinkTimes*2+1;
+        updateScore(addScore);
+        sc << addScore;
+        string str = ss.str()+"连击+" + sc.str() +"分";
         auto label = Text::create(str, "normal.TTF",30);
         label->setColor(Color3B(230,238,29));
         label->setPosition(pos);
@@ -255,6 +348,14 @@ void MenuLayer::setSerialLink(Vec2 pos)
         auto removeSelf = RemoveSelf::create();
         label->runAction(Sequence::create(moveBy,removeSelf, NULL));
         addChild(label,100);
+        
+        Audio::getInstance()->playEffect(sound_drop);
     }
     serialLinkTimes ++;
+}
+
+void MenuLayer::setDisable()
+{
+    unscheduleUpdate();
+    setVisible(false);
 }

@@ -444,8 +444,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AimDialog.o: \
  /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream \
  jni/../../Classes/GameLayer.h jni/../../Classes/LevelManager.h \
  jni/../../Classes/GameData.h jni/../../Classes/MapInfo.h \
- jni/../../Classes/Board.h jni/../../Classes/Cell.h \
- jni/../../Classes/BackgroundLayer.h jni/../../Classes/MenuLayer.h
+ jni/../../Classes/RankLayer.h jni/../../Classes/Board.h \
+ jni/../../Classes/Cell.h jni/../../Classes/BackgroundLayer.h \
+ jni/../../Classes/MenuLayer.h
 
 jni/../../Classes/AimDialog.h:
 
@@ -1342,6 +1343,8 @@ jni/../../Classes/LevelManager.h:
 jni/../../Classes/GameData.h:
 
 jni/../../Classes/MapInfo.h:
+
+jni/../../Classes/RankLayer.h:
 
 jni/../../Classes/Board.h:
 

@@ -21,6 +21,14 @@ struct Search2Pos
     bool isFind;
 };
 
+
+enum MOVE_DIR
+{
+    HORIZONTAL_LEFT,
+    HORIZONTAL_RIGHT,
+    VERTICAL_UP,
+    VERTICAL_DOWN,
+};
 class Board : public Node
 {
 public:
@@ -64,11 +72,18 @@ public:
     void updateReady(float dt);
     void debugTestData();
     void fall_callBack(Node* pSender);
+    void updateVec_callBack(float dt);
+    void createNextCells(int pairNums,int maxTypeNum);
+    void moveCells(int row1 , int col1 , int row2 , int col2);
+    void moveCells(int referRow , int referCol,map<Cell*, Vec2> &movePosMap);
+    Cell* createCell(int row , int col , int frameNum , int type);
     Vec2 getPositionByRowCol(int row,int col);
+    vector<Vec2> getEmptyVec();
     CREATE_FUNC(Board);
 public:
     vector<Cell*>cellVec[ROW + 2];
     vector<bool>vis[ROW + 2];
+    vector<Cell*>nextCellVec;
     TurnStepPath pathVec;
     vector<TurnStepPath> allPaths;
     float cellWidth;
@@ -85,8 +100,11 @@ public:
     bool isMoving;
     //是否准备好
     bool isReady;
+    //是否在更新vec(用于移动的时候)
+    bool isVecUpdatIng;
     Vec2 centerPos;
     int countdown;
+    float maxHeight;
     Search2Pos sea2Pos;
     CC_SYNTHESIZE(int, hasCellCount, HasCellCount);
 };

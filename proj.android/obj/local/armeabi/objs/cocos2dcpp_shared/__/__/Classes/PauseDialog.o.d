@@ -444,9 +444,15 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/PauseDialog.o: \
  jni/../../Classes/LevelManager.h jni/../../Classes/GameData.h \
  jni/../../Classes/MapInfo.h \
  /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream \
- jni/../../Classes/Board.h jni/../../Classes/Cell.h \
- jni/../../Classes/BackgroundLayer.h jni/../../Classes/MenuLayer.h \
- jni/../../Classes/LevelLayer.h jni/../../Classes/TransitionMoveLR.h
+ jni/../../Classes/RankLayer.h jni/../../Classes/Board.h \
+ jni/../../Classes/Cell.h jni/../../Classes/BackgroundLayer.h \
+ jni/../../Classes/MenuLayer.h jni/../../Classes/LevelLayer.h \
+ jni/../../Classes/TransitionMoveLR.h \
+ jni/../../Classes/TransitionMoveRL.h jni/../../Classes/PackageLayer.h \
+ jni/../../Classes/ShopLayer.h jni/../../Classes/Audio.h \
+ jni/../../Classes/Resounce.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/3d/../audio/include/Export.h
 
 jni/../../Classes/PauseDialog.h:
 
@@ -1344,6 +1350,8 @@ jni/../../Classes/MapInfo.h:
 
 /Users/fuatnow/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:
 
+jni/../../Classes/RankLayer.h:
+
 jni/../../Classes/Board.h:
 
 jni/../../Classes/Cell.h:
@@ -1355,3 +1363,17 @@ jni/../../Classes/MenuLayer.h:
 jni/../../Classes/LevelLayer.h:
 
 jni/../../Classes/TransitionMoveLR.h:
+
+jni/../../Classes/TransitionMoveRL.h:
+
+jni/../../Classes/PackageLayer.h:
+
+jni/../../Classes/ShopLayer.h:
+
+jni/../../Classes/Audio.h:
+
+jni/../../Classes/Resounce.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/SimpleAudioEngine.h:
+
+jni/../../cocos2d/cocos/3d/../audio/include/Export.h:

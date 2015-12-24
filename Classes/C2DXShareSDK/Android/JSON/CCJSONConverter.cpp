@@ -90,6 +90,7 @@ void CCJSONConverter::convertArrayToJson(CCArray * array, cJSON * json)
 cJSON * CCJSONConverter::getObjJson(CCObject * obj)
 {
     std::string s = typeid(*obj).name();
+    log("Type:%s",s.c_str());
     if(s.find("CCDictionary")!=std::string::npos){
         cJSON * json = cJSON_CreateObject();
         convertDictionaryToJson((CCDictionary *)obj, json);
@@ -98,7 +99,9 @@ cJSON * CCJSONConverter::getObjJson(CCObject * obj)
         cJSON * json = cJSON_CreateArray();
         convertArrayToJson((CCArray *)obj, json);
         return json;
-    }else if(s.find("CCString")!=std::string::npos){
+    }
+    else if(s.find("N7cocos2d8__StringE")!=std::string::npos){
+//    else if(s.find("CCString")!=std::string::npos){//N7cocos2d8__StringE
         CCString * s = (CCString *)obj;
         cJSON * json = cJSON_CreateString(s->getCString());
         return json;

@@ -28,6 +28,8 @@ public:
     void star_callBack(Ref* pSender);
     void btn_callBack(Ref *pSender, Widget::TouchEventType type);
     CREATE_FUNC(SuccessDialog);
+private:
+    int gainCoinNum;
 };
 
 #endif /* defined(__Link__SuccessDialog__) */

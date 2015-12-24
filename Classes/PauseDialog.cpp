@@ -9,6 +9,7 @@
 #include "PauseDialog.h"
 #include "GameLayer.h"
 #include "LevelLayer.h"
+#include "Audio.h"
 bool PauseDialog::init()
 {
     Node::init();
@@ -49,7 +50,7 @@ void PauseDialog::initData()
     
     //tag 7
     auto resumeBtn = (Button*)seekNodeByName(root, "playButton");
-    //resumeBtn->addTouchEventListener(CC_CALLBACK_2(PauseDialog::btn_callBack, this));
+    resumeBtn->addTouchEventListener(CC_CALLBACK_2(PauseDialog::btn_callBack, this));
     
     //tag 8
     auto closeBtn = (Button*)seekNodeByName(root, "closeBtn");
@@ -86,31 +87,43 @@ void PauseDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
         switch (tag)
         {
             case 2:
-                CCLOG("musicBtnOn");
+                log("musicBtnOn");
             {
                 musicBtnOn->setVisible(false);
                 musicBtnOff->setVisible(true);
+                
+                Audio::getInstance()->playEffect(sound_click);
+                Audio::getInstance()->setMusicCanPlay(false);
             }
                 break;
             case 3:
-                CCLOG("musicBtnOff");
+                log("musicBtnOff");
             {
                 musicBtnOff->setVisible(false);
                 musicBtnOn->setVisible(true);
+                
+                Audio::getInstance()->playEffect(sound_click);
+                Audio::getInstance()->setMusicCanPlay(true);
             }
                 break;
             case 4:
-                CCLOG("soundBtnOn");
+                log("soundBtnOn");
             {
                 soundBtnOn->setVisible(false);
                 soundBtnOff->setVisible(true);
+                
+                Audio::getInstance()->setSoundCanPlay(false);
+                Audio::getInstance()->playEffect(sound_click);
             }
                 break;
             case 5:
-                CCLOG("soundBtnOff");
+                log("soundBtnOff");
             {
                 soundBtnOff->setVisible(false);
                 soundBtnOn->setVisible(true);
+                
+                Audio::getInstance()->setSoundCanPlay(true);
+                Audio::getInstance()->playEffect(sound_click);
             }
                 break;
         }
@@ -121,21 +134,21 @@ void PauseDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
         switch (tag)
         {
             case 1:
-                CCLOG("replay_callBack");
+                log("replay_callBack");
             {
                 auto sc = GameLayer::scene();
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
             }
                 break;
             case 6:
-                CCLOG("homeBtn");
+                log("homeBtn");
             {
                 auto sc = LevelLayer::scene();
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5f, sc));
             }
                 break;
             case 7:
-                CCLOG("playButton");
+                log("playButton");
             {
                 auto game = (GameLayer*)getParent();
                 game->resumeGame();
@@ -143,7 +156,7 @@ void PauseDialog::btn_callBack(Ref *pSender, Widget::TouchEventType type)
             }
                 break;
             case 8:
-                CCLOG("closeBtn");
+                log("closeBtn");
             {
                 auto game = (GameLayer*)getParent();
                 game->resumeGame();

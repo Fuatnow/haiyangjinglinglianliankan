@@ -9,7 +9,7 @@
 #pragma once
 
 //-------------------------------------------------------------------------
-//#include "FKCW_Base_Macro.h"
+#include "FKCW_Base_Macro.h"
 #include "FKCW_Base_Types.h"
 //-------------------------------------------------------------------------
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID

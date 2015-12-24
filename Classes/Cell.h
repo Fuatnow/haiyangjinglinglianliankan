@@ -1,6 +1,13 @@
 #ifndef __Cell_H__
 #define __Cell_H__
 #include "BasicLayer.h"
+
+enum CELL_KIND
+{
+    KIND_NORMAL,
+    KIND_WALL
+};
+
 class Cell : public Sprite
 {
 public:
@@ -16,6 +23,8 @@ public:
     void setSelected();
     void swap(Cell* cell);
     void addParticle(std::string fileStr);
+    bool canBeExchage();
+    CELL_KIND getCellKind();
 public:
     int x, y;//坐标
     int t;//拐点个数
